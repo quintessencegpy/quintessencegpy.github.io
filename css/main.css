@@ -1148,7 +1148,7 @@ pre .javascript .function {
   line-height: 36px;
   font-size: 20px;
   font-weight: normal;
-  font-family: 'Beaver', 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Poor Story', 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 .site-subtitle {
   margin-top: 10px;
@@ -2012,7 +2012,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #1201d1;
+  background: #5cffff;
 }
 .links-of-blogroll {
   font-size: 13px;
