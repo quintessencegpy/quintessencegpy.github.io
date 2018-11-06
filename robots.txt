@@ -1,14 +1,13 @@
-# hexo robots.txt
 User-agent: *
+Disallow: /js/
+Disallow: /css/
+Disallow: /images/
+Disallow: /lib/
+Disallow: /google85ad5554e233f6cc.html
 Allow: /
 Allow: /archives/
 Allow: /categories/
 Allow: /tags/
 Allow: /about/
 Allow: /2018/
-Disallow: /js/
-Disallow: /css/
-Disallow: /images/
-Disallow: /lib/
-Sitemap: https://cyberhex.me/sitemap.xml
-Sitemap: https://cyberhex.me/baidusitemap.xml
+Sitemap: /sitemap.xml
