@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Objective-C 中 Nullability 的使用]]></title>
+    <url>%2F2018%2F11%2F25%2Fnullability-annotations-in-objective-c%2F</url>
+    <content type="text"><![CDATA[本文主要记录在学习 Objective-C 的过程中关于 Nullability 的问题。 背景我们都知道 Swift 和 Objective-C 可以同时存在于同一个 project 中，但想让他们俩兄弟同时幸福快乐和谐的生活在同一个项目中并不是一件容易的事。 Swift 小老弟最大的优势就是 Type Safety, 而 Objective-C 老大哥最大的“问题”就是可以有满屏的 nil。 在 Swift 中如果你想在不初始化一个变量的情况使用这个变量，你必须要提前告知 Xcode 这个变量是 optional 的， 但是 Objective-C 就没有这样的要求。 那么怎么解决这个问题呢，苹果最后引入了 Nullability 来给 Objective-C 加入一些安全保障。 举例在 Objective-C 中有以下代码： 123456789// Objective-C@interface User: NSObject@property (copy, nonatomic) NSString *username;@property (copy, nonatomic) NSString *password;- (BOOL)loginWithUsername:(NSString *)username password:(NSString *)password;@end 但是如果这段代码是存在与两种语言混合的项目中，这段代码 import 进如 Swift 之后就成了一下这样： 12345678// Swiftclass User: NSObject &#123; var username: String! var password: String! func login(withUsername username: String!, password: String!) -&gt; Bool&#125; 我们看到了满屏的惊叹号，这对于有强迫症的同学简直是一种煎熬，为什么会这样呢？因为 Swift 是 Type Safe 的语言，除非你提前申明这个变量是 optional，否则他不会让你随便给变量赋值 nil。 但是，如果在 Objective-C 中引入了 Nullability， 这个问题就会大大改善，比如下边的例子： 123456789// Objective-C@interface User: NSObject@property (nonnull, copy, nonatomic) NSString *username;@property (nullable, copy, nonatomic) NSString *password;- (BOOL)loginWithUsername:(nonnull NSString *)username password:(nonnull NSString *)password;@end 在 Swift 中，接口就会变成以下的情况： 12345678// Swiftclass User: NSObject &#123; var username: String var password: String？ func login(withUsername username: String, password: String) -&gt; Bool&#125; 但是，虽然这样解决的 Swift 和 Objective-C 之间搭桥的问题，Objective-C 本身并没有发生改变，他还是该吃吃，该喝喝，runtime 的行为模式和以前没啥区别，毕竟嘛，那什么改不了那啥。但是经过这样的改变，compiler 会站出来在我们用错 API 的时候提出警告。 四种 Nullability 标记 Pointers Properties _Null_unspecified null_unspecified 默认值，在搭桥到 Swift 后会成为 unwrapped optional _Nonnull nonnull 在搭桥到 Swift 后变成正常变量声明 _Nullable nullable 在搭桥到 Swift 后变成 optional N/A null_resettable 这种变量在读的时候不会是 nil， 但是可以重置为nil 结语这算是我第一篇正儿八经的博客了，也算是学习笔记性质的记录博客，所以内容不一定是完全正确的，所以还希望各位大佬不吝赐教，大家一起学习。 相关链接：Tree House: Nullability Annotations in Objective-C]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>Objective-C</category>
+      </categories>
+      <tags>
+        <tag>Objective-C</tag>
+        <tag>iOS</tag>
+        <tag>Nullability</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[写在前面的话]]></title>
     <url>%2F2018%2F11%2F22%2Finitial-post%2F</url>
     <content type="text"><![CDATA[梦里不知身是客，直把他乡作故乡。 这可能是来美国这四年来我第一次静下心来想好好写点东西。现在的我，蜗居在一间租来的短租房里，在美国这个大农村里卖掉了可能是生活中最重要的必备品 - 车，考虑着自己怎么会沦落到这个地步。生活与生存、梦想与现实，对于我来说不是选择题，而更像是灰掉了一个选项的无奈。可能是时候回国寻找下一个人生目标了，就算有再多的不甘心。 时空锥曾几何时，我的脑子里想着的都是相对论，康德哲学，甚至怎么样改变世界。不知从何时开始，我关心的事情完全变成了怎么样活下去。不管怎么说，在于生活的这场战争中，我是败得一派涂地。 我对相对论中的时空锥和因果律深信不疑，不知到在之前的哪个时空节点发生的事件或者是别人的时空锥的介入，让我的人生有了如此大的变化。但是这也许是命，也许是运，谁知道呢？ 展望毕竟有很长时间已经没有写东西了，本来有好多想说的话，但手放在键盘的那一刻就全忘了，能写这么些东西可能已经是绞尽脑汁了。现在说说自己接下来几个月的计划吧。 作为一个iOS Developer，我现在只会swift语言，而对于ojective-c只是知道一些皮毛，所以接下来的一段时间我要好好地学一下objective-c。 争取每学一些新的知识都把它们整理成学习笔记，这样不仅对我自己来说是一个很好的复习，对于未来可能大概也许来我博客的读者也会有很大帮助。 好好锻炼身体，可能有两三个月没有好好健身了，是时候在回国之前塑造一下新的形象。 结语虽然感觉自己很失败，但是危机并不是一个贬义词，危险与机会并存，就看自己怎么把握，说不定就走狗屎运咸鱼翻身了呢。]]></content>

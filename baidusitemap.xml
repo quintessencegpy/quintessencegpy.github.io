@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://cyberhex.me/2018/11/25/nullability-annotations-in-objective-c/</loc>
+    <lastmod>2018-11-26T04:53:53.396Z</lastmod>
+  </url>  <url>
     <loc>http://cyberhex.me/2018/11/22/initial-post/</loc>
     <lastmod>2018-11-23T00:51:20.991Z</lastmod>
   </url>
