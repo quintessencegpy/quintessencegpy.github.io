@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://cyberhex.me/2018/11/25/nullability-annotations-in-objective-c/</loc>
+    <loc>http://cyberhex.me/2018/11/22/initial-post/</loc>
     
-    <lastmod>2018-11-26T04:53:53.396Z</lastmod>
+    <lastmod>2019-03-06T09:31:44.219Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://cyberhex.me/2018/11/22/initial-post/</loc>
+    <loc>http://cyberhex.me/2018/11/27/concurrency-in-iOS/</loc>
     
-    <lastmod>2018-11-23T00:51:20.991Z</lastmod>
+    <lastmod>2019-03-06T09:29:32.600Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://cyberhex.me/2018/11/25/nullability-annotations-in-objective-c/</loc>
+    
+    <lastmod>2018-11-26T04:56:07.504Z</lastmod>
     
   </url>
   

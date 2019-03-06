@@ -155,16 +155,18 @@
 
 
 
-  <meta name="description" content="Simple(r) Always Wins.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="CyberHex">
-<meta property="og:url" content="http://cyberhex.me/archives/index.html">
+  <meta name="description" content="本文主要记录在学习 iOS 的过程中关于并发性的问题。">
+<meta name="keywords" content="Objective-C,iOS,Nullability">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS 中的并发性问题">
+<meta property="og:url" content="http://cyberhex.me/2018/11/27/concurrency-in-iOS/index.html">
 <meta property="og:site_name" content="CyberHex">
-<meta property="og:description" content="Simple(r) Always Wins.">
+<meta property="og:description" content="本文主要记录在学习 iOS 的过程中关于并发性的问题。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-06T09:29:32.600Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CyberHex">
-<meta name="twitter:description" content="Simple(r) Always Wins.">
+<meta name="twitter:title" content="iOS 中的并发性问题">
+<meta name="twitter:description" content="本文主要记录在学习 iOS 的过程中关于并发性的问题。">
 
 
 
@@ -173,7 +175,7 @@
 
 
 
-  <link rel="canonical" href="http://cyberhex.me/archives/">
+  <link rel="canonical" href="http://cyberhex.me/2018/11/27/concurrency-in-iOS/">
 
 
 
@@ -183,7 +185,7 @@
   };
 </script>
 
-  <title>归档 | CyberHex</title>
+  <title>iOS 中的并发性问题 | CyberHex</title>
   
 
 
@@ -232,7 +234,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -305,7 +307,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
   </li>
@@ -325,28 +327,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -393,148 +373,288 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cyberhex.me/2018/11/27/concurrency-in-iOS/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Penstein">
+      <meta itemprop="description" content="Simple(r) Always Wins.">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CyberHex">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">iOS 中的并发性问题
+              
+            
+          </h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-27 13:39:41" itemprop="dateCreated datePublished" datetime="2018-11-27T13:39:41+08:00">2018-11-27</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-06 17:29:32" itemprop="dateModified" datetime="2019-03-06T17:29:32+08:00">2019-03-06</time>
+              
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 3 篇日志。 继续努力。
-      </span>
-      
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
 
-      
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/iOS/" itemprop="url" rel="index"><span itemprop="name">iOS</span></a></span>
 
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/27/concurrency-in-iOS/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/11/27/concurrency-in-iOS/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
+             <span id="/2018/11/27/concurrency-in-iOS/" class="leancloud_visitors" data-flag-title="iOS 中的并发性问题">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-fire"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span>℃</span>
+             </span>
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/27/concurrency-in-iOS/" itemprop="url">
-              
-                <span itemprop="name">iOS 中的并发性问题</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-11-27T13:39:41+08:00" content="2018-11-27">
-          11-27
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/25/nullability-annotations-in-objective-c/" itemprop="url">
-              
-                <span itemprop="name">Objective-C 中 Nullability 的使用</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-11-25T22:23:19+08:00" content="2018-11-25">
-          11-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/22/initial-post/" itemprop="url">
-              
-                <span itemprop="name">写在前面的话</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-11-22T13:27:54+08:00" content="2018-11-22">
-          11-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
+      
+        <p>本文主要记录在学习 iOS 的过程中关于并发性的问题。<br><a id="more"></a></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前在开发过程中曾经遇到过挺多次并发的问题，比如在自己写 networking 代码的时候会遇到一些（对！我是自己手写 networking code， 什么是 Alamofire 对于当时刚开始学习的我来说，根本就不知道），但都是比较皮毛的东西，感觉自己并没有深入理解并发行的问题，现在下定决心好好研究一下并发性，毕竟面试会考挺多而且以后也会碰到很多。</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>现在很多事情都是多线的，电脑是多核的，手机是双卡双待的，你看我，我可以一边写博客，一边玩LOL(呃，不知道为什么就抄袭了爱情公寓的台词，不过好像有点讽刺)。其实我是想说，由于现在手机是多核的，意味着同一时间手机可以同时处理多个问题，于是很多现代操作系统比如 iOS 和 OS10 就利用利用了这个特点而使用多线程。在这里我就想提出一个千古难题，进程和线程的区别是啥，说实话，到今天之前我对这两个概念还是比较模糊。进程的定义是正在执行程序的一个实体，线程定义是程序的执行路径。简而言之,在 iOS 系统中，进程可以理解为就是一个 App, 而线程是程序执行流的最小单元，一个进程至少有一个线程。其实我的理解也还没到完全的地步，大家可以参考<a href="https://juejin.im/post/5b1cf4fa6fb9a01e4b062771" target="_blank" rel="noopener">我所理解的 iOS 并发编程</a>和<a href="https://www.cnblogs.com/lmule/archive/2010/08/18/1802774.html" target="_blank" rel="noopener">进程和线程的区别</a>。并发性有很多可以研究的问题，下面我想主要说一下 GCD 和 Operation Queue。</p>
+<h2 id="Main-Queue-vs-Background-Queue"><a href="#Main-Queue-vs-Background-Queue" class="headerlink" title="Main Queue vs. Background Queue"></a>Main Queue vs. Background Queue</h2><p>在 iOS 中有两个重要的概念，Main Queue 和 Background Queue，这两个东西有什么用呢？ 试想一下，如果你每次打开抖音都会先白屏三秒钟才出现图片，那你还会这么没日没夜的刷它吗？ 如果出现这种情况，最有可能的情况只有两种：</p>
+<ol>
+<li>iPhone XS 在向你招手，扔掉手中的老手机，下一站，黑市交易所。</li>
+<li>本来应该在 Background Queue 运行的 networking 奇瑞跑到了 Main Queue 的快车道上蹩住了你的校长牌阿斯顿 UI。</li>
+</ol>
+<p>一般情况下, 第二种情况发生的概率比较大。那么要怎么办呢？当然是利用你尊贵的身份改变交通规则，让开奇瑞的全部都去慢车道开，如果进入快车道，可以直接没收作案工具。这在现实生活中可能显得有点扯淡(?)。但是在 iOS 中不失为一种非常有效率的解决办法。 让运行较慢的 networking code 进入 Background Queue 运行，等到运行完成了再通知系统更新 UI。 这样就能大大提高用户体验，让用户刷抖音到天亮不是梦。</p>
+<h2 id="Grand-Central-Dispatch-GCD"><a href="#Grand-Central-Dispatch-GCD" class="headerlink" title="Grand Central Dispatch(GCD)"></a>Grand Central Dispatch(GCD)</h2><p>先讲一点点历史， GCD 为什么要叫 Grand Central Dispatch 而不是 Large Central Dispatch 或者 Big Central Dispatch ? 这是由于在纽约有一个非常著名的地铁站叫 Grand Central Terminal，这个地方差不多是曼哈顿中一个地标型站点，后来程序员们在设计 GCD 的时候觉得在管理不同的线程的时候和 Grand Central Terminal 有异曲同工之妙，然后就堂而皇之的抄袭(程序猿的事能算抄吗）了这个名字。如果你是一个 iOS 开发员并且有幸去纽约玩的话一定要去膜拜一下这个有意义的站点。</p>
+<div class="note info"><p>相关链接：</p><p><a href="https://teamtreehouse.com/library/concurrency-in-ios" target="_blank" rel="noopener">Tree House: Concurrency in iOS</a><br><a href="http://lkml.iu.edu/hypermail/linux/kernel/9608/0191.html" target="_blank" rel="noopener">Linus Torvalds 的邮件</a><br><a href="https://www.cnblogs.com/lmule/archive/2010/08/18/1802774.html" target="_blank" rel="noopener">进程和线程的区别</a><br><a href="https://juejin.im/post/5b1cf4fa6fb9a01e4b062771" target="_blank" rel="noopener">我所理解的 iOS 并发编程</a><br><a href="http://khanlou.com/2016/04/the-GCD-handbook/" target="_blank" rel="noopener">The GCD Handbook</a><br><a href="https://www.objc.io/issues/2-concurrency/" target="_blank" rel="noopener">OBJC Concurrent Programming</a></p></div>
+
+      
     </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">本文结束 <i class="fa fa-star"></i> 感谢您的阅读</div>
+    
+</div>
+      
+    </div>
+
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2018/11/27/concurrency-in-iOS/">iOS 中的并发性问题</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Penstein 的个人博客">Penstein</a></p>
+  <p><span>原始链接:</span><a href="/2018/11/27/concurrency-in-iOS/" title="iOS 中的并发性问题">http://cyberhex.me/2018/11/27/concurrency-in-iOS/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://cyberhex.me/2018/11/27/concurrency-in-iOS/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+	});
+    });  
+</script>
+
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Objective-C/" rel="tag"><i class="fa fa-tag"></i>  Objective-C</a>
+          
+            <a href="/tags/iOS/" rel="tag"><i class="fa fa-tag"></i>  iOS</a>
+          
+            <a href="/tags/Nullability/" rel="tag"><i class="fa fa-tag"></i>  Nullability</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/25/nullability-annotations-in-objective-c/" rel="next" title="Objective-C 中 Nullability 的使用">
+                <i class="fa fa-chevron-left"></i> Objective-C 中 Nullability 的使用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -555,8 +675,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -725,6 +854,22 @@ show_date_time();
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">2.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Main-Queue-vs-Background-Queue"><span class="nav-number">3.</span> <span class="nav-text">Main Queue vs. Background Queue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Grand-Central-Dispatch-GCD"><span class="nav-number">4.</span> <span class="nav-text">Grand Central Dispatch(GCD)</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
       
@@ -881,6 +1026,10 @@ show_date_time();
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+
+
 
   
 

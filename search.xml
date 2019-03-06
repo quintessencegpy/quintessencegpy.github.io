@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[iOS 中的并发性问题]]></title>
+    <url>%2F2018%2F11%2F27%2Fconcurrency-in-iOS%2F</url>
+    <content type="text"><![CDATA[本文主要记录在学习 iOS 的过程中关于并发性的问题。 前言之前在开发过程中曾经遇到过挺多次并发的问题，比如在自己写 networking 代码的时候会遇到一些（对！我是自己手写 networking code， 什么是 Alamofire 对于当时刚开始学习的我来说，根本就不知道），但都是比较皮毛的东西，感觉自己并没有深入理解并发行的问题，现在下定决心好好研究一下并发性，毕竟面试会考挺多而且以后也会碰到很多。 背景现在很多事情都是多线的，电脑是多核的，手机是双卡双待的，你看我，我可以一边写博客，一边玩LOL(呃，不知道为什么就抄袭了爱情公寓的台词，不过好像有点讽刺)。其实我是想说，由于现在手机是多核的，意味着同一时间手机可以同时处理多个问题，于是很多现代操作系统比如 iOS 和 OS10 就利用利用了这个特点而使用多线程。在这里我就想提出一个千古难题，进程和线程的区别是啥，说实话，到今天之前我对这两个概念还是比较模糊。进程的定义是正在执行程序的一个实体，线程定义是程序的执行路径。简而言之,在 iOS 系统中，进程可以理解为就是一个 App, 而线程是程序执行流的最小单元，一个进程至少有一个线程。其实我的理解也还没到完全的地步，大家可以参考我所理解的 iOS 并发编程和进程和线程的区别。并发性有很多可以研究的问题，下面我想主要说一下 GCD 和 Operation Queue。 Main Queue vs. Background Queue在 iOS 中有两个重要的概念，Main Queue 和 Background Queue，这两个东西有什么用呢？ 试想一下，如果你每次打开抖音都会先白屏三秒钟才出现图片，那你还会这么没日没夜的刷它吗？ 如果出现这种情况，最有可能的情况只有两种： iPhone XS 在向你招手，扔掉手中的老手机，下一站，黑市交易所。 本来应该在 Background Queue 运行的 networking 奇瑞跑到了 Main Queue 的快车道上蹩住了你的校长牌阿斯顿 UI。 一般情况下, 第二种情况发生的概率比较大。那么要怎么办呢？当然是利用你尊贵的身份改变交通规则，让开奇瑞的全部都去慢车道开，如果进入快车道，可以直接没收作案工具。这在现实生活中可能显得有点扯淡(?)。但是在 iOS 中不失为一种非常有效率的解决办法。 让运行较慢的 networking code 进入 Background Queue 运行，等到运行完成了再通知系统更新 UI。 这样就能大大提高用户体验，让用户刷抖音到天亮不是梦。 Grand Central Dispatch(GCD)先讲一点点历史， GCD 为什么要叫 Grand Central Dispatch 而不是 Large Central Dispatch 或者 Big Central Dispatch ? 这是由于在纽约有一个非常著名的地铁站叫 Grand Central Terminal，这个地方差不多是曼哈顿中一个地标型站点，后来程序员们在设计 GCD 的时候觉得在管理不同的线程的时候和 Grand Central Terminal 有异曲同工之妙，然后就堂而皇之的抄袭(程序猿的事能算抄吗）了这个名字。如果你是一个 iOS 开发员并且有幸去纽约玩的话一定要去膜拜一下这个有意义的站点。 相关链接：Tree House: Concurrency in iOSLinus Torvalds 的邮件进程和线程的区别我所理解的 iOS 并发编程The GCD HandbookOBJC Concurrent Programming]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>iOS</category>
+      </categories>
+      <tags>
+        <tag>Objective-C</tag>
+        <tag>iOS</tag>
+        <tag>Nullability</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Objective-C 中 Nullability 的使用]]></title>
     <url>%2F2018%2F11%2F25%2Fnullability-annotations-in-objective-c%2F</url>
     <content type="text"><![CDATA[本文主要记录在学习 Objective-C 的过程中关于 Nullability 的问题。 背景我们都知道 Swift 和 Objective-C 可以同时存在于同一个 project 中，但想让他们俩兄弟同时幸福快乐和谐的生活在同一个项目中并不是一件容易的事。 Swift 小老弟最大的优势就是 Type Safety, 而 Objective-C 老大哥最大的“问题”就是可以有满屏的 nil。 在 Swift 中如果你想在不初始化一个变量的情况使用这个变量，你必须要提前告知 Xcode 这个变量是 optional 的， 但是 Objective-C 就没有这样的要求。 那么怎么解决这个问题呢，苹果最后引入了 Nullability 来给 Objective-C 加入一些安全保障。 举例在 Objective-C 中有以下代码： 123456789// Objective-C@interface User: NSObject@property (copy, nonatomic) NSString *username;@property (copy, nonatomic) NSString *password;- (BOOL)loginWithUsername:(NSString *)username password:(NSString *)password;@end 但是如果这段代码是存在与两种语言混合的项目中，这段代码 import 进如 Swift 之后就成了一下这样： 12345678// Swiftclass User: NSObject &#123; var username: String! var password: String! func login(withUsername username: String!, password: String!) -&gt; Bool&#125; 我们看到了满屏的惊叹号，这对于有强迫症的同学简直是一种煎熬，为什么会这样呢？因为 Swift 是 Type Safe 的语言，除非你提前申明这个变量是 optional，否则他不会让你随便给变量赋值 nil。 但是，如果在 Objective-C 中引入了 Nullability， 这个问题就会大大改善，比如下边的例子： 123456789// Objective-C@interface User: NSObject@property (nonnull, copy, nonatomic) NSString *username;@property (nullable, copy, nonatomic) NSString *password;- (BOOL)loginWithUsername:(nonnull NSString *)username password:(nonnull NSString *)password;@end 在 Swift 中，接口就会变成以下的情况： 12345678// Swiftclass User: NSObject &#123; var username: String var password: String？ func login(withUsername username: String, password: String) -&gt; Bool&#125; 但是，虽然这样解决的 Swift 和 Objective-C 之间搭桥的问题，Objective-C 本身并没有发生改变，他还是该吃吃，该喝喝，runtime 的行为模式和以前没啥区别，毕竟嘛，那什么改不了那啥。但是经过这样的改变，compiler 会站出来在我们用错 API 的时候提出警告。 四种 Nullability 标记 Pointers Properties _Null_unspecified null_unspecified 默认值，在搭桥到 Swift 后会成为 unwrapped optional _Nonnull nonnull 在搭桥到 Swift 后变成正常变量声明 _Nullable nullable 在搭桥到 Swift 后变成 optional N/A null_resettable 这种变量在读的时候不会是 nil， 但是可以重置为nil 结语这算是我第一篇正儿八经的博客了，也算是学习笔记性质的记录博客，所以内容不一定是完全正确的，所以还希望各位大佬不吝赐教，大家一起学习。 相关链接：Tree House: Nullability Annotations in Objective-C]]></content>
