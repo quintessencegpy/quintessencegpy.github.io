@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://cyberhex.me/2019/06/21/viewcontroller-containment/</loc>
+    <lastmod>2019-06-23T03:33:14.084Z</lastmod>
+  </url>  <url>
     <loc>http://cyberhex.me/2018/11/27/concurrency-in-iOS/</loc>
-    <lastmod>2019-03-30T12:15:56.070Z</lastmod>
+    <lastmod>2019-03-30T12:44:55.295Z</lastmod>
   </url>  <url>
     <loc>http://cyberhex.me/2018/11/22/initial-post/</loc>
     <lastmod>2019-03-17T12:17:34.609Z</lastmod>
