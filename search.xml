@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ARTS 打卡 04]]></title>
+    <url>%2F2020%2F07%2F05%2Farts-04%2F</url>
+    <content type="text"><![CDATA[本文主要是公司内部 ARTS 活动打卡记录 AlgorithmReviewTips前一阵做单元测试的时候发现一个问题，就是如果想把 UIImage 作为 ViewModel 的输出的时候会有一个问题就是不知道怎么样单测这个 UIImage 的输出，最后无奈只能让 ViewModel 输出 UIImage 的名字，然后在 ViewController 中来进行 UIImage 的初始化。但是昨天看关于单测的东西的时候发现一个很好用的技巧，下次在做单测的时候可以尝试使用了： 12345678910 func testImage() &#123; let viewModelImage = viewModel.image let viewModelImageDataReference = viewModelImage.pngData()! let stubImageDataReference = UIImage(named: "test").pngData()! XCAssertEqual(viewModelImageDataReference, stubImageDataReference) XCAssertEqual(viewModelImage.size.width, desiredWidth) XCAssertEqual(viewModelImage.size.height, desiredHeight)&#125; Share马虎党的福音 - TDD 带你进入新世界尤尼泰斯特 2020 - 回忆篇]]></content>
+      <categories>
+        <category>ARTS</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[尤尼泰斯特 2020 - 回忆篇]]></title>
     <url>%2F2020%2F07%2F05%2Funit-test-short-story-01%2F</url>
     <content type="text"><![CDATA[泰斯特探长与菲托尔的爱恨情仇 序章“铃铃铃…”，一阵急促的电话声吵醒了泰斯特探长，他下意识地看了一眼手机，骂骂咧咧的说一句：“我都关了静音了，到底哪在响？！”这时候电话又响了一声，警探这才反应过来，这是警局内线的电话，只有在紧急情况下才会响。上次听到这个铃声是几年前的事情了，他瞬间紧张了起来，但又一时间没有想起配枪放在哪里，就拿了衣橱里的棒球棍，慌慌张张向地下室走去。走到一半的时候突然想起来配枪放在了书房的保险箱里边，于是他还是决定先去拿了配枪再接电话。电话还是响个不停，他破口大骂：“催个鬼啊，马上到了！”一顿折腾，他终于来到了电话旁边，拿起电话，对面是一个略显稚嫩和颤抖的声音：“泰斯特探长，抱歉吵醒您，警局…”“别那么多废话，什么紧急情况？”泰斯特探长打断了这个年轻人的话，“是菲托尔，他又出现了”泰斯特探长心脏一抽，碰倒了桌上的笔筒，里边的笔掉了一地，电话那边传来急促的声音“探长，您没事吧？！”泰斯特探长还没从刚才的惊讶中回过神来，电话那边又传了声音“您还在吗？没事，您这次一定能将他绳之以法，我们都尽最大努力…”“这还用得着你说，我马上过去!”他砰的一声挂掉了电话，他倒吸了一口气，默念了一句“怎么又是你？”陷入了回忆。 回忆十年前，那会泰斯特还是一个刚入职刚满两年的年轻警探，是蔻丁市有史以来最年轻的优秀警探。 时间有限先写这么多，一直想写一个短片小说，觉得单测给了我好多灵感，写一个关于单测的小说也算圆了我的小说梦。哈哈哈哈哈]]></content>

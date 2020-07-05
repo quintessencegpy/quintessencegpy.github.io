@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://cyberhex.me/"/>
-  <updated>2020-07-05T15:30:34.394Z</updated>
+  <updated>2020-07-05T16:23:55.856Z</updated>
   <id>http://cyberhex.me/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ARTS 打卡 04</title>
+    <link href="http://cyberhex.me/2020/07/05/arts-04/"/>
+    <id>http://cyberhex.me/2020/07/05/arts-04/</id>
+    <published>2020-07-05T15:36:17.000Z</published>
+    <updated>2020-07-05T16:23:55.856Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文主要是公司内部 ARTS 活动打卡记录<br><a id="more"></a></p><h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>前一阵做单元测试的时候发现一个问题，就是如果想把 UIImage 作为 ViewModel 的输出的时候会有一个问题就是不知道怎么样单测这个 UIImage 的输出，最后无奈只能让 ViewModel 输出 UIImage 的名字，然后在 ViewController 中来进行 UIImage 的初始化。但是昨天看关于单测的东西的时候发现一个很好用的技巧，下次在做单测的时候可以尝试使用了：</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">testImage</span><span class="params">()</span></span> &#123;</span><br><span class="line"><span class="keyword">let</span> viewModelImage = viewModel.image</span><br><span class="line"><span class="keyword">let</span> viewModelImageDataReference = viewModelImage.pngData()!</span><br><span class="line"><span class="keyword">let</span> stubImageDataReference = <span class="type">UIImage</span>(named: <span class="string">"test"</span>).pngData()!</span><br><span class="line"><span class="type">XCAssertEqual</span>(viewModelImageDataReference, stubImageDataReference)</span><br><span class="line"><span class="type">XCAssertEqual</span>(viewModelImage.size.width, desiredWidth)</span><br><span class="line"><span class="type">XCAssertEqual</span>(viewModelImage.size.height, desiredHeight)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2><p><a href="https://cyberhex.me/2020/06/14/tdd-part-one/">马虎党的福音 - TDD 带你进入新世界</a><br><a href="https://cyberhex.me/2020/07/05/unit-test-short-story-01/">尤尼泰斯特 2020 - 回忆篇</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文主要是公司内部 ARTS 活动打卡记录&lt;br&gt;
+    
+    </summary>
+    
+      <category term="ARTS" scheme="http://cyberhex.me/categories/ARTS/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>尤尼泰斯特 2020 - 回忆篇</title>
@@ -45,7 +65,7 @@
     <link href="http://cyberhex.me/2020/07/05/arts-02/"/>
     <id>http://cyberhex.me/2020/07/05/arts-02/</id>
     <published>2020-07-05T09:41:11.000Z</published>
-    <updated>2020-07-05T16:09:13.565Z</updated>
+    <updated>2020-07-05T16:18:44.082Z</updated>
     
     <content type="html"><![CDATA[<p>本文主要是公司内部 ARTS 活动打卡记录<br><a id="more"></a></p><h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2>]]></content>
     
@@ -65,7 +85,7 @@
     <link href="http://cyberhex.me/2020/06/14/tdd-part-one/"/>
     <id>http://cyberhex.me/2020/06/14/tdd-part-one/</id>
     <published>2020-06-14T09:41:34.000Z</published>
-    <updated>2020-07-05T13:56:59.682Z</updated>
+    <updated>2020-07-05T16:18:43.097Z</updated>
     
     <content type="html"><![CDATA[<p>本文主要记录学习单测，和研究 TDD 的感悟和心得<br><a id="more"></a></p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2>]]></content>
     
