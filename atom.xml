@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://cyberhex.me/"/>
-  <updated>2020-06-14T11:01:07.624Z</updated>
+  <updated>2020-07-05T15:30:34.394Z</updated>
   <id>http://cyberhex.me/</id>
   
   <author>
@@ -17,13 +17,57 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>尤尼泰斯特 2020 - 回忆篇</title>
+    <link href="http://cyberhex.me/2020/07/05/unit-test-short-story-01/"/>
+    <id>http://cyberhex.me/2020/07/05/unit-test-short-story-01/</id>
+    <published>2020-07-05T14:29:11.000Z</published>
+    <updated>2020-07-05T15:30:34.394Z</updated>
+    
+    <content type="html"><![CDATA[<p>泰斯特探长与菲托尔的爱恨情仇<br><a id="more"></a></p><h2 id="序章"><a href="#序章" class="headerlink" title="序章"></a>序章</h2><p>“铃铃铃…”，一阵急促的电话声吵醒了泰斯特探长，他下意识地看了一眼手机，骂骂咧咧的说一句：“我都关了静音了，到底哪在响？！”这时候电话又响了一声，警探这才反应过来，这是警局内线的电话，只有在紧急情况下才会响。上次听到这个铃声是几年前的事情了，他瞬间紧张了起来，但又一时间没有想起配枪放在哪里，就拿了衣橱里的棒球棍，慌慌张张向地下室走去。走到一半的时候突然想起来配枪放在了书房的保险箱里边，于是他还是决定先去拿了配枪再接电话。电话还是响个不停，他破口大骂：“催个鬼啊，马上到了！”一顿折腾，他终于来到了电话旁边，拿起电话，对面是一个略显稚嫩和颤抖的声音：“泰斯特探长，抱歉吵醒您，警局…”“别那么多废话，什么紧急情况？”泰斯特探长打断了这个年轻人的话，“是菲托尔，他又出现了”泰斯特探长心脏一抽，碰倒了桌上的笔筒，里边的笔掉了一地，电话那边传来急促的声音“探长，您没事吧？！”泰斯特探长还没从刚才的惊讶中回过神来，电话那边又传了声音“您还在吗？没事，您这次一定能将他绳之以法，我们都尽最大努力…”“这还用得着你说，我马上过去!”他砰的一声挂掉了电话，他倒吸了一口气，默念了一句“怎么又是你？”陷入了回忆。</p><h2 id="回忆"><a href="#回忆" class="headerlink" title="回忆"></a>回忆</h2><p>十年前，那会泰斯特还是一个刚入职刚满两年的年轻警探，是蔻丁市有史以来最年轻的优秀警探。</p><p>时间有限先写这么多，一直想写一个短片小说，觉得单测给了我好多灵感，写一个关于单测的小说也算圆了我的小说梦。哈哈哈哈哈</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;泰斯特探长与菲托尔的爱恨情仇&lt;br&gt;
+    
+    </summary>
+    
+      <category term="戏说就是胡说" scheme="http://cyberhex.me/categories/%E6%88%8F%E8%AF%B4%E5%B0%B1%E6%98%AF%E8%83%A1%E8%AF%B4/"/>
+    
+    
+      <category term="iOS" scheme="http://cyberhex.me/tags/iOS/"/>
+    
+      <category term="TDD" scheme="http://cyberhex.me/tags/TDD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ARTS 打卡 02</title>
+    <link href="http://cyberhex.me/2020/07/05/arts-02/"/>
+    <id>http://cyberhex.me/2020/07/05/arts-02/</id>
+    <published>2020-07-05T09:41:11.000Z</published>
+    <updated>2020-07-05T16:09:13.565Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文主要是公司内部 ARTS 活动打卡记录<br><a id="more"></a></p><h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文主要是公司内部 ARTS 活动打卡记录&lt;br&gt;
+    
+    </summary>
+    
+      <category term="ARTS" scheme="http://cyberhex.me/categories/ARTS/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>马虎党的福音 - TDD 带你进入新世界</title>
     <link href="http://cyberhex.me/2020/06/14/tdd-part-one/"/>
     <id>http://cyberhex.me/2020/06/14/tdd-part-one/</id>
     <published>2020-06-14T09:41:34.000Z</published>
-    <updated>2020-06-14T11:01:07.624Z</updated>
+    <updated>2020-07-05T13:56:59.682Z</updated>
     
-    <content type="html"><![CDATA[<p>本文主要记录学习单测，和研究 TDD 的感悟和心得<br><a id="more"></a></p>]]></content>
+    <content type="html"><![CDATA[<p>本文主要记录学习单测，和研究 TDD 的感悟和心得<br><a id="more"></a></p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2>]]></content>
     
     <summary type="html">
     
