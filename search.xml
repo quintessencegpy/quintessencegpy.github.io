@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ARTS 打卡 03]]></title>
+    <url>%2F2020%2F07%2F06%2Farts-03%2F</url>
+    <content type="text"><![CDATA[AlgorithmReviewTipsShare]]></content>
+      <categories>
+        <category>ARTS</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[ARTS 打卡 04]]></title>
     <url>%2F2020%2F07%2F05%2Farts-04%2F</url>
-    <content type="text"><![CDATA[本文主要是公司内部 ARTS 活动打卡记录 AlgorithmReviewTips前一阵做单元测试的时候发现一个问题，就是如果想把 UIImage 作为 ViewModel 的输出的时候会有一个问题就是不知道怎么样单测这个 UIImage 的输出，最后无奈只能让 ViewModel 输出 UIImage 的名字，然后在 ViewController 中来进行 UIImage 的初始化。但是昨天看关于单测的东西的时候发现一个很好用的技巧，下次在做单测的时候可以尝试使用了： 12345678910 func testImage() &#123; let viewModelImage = viewModel.image let viewModelImageDataReference = viewModelImage.pngData()! let stubImageDataReference = UIImage(named: "test").pngData()! XCAssertEqual(viewModelImageDataReference, stubImageDataReference) XCAssertEqual(viewModelImage.size.width, desiredWidth) XCAssertEqual(viewModelImage.size.height, desiredHeight)&#125; Share马虎党的福音 - TDD 带你进入新世界尤尼泰斯特 2020 - 回忆篇]]></content>
+    <content type="text"><![CDATA[本文主要是公司内部 ARTS 活动打卡记录 Algorithm前缀树问题（LeetCode 208 中等） 这个问题也相当于一个比较基础的问题了，它是一些其他题目（比如 Word ladder II 之类的）题目的前置题目，这个题目如果你是想刷算法的话属于必背题目，核心点是在每次插入一个单词的时候更新树的结构，这样的话在下次查找的时候就可以判断是否有这个单词或者是否有以某个单词开头的单词。 一个比较重要的点就是前缀树和哈希表之间的对比，他们俩在很多时候可以互相替代，前缀树花费的空间更少一些但是单次查询花费的时间更多一点。 ReviewTips前一阵做单元测试的时候发现一个问题，就是如果想把 UIImage 作为 ViewModel 的输出的时候会有一个问题就是不知道怎么样单测这个 UIImage 的输出，最后无奈只能让 ViewModel 输出 UIImage 的名字，然后在 ViewController 中来进行 UIImage 的初始化。但是昨天看关于单测的东西的时候发现一个很好用的技巧，下次在做单测的时候可以尝试使用了： 12345678910 func testImage() &#123; let viewModelImage = viewModel.image let viewModelImageDataReference = viewModelImage.pngData()! let stubImageDataReference = UIImage(named: "test").pngData()! XCAssertEqual(viewModelImageDataReference, stubImageDataReference) XCAssertEqual(viewModelImage.size.width, desiredWidth) XCAssertEqual(viewModelImage.size.height, desiredHeight)&#125; Share尤尼泰斯特 2020 - 回忆篇]]></content>
       <categories>
         <category>ARTS</category>
       </categories>
@@ -23,7 +31,7 @@
   <entry>
     <title><![CDATA[ARTS 打卡 02]]></title>
     <url>%2F2020%2F07%2F05%2Farts-02%2F</url>
-    <content type="text"><![CDATA[本文主要是公司内部 ARTS 活动打卡记录 AlgorithmReviewTipsShare]]></content>
+    <content type="text"><![CDATA[本文主要是公司内部 ARTS 活动打卡记录二三周的打卡因为工作和家里的原因耽误了，这两个礼拜就会补上 AlgorithmReviewTipsShare]]></content>
       <categories>
         <category>ARTS</category>
       </categories>

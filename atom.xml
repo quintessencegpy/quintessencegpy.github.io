@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://cyberhex.me/"/>
-  <updated>2020-07-05T16:23:55.856Z</updated>
+  <updated>2020-07-05T16:48:29.751Z</updated>
   <id>http://cyberhex.me/</id>
   
   <author>
@@ -17,13 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ARTS 打卡 03</title>
+    <link href="http://cyberhex.me/2020/07/06/arts-03/"/>
+    <id>http://cyberhex.me/2020/07/06/arts-03/</id>
+    <published>2020-07-05T16:45:12.000Z</published>
+    <updated>2020-07-05T16:48:29.751Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Algorithm&quot;&gt;&lt;a href=&quot;#Algorithm&quot; class=&quot;headerlink&quot; title=&quot;Algorithm&quot;&gt;&lt;/a&gt;Algorithm&lt;/h2&gt;&lt;h2 id=&quot;Review&quot;&gt;&lt;a href=&quot;#Review&quot; class=&quot;head
+      
+    
+    </summary>
+    
+      <category term="ARTS" scheme="http://cyberhex.me/categories/ARTS/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>ARTS 打卡 04</title>
     <link href="http://cyberhex.me/2020/07/05/arts-04/"/>
     <id>http://cyberhex.me/2020/07/05/arts-04/</id>
     <published>2020-07-05T15:36:17.000Z</published>
-    <updated>2020-07-05T16:23:55.856Z</updated>
+    <updated>2020-07-05T16:57:40.748Z</updated>
     
-    <content type="html"><![CDATA[<p>本文主要是公司内部 ARTS 活动打卡记录<br><a id="more"></a></p><h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>前一阵做单元测试的时候发现一个问题，就是如果想把 UIImage 作为 ViewModel 的输出的时候会有一个问题就是不知道怎么样单测这个 UIImage 的输出，最后无奈只能让 ViewModel 输出 UIImage 的名字，然后在 ViewController 中来进行 UIImage 的初始化。但是昨天看关于单测的东西的时候发现一个很好用的技巧，下次在做单测的时候可以尝试使用了：</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">testImage</span><span class="params">()</span></span> &#123;</span><br><span class="line"><span class="keyword">let</span> viewModelImage = viewModel.image</span><br><span class="line"><span class="keyword">let</span> viewModelImageDataReference = viewModelImage.pngData()!</span><br><span class="line"><span class="keyword">let</span> stubImageDataReference = <span class="type">UIImage</span>(named: <span class="string">"test"</span>).pngData()!</span><br><span class="line"><span class="type">XCAssertEqual</span>(viewModelImageDataReference, stubImageDataReference)</span><br><span class="line"><span class="type">XCAssertEqual</span>(viewModelImage.size.width, desiredWidth)</span><br><span class="line"><span class="type">XCAssertEqual</span>(viewModelImage.size.height, desiredHeight)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2><p><a href="https://cyberhex.me/2020/06/14/tdd-part-one/">马虎党的福音 - TDD 带你进入新世界</a><br><a href="https://cyberhex.me/2020/07/05/unit-test-short-story-01/">尤尼泰斯特 2020 - 回忆篇</a></p>]]></content>
+    <content type="html"><![CDATA[<p>本文主要是公司内部 ARTS 活动打卡记录<br><a id="more"></a></p><h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><p>前缀树问题（LeetCode 208 中等）</p><p>这个问题也相当于一个比较基础的问题了，它是一些其他题目（比如 Word ladder II 之类的）题目的前置题目，这个题目如果你是想刷算法的话属于必背题目，核心点是在每次插入一个单词的时候更新树的结构，这样的话在下次查找的时候就可以判断是否有这个单词或者是否有以某个单词开头的单词。</p><p>一个比较重要的点就是前缀树和哈希表之间的对比，他们俩在很多时候可以互相替代，前缀树花费的空间更少一些但是单次查询花费的时间更多一点。</p><h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>前一阵做单元测试的时候发现一个问题，就是如果想把 UIImage 作为 ViewModel 的输出的时候会有一个问题就是不知道怎么样单测这个 UIImage 的输出，最后无奈只能让 ViewModel 输出 UIImage 的名字，然后在 ViewController 中来进行 UIImage 的初始化。但是昨天看关于单测的东西的时候发现一个很好用的技巧，下次在做单测的时候可以尝试使用了：</p><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">testImage</span><span class="params">()</span></span> &#123;</span><br><span class="line"><span class="keyword">let</span> viewModelImage = viewModel.image</span><br><span class="line"><span class="keyword">let</span> viewModelImageDataReference = viewModelImage.pngData()!</span><br><span class="line"><span class="keyword">let</span> stubImageDataReference = <span class="type">UIImage</span>(named: <span class="string">"test"</span>).pngData()!</span><br><span class="line"><span class="type">XCAssertEqual</span>(viewModelImageDataReference, stubImageDataReference)</span><br><span class="line"><span class="type">XCAssertEqual</span>(viewModelImage.size.width, desiredWidth)</span><br><span class="line"><span class="type">XCAssertEqual</span>(viewModelImage.size.height, desiredHeight)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2><p><a href="https://cyberhex.me/2020/07/05/unit-test-short-story-01/">尤尼泰斯特 2020 - 回忆篇</a></p>]]></content>
     
     <summary type="html">
     
@@ -65,9 +88,9 @@
     <link href="http://cyberhex.me/2020/07/05/arts-02/"/>
     <id>http://cyberhex.me/2020/07/05/arts-02/</id>
     <published>2020-07-05T09:41:11.000Z</published>
-    <updated>2020-07-05T16:18:44.082Z</updated>
+    <updated>2020-07-05T16:48:25.508Z</updated>
     
-    <content type="html"><![CDATA[<p>本文主要是公司内部 ARTS 活动打卡记录<br><a id="more"></a></p><h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2>]]></content>
+    <content type="html"><![CDATA[<p>本文主要是公司内部 ARTS 活动打卡记录<br><a id="more"></a><br>二三周的打卡因为工作和家里的原因耽误了，这两个礼拜就会补上</p><h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2>]]></content>
     
     <summary type="html">
     
@@ -109,7 +132,7 @@
     <link href="http://cyberhex.me/2020/06/14/arts-01/"/>
     <id>http://cyberhex.me/2020/06/14/arts-01/</id>
     <published>2020-06-14T09:41:11.000Z</published>
-    <updated>2020-06-14T11:07:14.788Z</updated>
+    <updated>2020-07-05T16:57:43.466Z</updated>
     
     <content type="html"><![CDATA[<p>本文主要是公司内部 ARTS 活动打卡记录<br><a id="more"></a></p><h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><p>N 皇后问题（LeetCode 51 困难）</p><p>这个题目也算是 DFS 算法中经典的经典，所以这道题目的结构也是遵循递归的几大步骤（recursion terminator，current level logic，drill down，reverse state if needed），只不过这道题目需要多考虑的是怎么剪枝，也就是如果提前发现本次递归是一个无效的递归就提前终止。我的做法是用了三个 set 来记录当前的位置是否有效，我看讨论区还有一种用位运算来处理的，看起来很 fancy，但是没有仔细去研究，有时间需要好好看一下。</p><p>DFS 一直感觉有一点烧脑，尤其是如果做人肉递归的情况下，以后要养成避免人肉递归的习惯。</p><h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><p>最近一直在看 Raywenderlich 的 RxSwift 的书，已经看到了第 24 章（总共 25 章 fighting！），感觉收获很大，好好反思了之前对于 RxSwift 的用法，觉得有很多不合理的地方，而且也有了一些在工作上该如何使用的思考，顺便思考了之前项目中的架构的不足，由于最近开始折腾单测的问题才发现之前有很多不合理的地方，在之后的重构中要更加注意。</p><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>本来以为这周的 tips 可能要鸽了，但是在打卡前的最后几个小时发现了一个看起来很有意思的小技巧，让我这个强迫症眼前一亮。<br>在 MVVM 中因为每一个 ViewController 都会有一个 ViewModel，所以之前我在创建 ViewController 的时候有两种方法，一种是用 Initializer Injection，也就是把 ViewModel 作为 ViewController的 Init 方法的参数，另一种就是把 ViewModel 设为一个 Optional 的 internal 的变量，在初始化 ViewController 之后把 ViewModel 赋值进去。但感觉这两种方法都有一点不符合我的习惯，第一种需要加一个没用的 required 的 initializer，第二种需要在初始化之后赋值（有可能会忘）。今天发现一种使用工厂方法来创建 ViewController 的套路，如下：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ViewController</span>: <span class="title">UIViewController</span> </span>&#123;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">let</span> viewModel: <span class="type">ViewModel</span></span><br><span class="line"><span class="keyword">static</span> <span class="function"><span class="keyword">func</span> <span class="title">create</span><span class="params">(withViewModel viewModel: ViewModel)</span></span> -&gt; <span class="type">ViewController</span> &#123;</span><br><span class="line"><span class="keyword">let</span> vc = <span class="type">ViewController</span>()</span><br><span class="line">vc.viewModel = viewModel</span><br><span class="line"><span class="keyword">return</span> vc</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2><p><a href="https://cyberhex.me/2020/04/26/coodinator-pattern/">都是 Apple 惹的祸 - Coordinator Pattern 的前世今生</a></p>]]></content>
     
