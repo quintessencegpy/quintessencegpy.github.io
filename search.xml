@@ -25,7 +25,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[A song of TDD and BUG - 副歌]]></title>
+    <title><![CDATA[A song of TDD and BUG - 变奏曲]]></title>
     <url>%2F2020%2F07%2F07%2Ftdd-part-three%2F</url>
     <content type="text"><![CDATA[TDD 与 BUG 的爱恨情仇 历史代码 TDD 改造需要注意的问题Start SmallChoose Your BattleField记得写单测并不是你的目的，减少 Bug 才是，所以我们需要把有限的精力放在收益最大的单侧上。我推荐两种选择写单测优先级的方案： 利用时间局部性：就像 LRU 的思想一下，在最近一段时间修改过的逻辑很有可能在未来一段时间内也需要修改，所以选择用单侧保证这部分逻辑有助于之后的迭代和重构选择基础库]]></content>
       <categories>

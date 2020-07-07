@@ -65,11 +65,11 @@
   </entry>
   
   <entry>
-    <title>A song of TDD and BUG - 副歌</title>
+    <title>A song of TDD and BUG - 变奏曲</title>
     <link href="http://cyberhex.me/2020/07/07/tdd-part-three/"/>
     <id>http://cyberhex.me/2020/07/07/tdd-part-three/</id>
     <published>2020-07-06T16:27:32.000Z</published>
-    <updated>2020-07-06T17:10:06.028Z</updated>
+    <updated>2020-07-07T18:36:25.695Z</updated>
     
     <content type="html"><![CDATA[<p>TDD 与 BUG 的爱恨情仇<br><a id="more"></a></p><h2 id="历史代码-TDD-改造需要注意的问题"><a href="#历史代码-TDD-改造需要注意的问题" class="headerlink" title="历史代码 TDD 改造需要注意的问题"></a>历史代码 TDD 改造需要注意的问题</h2><h3 id="Start-Small"><a href="#Start-Small" class="headerlink" title="Start Small"></a>Start Small</h3><h3 id="Choose-Your-BattleField"><a href="#Choose-Your-BattleField" class="headerlink" title="Choose Your BattleField"></a>Choose Your BattleField</h3><p>记得写单测并不是你的目的，减少 Bug 才是，所以我们需要把有限的精力放在收益最大的单侧上。我推荐两种选择写单测优先级的方案：</p><blockquote><p>利用时间局部性：就像 LRU 的思想一下，在最近一段时间修改过的逻辑很有可能在未来一段时间内也需要修改，所以选择用单侧保证这部分逻辑有助于之后的迭代和重构<br>选择基础库</p></blockquote>]]></content>
     
