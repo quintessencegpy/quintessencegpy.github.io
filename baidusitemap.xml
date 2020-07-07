@@ -2,10 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://cyberhex.me/2020/06/14/tdd-part-one/</loc>
-    <lastmod>2020-07-06T17:10:10.957Z</lastmod>
+    <lastmod>2020-07-07T18:22:39.344Z</lastmod>
+  </url>  <url>
+    <loc>http://cyberhex.me/2020/07/07/tdd-part-two/</loc>
+    <lastmod>2020-07-07T18:08:52.492Z</lastmod>
   </url>  <url>
     <loc>http://cyberhex.me/2018/11/27/concurrency-in-iOS/</loc>
-    <lastmod>2020-07-06T17:10:09.700Z</lastmod>
+    <lastmod>2020-07-07T16:59:53.620Z</lastmod>
   </url>  <url>
     <loc>http://cyberhex.me/2020/07/07/tdd-part-three/</loc>
     <lastmod>2020-07-06T17:10:06.028Z</lastmod>
@@ -15,9 +18,6 @@
   </url>  <url>
     <loc>http://cyberhex.me/2020/07/07/tdd-part-four/</loc>
     <lastmod>2020-07-06T16:31:45.247Z</lastmod>
-  </url>  <url>
-    <loc>http://cyberhex.me/2020/07/07/tdd-part-two/</loc>
-    <lastmod>2020-07-06T16:30:32.162Z</lastmod>
   </url>  <url>
     <loc>http://cyberhex.me/2020/07/05/arts-03/</loc>
     <lastmod>2020-07-05T17:05:43.600Z</lastmod>
