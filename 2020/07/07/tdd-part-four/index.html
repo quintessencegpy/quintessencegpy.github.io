@@ -155,18 +155,18 @@
 
 
 
-  <meta name="description" content="TDD 与 BUG 的爱恨情仇">
+  <meta name="description" content="TDD 与 BUG 的爱恨情仇（卷四），本系列链表头部请戳 A song of TDD and BUG - 前奏曲">
 <meta name="keywords" content="iOS,TDD">
 <meta property="og:type" content="article">
-<meta property="og:title" content="A song of TDD and BUG - 尾声">
+<meta property="og:title" content="A song of TDD and BUG - 变奏曲">
 <meta property="og:url" content="http://cyberhex.me/2020/07/07/tdd-part-four/index.html">
 <meta property="og:site_name" content="CyberHex">
-<meta property="og:description" content="TDD 与 BUG 的爱恨情仇">
+<meta property="og:description" content="TDD 与 BUG 的爱恨情仇（卷四），本系列链表头部请戳 A song of TDD and BUG - 前奏曲">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-07-06T16:31:45.247Z">
+<meta property="og:updated_time" content="2020-07-19T16:07:15.020Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="A song of TDD and BUG - 尾声">
-<meta name="twitter:description" content="TDD 与 BUG 的爱恨情仇">
+<meta name="twitter:title" content="A song of TDD and BUG - 变奏曲">
+<meta name="twitter:description" content="TDD 与 BUG 的爱恨情仇（卷四），本系列链表头部请戳 A song of TDD and BUG - 前奏曲">
 
 
 
@@ -185,7 +185,7 @@
   };
 </script>
 
-  <title>A song of TDD and BUG - 尾声 | CyberHex</title>
+  <title>A song of TDD and BUG - 变奏曲 | CyberHex</title>
   
 
 
@@ -406,7 +406,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">A song of TDD and BUG - 尾声
+          <h1 class="post-title" itemprop="name headline">A song of TDD and BUG - 变奏曲
               
             
           </h1>
@@ -431,12 +431,24 @@
                 
               
 
-              <time title="创建时间：2020-07-07 00:29:34 / 修改时间：00:31:45" itemprop="dateCreated datePublished" datetime="2020-07-07T00:29:34+08:00">2020-07-07</time>
+              <time title="创建时间：2020-07-07 00:47:32" itemprop="dateCreated datePublished" datetime="2020-07-07T00:47:32+08:00">2020-07-07</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-07-20 00:07:15" itemprop="dateModified" datetime="2020-07-20T00:07:15+08:00">2020-07-20</time>
               
             
           </span>
@@ -477,7 +489,7 @@
 
           
           
-             <span id="/2020/07/07/tdd-part-four/" class="leancloud_visitors" data-flag-title="A song of TDD and BUG - 尾声">
+             <span id="/2020/07/07/tdd-part-four/" class="leancloud_visitors" data-flag-title="A song of TDD and BUG - 变奏曲">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-fire"></i>
@@ -509,7 +521,12 @@
       
 
       
-        <p>TDD 与 BUG 的爱恨情仇<br><a id="more"></a></p>
+        <p>TDD 与 BUG 的爱恨情仇（卷四），本系列链表头部请戳 <a href="https://cyberhex.me/2020/06/14/tdd-part-one/">A song of TDD and BUG - 前奏曲</a><br><a id="more"></a></p>
+<h2 id="历史代码-TDD-改造需要注意的问题"><a href="#历史代码-TDD-改造需要注意的问题" class="headerlink" title="历史代码 TDD 改造需要注意的问题"></a>历史代码 TDD 改造需要注意的问题</h2><h3 id="Start-Small"><a href="#Start-Small" class="headerlink" title="Start Small"></a>Start Small</h3><h3 id="Choose-Your-BattleField"><a href="#Choose-Your-BattleField" class="headerlink" title="Choose Your BattleField"></a>Choose Your BattleField</h3><p>记得写单测并不是你的目的，减少 Bug 才是，所以我们需要把有限的精力放在收益最大的单侧上。我推荐两种选择写单测优先级的方案：</p>
+<ol>
+<li>利用时间局部性：就像 LRU 的思想一下，在最近一段时间修改过的逻辑很有可能在未来一段时间内也需要修改，所以选择用单侧保证这部分逻辑有助于之后的迭代和重构。</li>
+<li>“从”新开始：主意是从新，不是重新，也就是暂时考虑放弃之前的逻辑，对新业务使用 TDD 的开发模式来开发。这种比较适合没有时间对老代码进行重构和改造的情况，先对新的业务进行单测，等到业务稳定以后再考虑之前的历史包袱。</li>
+</ol>
 
       
     </div>
@@ -539,9 +556,9 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2020/07/07/tdd-part-four/">A song of TDD and BUG - 尾声</a></p>
+  <p><span>本文标题:</span><a href="/2020/07/07/tdd-part-four/">A song of TDD and BUG - 变奏曲</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Penstein 的个人博客">Penstein</a></p>
-  <p><span>原始链接:</span><a href="/2020/07/07/tdd-part-four/" title="A song of TDD and BUG - 尾声">http://cyberhex.me/2020/07/07/tdd-part-four/</a>
+  <p><span>原始链接:</span><a href="/2020/07/07/tdd-part-four/" title="A song of TDD and BUG - 变奏曲">http://cyberhex.me/2020/07/07/tdd-part-four/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://cyberhex.me/2020/07/07/tdd-part-four/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
@@ -588,8 +605,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/07/07/tdd-part-three/" rel="next" title="A song of TDD and BUG - 变奏曲">
-                <i class="fa fa-chevron-left"></i> A song of TDD and BUG - 变奏曲
+              <a href="/2020/07/07/tdd-part-three/" rel="next" title="A song of TDD and BUG - 副歌">
+                <i class="fa fa-chevron-left"></i> A song of TDD and BUG - 副歌
               </a>
             
           </div>
@@ -598,8 +615,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/07/07/unit-test-short-story-01/" rel="prev" title="尤尼泰斯特 2020 - 回忆篇">
-                尤尼泰斯特 2020 - 回忆篇 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/07/07/tdd-part-five/" rel="prev" title="A song of TDD and BUG - 尾声">
+                A song of TDD and BUG - 尾声 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -648,8 +665,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -668,7 +694,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -835,6 +861,22 @@ show_date_time();
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#历史代码-TDD-改造需要注意的问题"><span class="nav-number">1.</span> <span class="nav-text">历史代码 TDD 改造需要注意的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Start-Small"><span class="nav-number">1.1.</span> <span class="nav-text">Start Small</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Choose-Your-BattleField"><span class="nav-number">1.2.</span> <span class="nav-text">Choose Your BattleField</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
