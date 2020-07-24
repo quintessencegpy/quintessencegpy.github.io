@@ -163,7 +163,7 @@
 <meta property="og:site_name" content="CyberHex">
 <meta property="og:description" content="TDD 与 BUG 的爱恨情仇（卷二），本系列链表头部请戳 A song of TDD and BUG - 前奏曲">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-07-23T18:30:50.352Z">
+<meta property="og:updated_time" content="2020-07-24T17:04:37.254Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="A song of TDD and BUG - 主歌">
 <meta name="twitter:description" content="TDD 与 BUG 的爱恨情仇（卷二），本系列链表头部请戳 A song of TDD and BUG - 前奏曲">
@@ -448,7 +448,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-07-24 02:30:50" itemprop="dateModified" datetime="2020-07-24T02:30:50+08:00">2020-07-24</time>
+                <time title="修改时间：2020-07-25 01:04:37" itemprop="dateModified" datetime="2020-07-25T01:04:37+08:00">2020-07-25</time>
               
             
           </span>
@@ -624,9 +624,8 @@
 <li>RxBlocking 对于无法停止的序列的测试能力很有限，如 BehaviorRelay 这种天生就无法停止的序列就无法用 RxBlocking。</li>
 <li>RxBlocking 会阻塞当前的线程，这个有可能会引起卡死的现象，从而无法进行接下来的单测。</li>
 <li>RxBlocking 无法像 RxTest 对特定时间点的事件进行测试，比如上边 RxTest 的测试中，我们可以很明确的知道在 10、20、30 秒的时候收到了 applicationEnteredForeground，并且我们的输出也是在 10、20、30 秒发出的，但是 RxBlocking 就没有这个能力。</li>
-<li>在这部分刚开始就说了 RxBlocking 是把异步过程强行变成一个同步的过程，所以一些必须要异步触发的 case （比如用一个序列触发另一个序列的这种情况）我们就没法用 RxBlocking。</li>
+<li>在这部分刚开始就说了 RxBlocking 是把异步过程强行变成一个同步的过程，所以一些必须要异步触发的 case （比如用一个序列触发另一个序列的这种情况）我们就没法用 RxBlocking。`</li>
 </ol>
-<p>相比 RxBlocking 写起来非常简单也直观，但使用场。</p>
 <h3 id="如何做选择"><a href="#如何做选择" class="headerlink" title="如何做选择"></a>如何做选择</h3><blockquote>
 <p>只有小孩子才做选择，大人全都要。</p>
 </blockquote>
