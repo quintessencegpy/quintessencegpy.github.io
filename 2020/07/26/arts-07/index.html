@@ -157,14 +157,14 @@
 
   <meta name="description" content="本文主要是公司内部 ARTS 活动打卡记录">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ARTS 打卡 06">
+<meta property="og:title" content="ARTS 打卡 07">
 <meta property="og:url" content="http://cyberhex.me/2020/07/26/arts-07/index.html">
 <meta property="og:site_name" content="CyberHex">
 <meta property="og:description" content="本文主要是公司内部 ARTS 活动打卡记录">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-07-26T15:38:51.182Z">
+<meta property="og:updated_time" content="2020-07-26T15:41:22.481Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ARTS 打卡 06">
+<meta name="twitter:title" content="ARTS 打卡 07">
 <meta name="twitter:description" content="本文主要是公司内部 ARTS 活动打卡记录">
 
 
@@ -184,7 +184,7 @@
   };
 </script>
 
-  <title>ARTS 打卡 06 | CyberHex</title>
+  <title>ARTS 打卡 07 | CyberHex</title>
   
 
 
@@ -405,7 +405,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ARTS 打卡 06
+          <h1 class="post-title" itemprop="name headline">ARTS 打卡 07
               
             
           </h1>
@@ -430,7 +430,7 @@
                 
               
 
-              <time title="创建时间：2020-07-26 22:47:16 / 修改时间：23:38:51" itemprop="dateCreated datePublished" datetime="2020-07-26T22:47:16+08:00">2020-07-26</time>
+              <time title="创建时间：2020-07-26 22:47:16 / 修改时间：23:41:22" itemprop="dateCreated datePublished" datetime="2020-07-26T22:47:16+08:00">2020-07-26</time>
             
 
             
@@ -476,7 +476,7 @@
 
           
           
-             <span id="/2020/07/26/arts-07/" class="leancloud_visitors" data-flag-title="ARTS 打卡 06">
+             <span id="/2020/07/26/arts-07/" class="leancloud_visitors" data-flag-title="ARTS 打卡 07">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-fire"></i>
@@ -514,7 +514,7 @@
 <h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><p>这周看的东西都写在了分享的博客里，主要想说一下这周同事关于 OpenGL 的分享。之前由于苹果对于 OpenGL 有比较好的封装，所以很少接触到它，但是听了分享以后才发现自己对于许多苹果底层的东西知之甚少，比如 OpenGL，比如 Metal。听闻说 Metal 还是 CoreML 的基础（亏我还翻译过关于 CoreML 的文章，惭愧啊），之后在做完单测和 Flutter 分享以后要多花花时间看看这些底层的东西（包括 CoreAnimation 也是云里雾里的）。</p>
 <h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>每次最头疼的就是 Tips 了，但是今天发现一个挺有用的小技巧。之前在 Swift 中使用 Selector 总感觉很山寨，还要写个 #selector，奇奇怪怪的，但是有一种很优雅的解决方式就是在当前文件中写一个 private 的 extension，如下：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">extension</span> <span class="title">Selector</span> </span>&#123;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">let</span> didTapButton = #selector(<span class="type">ViewController</span>.handleButtonTapped)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>然后使用的时候就可以这样：</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">capturePhotoButton.addTarget(<span class="keyword">self</span>, action: . didTapButton, <span class="keyword">for</span>: .touchUpInside)</span><br></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">button.addTarget(<span class="keyword">self</span>, action: .didTapButton, <span class="keyword">for</span>: .touchUpInside)</span><br></pre></td></tr></table></figure>
 <p>真的看起来舒服很多！</p>
 <h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2><p><a href="https://cyberhex.me/2020/06/14/tdd-part-one/">A song of TDD and BUG - 前奏曲</a></p>
 
@@ -546,9 +546,9 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2020/07/26/arts-07/">ARTS 打卡 06</a></p>
+  <p><span>本文标题:</span><a href="/2020/07/26/arts-07/">ARTS 打卡 07</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Penstein 的个人博客">Penstein</a></p>
-  <p><span>原始链接:</span><a href="/2020/07/26/arts-07/" title="ARTS 打卡 06">http://cyberhex.me/2020/07/26/arts-07/</a>
+  <p><span>原始链接:</span><a href="/2020/07/26/arts-07/" title="ARTS 打卡 07">http://cyberhex.me/2020/07/26/arts-07/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://cyberhex.me/2020/07/26/arts-07/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
