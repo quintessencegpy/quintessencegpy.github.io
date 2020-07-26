@@ -2,6 +2,14 @@
 <search>
   <entry>
     <title><![CDATA[ARTS 打卡 06]]></title>
+    <url>%2F2020%2F07%2F26%2Farts-07%2F</url>
+    <content type="text"><![CDATA[本文主要是公司内部 ARTS 活动打卡记录 Algorithm课程表II（LeetCode 210，中等） 这道题算是拓扑排序的经典了（刷了好几遍了，这周好多事偷个懒）。当然底层的算法还是万年不变的 BFS，算是比较好理解，唯一需要的注意的就是入度的定义，这个是这道题除了 BFS 之外的关键。 Review这周看的东西都写在了分享的博客里，主要想说一下这周同事关于 OpenGL 的分享。之前由于苹果对于 OpenGL 有比较好的封装，所以很少接触到它，但是听了分享以后才发现自己对于许多苹果底层的东西知之甚少，比如 OpenGL，比如 Metal。听闻说 Metal 还是 CoreML 的基础（亏我还翻译过关于 CoreML 的文章，惭愧啊），之后在做完单测和 Flutter 分享以后要多花花时间看看这些底层的东西（包括 CoreAnimation 也是云里雾里的）。 Tips每次最头疼的就是 Tips 了，但是今天发现一个挺有用的小技巧。之前在 Swift 中使用 Selector 总感觉很山寨，还要写个 #selector，奇奇怪怪的，但是有一种很优雅的解决方式就是在当前文件中写一个 private 的 extension，如下：123private extension Selector &#123; static let didTapButton = #selector(ViewController.handleButtonTapped)&#125; 然后使用的时候就可以这样： 1capturePhotoButton.addTarget(self, action: . didTapButton, for: .touchUpInside) 真的看起来舒服很多！ ShareA song of TDD and BUG - 前奏曲]]></content>
+      <categories>
+        <category>ARTS</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[ARTS 打卡 06]]></title>
     <url>%2F2020%2F07%2F20%2Farts-06%2F</url>
     <content type="text"><![CDATA[本文主要是公司内部 ARTS 活动打卡记录 AlgorithmK 个一组翻转链表（LeetCode 25，困难） 这个题真的是就算知道怎么做也是要写错好几回，我这次的 AC 率是 6，感觉链表的题还是要多练才行。还有 Dummy Node 的技巧也很重要。 Review这周看了这篇教程：Testing Your RxSwift Code RxTest VS. RxBlocking两个在 Rx 的测试中都非常有用，RxBlocking 更加直观，RxTest 更加全面。 RxTest 可以覆盖大部分测试，而且 TestScheduler 模拟的虚拟时间可以大大缩短测试时间，但是写起来比较长也比较麻烦 相比 RxBlocking 写起来非常简单也直观，但使用场景比较局限，其中对我们来说比较致命的一点是 RxBlocking 对于无法停止的序列的测试能力很有限，并不能提供我们需要的能力。而我们直播中大部分序列都是无限序列，所以暂时不考虑 RxBlocking。 还有一点就是，RxBlocking 无法测试时间相关的用例，比如我在 1s的时候收到一个信号，想测试输出是否在 1s的时候输出某个特定值，RxBlocking 只能测试出来收到了这个值，但是不能确定时间戳。RxBlocking 比较适合测试初始值，或者只有一个状态的序列。 RxBlocking 也会 block 住当前线程，所以之前发生过的，测试走到 RxBlocking的语句之后，就会卡死并且无法继续进行测试也是这个引起的（我们使用了 BehaviorRelay 是无限序列）。 所以之后的测试还是需要继续使用 RxTest，以上。 Tips这次没发现特别骚的套路，所以先鸽了 Share什么时候需要写单测并不是所有的代码都需要你写单测来保证的，总结起来就是“三个不一个要”： 不给自动生成的代码写 Unit Test（比如生成的 getter setter），我们要相信 Xcode（或者其他编辑器），出了问题是天灾，需要我们单独分情况处理，然后给我们自己处理的代码写单测。 不给编译器能发现的问题写 Unit Test，这个不是你需要关心的。 不给第三方库写 Unit Test，所谓疑人不用，用人不疑，你既然辛辛苦苦选择了一个靠谱的第三方库，就要相信他。如果出问题的话处理方式同第一点。 要给自己写的无法用编译器发现问题的代码写 Unit Test，包括自己写的 Class，Method 等。 总结一下，上边的原则看起来挺多，其实就是一句话：上帝的归上帝，凯撒的归凯撒，自己的锅自己背，别人的锅我不管。]]></content>
       <categories>
@@ -133,8 +141,8 @@
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>iOS</tag>
         <tag>Swift</tag>
+        <tag>iOS</tag>
         <tag>Design Pattern</tag>
       </tags>
   </entry>
@@ -146,8 +154,8 @@
         <category>翻译</category>
       </categories>
       <tags>
-        <tag>iOS</tag>
         <tag>Swift</tag>
+        <tag>iOS</tag>
         <tag>Design Pattern</tag>
       </tags>
   </entry>
@@ -159,8 +167,8 @@
         <category>工作总结</category>
       </categories>
       <tags>
-        <tag>iOS</tag>
         <tag>Swift</tag>
+        <tag>iOS</tag>
         <tag>Design Pattern</tag>
       </tags>
   </entry>
@@ -172,8 +180,8 @@
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>iOS</tag>
         <tag>Swift</tag>
+        <tag>iOS</tag>
         <tag>Concurrency</tag>
       </tags>
   </entry>
@@ -185,8 +193,8 @@
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>Objective-C</tag>
         <tag>iOS</tag>
+        <tag>Objective-C</tag>
         <tag>Nullability</tag>
       </tags>
   </entry>

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://cyberhex.me/2020/07/26/arts-07/</loc>
+    <lastmod>2020-07-26T15:38:51.182Z</lastmod>
+  </url>  <url>
+    <loc>http://cyberhex.me/2020/05/16/flutter-setup/</loc>
+    <lastmod>2020-07-25T06:26:09.323Z</lastmod>
+  </url>  <url>
     <loc>http://cyberhex.me/2020/07/07/tdd-part-two/</loc>
     <lastmod>2020-07-24T17:04:37.254Z</lastmod>
   </url>  <url>
@@ -36,9 +42,6 @@
   </url>  <url>
     <loc>http://cyberhex.me/2020/07/05/arts-04/</loc>
     <lastmod>2020-07-05T16:57:40.748Z</lastmod>
-  </url>  <url>
-    <loc>http://cyberhex.me/2020/05/16/flutter-setup/</loc>
-    <lastmod>2020-06-14T11:07:44.290Z</lastmod>
   </url>  <url>
     <loc>http://cyberhex.me/2020/04/26/coodinator-pattern/</loc>
     <lastmod>2020-06-14T11:02:17.519Z</lastmod>
