@@ -163,7 +163,7 @@
 <meta property="og:site_name" content="CyberHex">
 <meta property="og:description" content="TDD 与 BUG 的爱恨情仇（卷四），本系列链表头部请戳 A song of TDD and BUG - 前奏曲">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-07-20T15:01:31.811Z">
+<meta property="og:updated_time" content="2020-07-29T17:11:22.645Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="A song of TDD and BUG - 变奏曲">
 <meta name="twitter:description" content="TDD 与 BUG 的爱恨情仇（卷四），本系列链表头部请戳 A song of TDD and BUG - 前奏曲">
@@ -448,7 +448,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-07-20 23:01:31" itemprop="dateModified" datetime="2020-07-20T23:01:31+08:00">2020-07-20</time>
+                <time title="修改时间：2020-07-30 01:11:22" itemprop="dateModified" datetime="2020-07-30T01:11:22+08:00">2020-07-30</time>
               
             
           </span>
@@ -522,7 +522,7 @@
 
       
         <p>TDD 与 BUG 的爱恨情仇（卷四），本系列链表头部请戳 <a href="https://cyberhex.me/2020/06/14/tdd-part-one/">A song of TDD and BUG - 前奏曲</a><br><a id="more"></a></p>
-<h2 id="历史代码-TDD-改造需要注意的问题"><a href="#历史代码-TDD-改造需要注意的问题" class="headerlink" title="历史代码 TDD 改造需要注意的问题"></a>历史代码 TDD 改造需要注意的问题</h2><h3 id="Start-Small"><a href="#Start-Small" class="headerlink" title="Start Small"></a>Start Small</h3><h3 id="Choose-Your-BattleField"><a href="#Choose-Your-BattleField" class="headerlink" title="Choose Your BattleField"></a>Choose Your BattleField</h3><p>记得写单测并不是你的目的，减少 Bug 才是，所以我们需要把有限的精力放在收益最大的单侧上。我推荐两种选择写单测优先级的方案：</p>
+<h2 id="All-About-Change"><a href="#All-About-Change" class="headerlink" title="All About Change"></a>All About Change</h2><h2 id="劝分不劝和"><a href="#劝分不劝和" class="headerlink" title="劝分不劝和"></a>劝分不劝和</h2><h2 id="Dependency-Map"><a href="#Dependency-Map" class="headerlink" title="Dependency Map"></a>Dependency Map</h2><h2 id="历史代码-TDD-改造需要注意的问题"><a href="#历史代码-TDD-改造需要注意的问题" class="headerlink" title="历史代码 TDD 改造需要注意的问题"></a>历史代码 TDD 改造需要注意的问题</h2><h3 id="Start-Small"><a href="#Start-Small" class="headerlink" title="Start Small"></a>Start Small</h3><h3 id="Choose-Your-BattleField"><a href="#Choose-Your-BattleField" class="headerlink" title="Choose Your BattleField"></a>Choose Your BattleField</h3><p>记得写单测并不是你的目的，减少 Bug 才是，所以我们需要把有限的精力放在收益最大的单侧上。我推荐两种选择写单测优先级的方案：</p>
 <ol>
 <li>利用时间局部性：就像 LRU 的思想一下，在最近一段时间修改过的逻辑很有可能在未来一段时间内也需要修改，所以选择用单侧保证这部分逻辑有助于之后的迭代和重构。</li>
 <li>“从”新开始：主意是从新，不是重新，也就是暂时考虑放弃之前的逻辑，对新业务使用 TDD 的开发模式来开发。这种比较适合没有时间对老代码进行重构和改造的情况，先对新的业务进行单测，等到业务稳定以后再考虑之前的历史包袱。</li>
@@ -871,7 +871,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#历史代码-TDD-改造需要注意的问题"><span class="nav-number">1.</span> <span class="nav-text">历史代码 TDD 改造需要注意的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Start-Small"><span class="nav-number">1.1.</span> <span class="nav-text">Start Small</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Choose-Your-BattleField"><span class="nav-number">1.2.</span> <span class="nav-text">Choose Your BattleField</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#All-About-Change"><span class="nav-number">1.</span> <span class="nav-text">All About Change</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#劝分不劝和"><span class="nav-number">2.</span> <span class="nav-text">劝分不劝和</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dependency-Map"><span class="nav-number">3.</span> <span class="nav-text">Dependency Map</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#历史代码-TDD-改造需要注意的问题"><span class="nav-number">4.</span> <span class="nav-text">历史代码 TDD 改造需要注意的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Start-Small"><span class="nav-number">4.1.</span> <span class="nav-text">Start Small</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Choose-Your-BattleField"><span class="nav-number">4.2.</span> <span class="nav-text">Choose Your BattleField</span></a></li></ol></li></ol></div>
             
 
           </div>
