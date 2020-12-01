@@ -163,7 +163,7 @@
 <meta property="og:site_name" content="CyberHex">
 <meta property="og:description" content="本文主要是苹果线上活动 - 基于 CreateML 的物体识别的观后感和一点想法。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-12-01T13:38:01.627Z">
+<meta property="og:updated_time" content="2020-12-01T15:03:20.128Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CreateML - 开启革命的星星之火">
 <meta name="twitter:description" content="本文主要是苹果线上活动 - 基于 CreateML 的物体识别的观后感和一点想法。">
@@ -448,7 +448,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-12-01 21:38:01" itemprop="dateModified" datetime="2020-12-01T21:38:01+08:00">2020-12-01</time>
+                <time title="修改时间：2020-12-01 23:03:20" itemprop="dateModified" datetime="2020-12-01T23:03:20+08:00">2020-12-01</time>
               
             
           </span>
@@ -522,7 +522,7 @@
 
       
         <p>本文主要是苹果线上活动 - 基于 CreateML 的物体识别的观后感和一点想法。<br><a id="more"></a></p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>Core ML 在 2017 年的横空出世开启了 iOS 机器学习的元年。但苹果貌似并没有准备在这条路上停下脚步，隔了仅仅一年，苹果就推出了 Create ML，之后苹果还在不断地给 Core ML 和 Create ML 添加新的功能，甚至在 XCode 11 之后将 Create ML 独立成为一个单独的 App。由此可见，苹果并不是拍拍脑袋或者搞搞 KPI（他们应该没有，只是为了押韵），他们是认真在考虑把 Machine Learning 移植到移动端，并且不断地在尝试去降低 Machine Learning 的门槛，让越来越多的开发正更方便的使用 Machine Learning 给自己的应用增砖添瓦。</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>Core ML 在 2017 年的横空出世开启了苹果机器学习的元年。但苹果貌似并没有准备在这条路上停下脚步，隔了仅仅一年，苹果就推出了 Create ML，之后苹果还在不断地给 Core ML 和 Create ML 添加新的功能，甚至在 XCode 11 之后将 Create ML 独立成为一个单独的 App。由此可见，苹果并不是拍拍脑袋或者搞搞 KPI（他们应该没有，只是为了押韵），他们是认真在考虑把 Machine Learning 移植到移动端，并且不断地在尝试去降低 Machine Learning 的门槛，让越来越多的开发正更方便的使用 Machine Learning 给自己的应用增砖添瓦。</p>
 <h2 id="什么是-Create-ML"><a href="#什么是-Create-ML" class="headerlink" title="什么是 Create ML"></a>什么是 Create ML</h2><p>关于 CreateML 网上有太多的介绍和教程，我只做一下简单的介绍，因为我再怎么努力也没办法比前人讲的更好更清楚，既然这样，那就站在巨人的肩膀上，大概讲一下我的认识。</p>
 <p>苹果在 2016 年收购了 Turi Create，然后在此基础上发展出了 Create ML（虽然在 WWDC 中没有明说，但是大家都心知肚明）。在 Create ML 之前如果你想在 iOS 中使用 Core ML 的 Model（mlmodel 格式的文件）的话，只能在 TensorFlow，Pytorch 等流行的框架中先进行模型训练，然后通过 Core ML 中的 converter 把这些模型转换成 mlmodel 的格式。这其实是有一定门槛的，首先你得对 TensorFlow，Pytorch 有一定的了解，也要会使用 Python 语言（虽然不是很难），最重要的是你得对机器学习有比较多的了解，才能把自己的想法转化成模型。</p>
 <p>但 Create ML 的出现，打破了这个壁垒。Create ML 中现在有很多机器学习的类型，包括：Image，Video，Motion，Sound，Text 和 Table，囊括了很多我们平时会遇到的场景，我们通过其中预设的 Template 再加上几行代码（如果你用 GUI 工具甚至一行代码都不用写），通过对收集的数据进行训练，在你的 Mac 上就可以得到一个 well-trained 模型。这其中除了一些对数据集有一些需要注意的点 - 比如数据集要尽量均衡，要有不同的背景、不同的角度，要有噪音等等，你不需要对内部的神经网络之类的有很多的了解。剩下需要你做的基本就是一些拖拽，设置参数，泡杯卡布奇诺等待 Mac 帮你 Training 之类的操作。</p>

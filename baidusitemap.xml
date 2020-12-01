@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://cyberhex.me/2020/07/07/tdd-part-four/</loc>
+    <lastmod>2020-12-01T15:23:25.770Z</lastmod>
+  </url>  <url>
+    <loc>http://cyberhex.me/2020/07/07/tdd-part-five/</loc>
+    <lastmod>2020-12-01T15:23:10.658Z</lastmod>
+  </url>  <url>
     <loc>http://cyberhex.me/2020/12/01/arts-09/</loc>
-    <lastmod>2020-12-01T13:42:29.155Z</lastmod>
+    <lastmod>2020-12-01T15:22:31.051Z</lastmod>
   </url>  <url>
     <loc>http://cyberhex.me/2020/11/24/create-ml-introduction/</loc>
-    <lastmod>2020-12-01T13:38:01.627Z</lastmod>
-  </url>  <url>
-    <loc>http://cyberhex.me/2020/07/07/tdd-part-four/</loc>
-    <lastmod>2020-11-30T16:32:14.400Z</lastmod>
+    <lastmod>2020-12-01T15:03:20.128Z</lastmod>
   </url>  <url>
     <loc>http://cyberhex.me/2020/08/02/arts-08/</loc>
     <lastmod>2020-08-02T14:42:10.067Z</lastmod>
@@ -30,9 +33,6 @@
   </url>  <url>
     <loc>http://cyberhex.me/2020/07/26/arts-07/</loc>
     <lastmod>2020-07-26T15:41:22.481Z</lastmod>
-  </url>  <url>
-    <loc>http://cyberhex.me/2020/07/07/tdd-part-five/</loc>
-    <lastmod>2020-07-20T15:01:33.376Z</lastmod>
   </url>  <url>
     <loc>http://cyberhex.me/2020/07/20/arts-06/</loc>
     <lastmod>2020-07-19T17:15:56.706Z</lastmod>

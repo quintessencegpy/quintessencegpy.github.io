@@ -155,17 +155,17 @@
 
 
 
-  <meta name="description" content="AlgorithmReviewTips这两周没想起来啥 Tips，鸽了。 ShareCreateML - 开启革命的星星之火">
+  <meta name="description" content="Algorithm排序链表圈（Leetcode 148，中等） 123456789101112131415161718192021222324252627282930313233343536class Solution:    def sortList(self, head: ListNode) -&amp;gt; ListNode:        if not head or not head.next">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ARTS 打卡 09">
 <meta property="og:url" content="http://cyberhex.me/2020/12/01/arts-09/index.html">
 <meta property="og:site_name" content="CyberHex">
-<meta property="og:description" content="AlgorithmReviewTips这两周没想起来啥 Tips，鸽了。 ShareCreateML - 开启革命的星星之火">
+<meta property="og:description" content="Algorithm排序链表圈（Leetcode 148，中等） 123456789101112131415161718192021222324252627282930313233343536class Solution:    def sortList(self, head: ListNode) -&amp;gt; ListNode:        if not head or not head.next">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-12-01T13:42:29.155Z">
+<meta property="og:updated_time" content="2020-12-01T15:22:31.051Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ARTS 打卡 09">
-<meta name="twitter:description" content="AlgorithmReviewTips这两周没想起来啥 Tips，鸽了。 ShareCreateML - 开启革命的星星之火">
+<meta name="twitter:description" content="Algorithm排序链表圈（Leetcode 148，中等） 123456789101112131415161718192021222324252627282930313233343536class Solution:    def sortList(self, head: ListNode) -&amp;gt; ListNode:        if not head or not head.next">
 
 
 
@@ -430,7 +430,7 @@
                 
               
 
-              <time title="创建时间：2020-12-01 21:38:19 / 修改时间：21:42:29" itemprop="dateCreated datePublished" datetime="2020-12-01T21:38:19+08:00">2020-12-01</time>
+              <time title="创建时间：2020-12-01 21:38:19 / 修改时间：23:22:31" itemprop="dateCreated datePublished" datetime="2020-12-01T21:38:19+08:00">2020-12-01</time>
             
 
             
@@ -508,7 +508,11 @@
       
 
       
-        <h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>这两周没想起来啥 Tips，鸽了。</p>
+        <h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><p>排序链表圈（Leetcode 148，中等）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sortList</span><span class="params">(self, head: ListNode)</span> -&gt; ListNode:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> head <span class="keyword">or</span> <span class="keyword">not</span> head.next:</span><br><span class="line">            <span class="keyword">return</span> head</span><br><span class="line">        mid = self.find_mid(head)</span><br><span class="line">        right = self.sortList(mid.next)</span><br><span class="line">        mid.next = <span class="keyword">None</span></span><br><span class="line">        left = self.sortList(head)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> self.merge(left, right)</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">merge</span><span class="params">(self, left, right)</span>:</span></span><br><span class="line">        dummy = ListNode(<span class="number">0</span>)</span><br><span class="line">        tail = dummy</span><br><span class="line">        <span class="keyword">while</span> left <span class="keyword">and</span> right:</span><br><span class="line">            <span class="keyword">if</span> left.val &lt;= right.val:</span><br><span class="line">                tail.next = left</span><br><span class="line">                left = left.next</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                tail.next = right</span><br><span class="line">                right = right.next</span><br><span class="line">            tail = tail.next</span><br><span class="line">        <span class="keyword">if</span> left:</span><br><span class="line">            tail.next = left</span><br><span class="line">        <span class="keyword">if</span> right:</span><br><span class="line">            tail.next = right</span><br><span class="line">        <span class="keyword">return</span> dummy.next</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">find_mid</span><span class="params">(self, head)</span>:</span></span><br><span class="line">        slow, fast = head, head.next</span><br><span class="line">        <span class="keyword">while</span> fast <span class="keyword">and</span> fast.next:</span><br><span class="line">            fast = fast.next.next</span><br><span class="line">            slow = slow.next</span><br><span class="line">        <span class="keyword">return</span> slow</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><p><a href="https://developer.apple.com/videos/play/wwdc2020/10152/" target="_blank" rel="noopener">Use model deployment and security with Core ML</a></p>
+<p>通过 WWDC 这个讲座了解到了 MLModel 可以通过 AppleCloud 的方式进行更新和维护，还可以有不同的 ModelCollection 针对不同种类的用户，如果使用这种方式的话并不会增加包体积，而且还有了官方支持的方法可以进行 A/B Test。之后在一些需要实时机器学习的场景（比如视频，音频等）就可以引入 MLModel 而不是用云端处理的方式，这样会有更好的用户体验。</p>
+<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>这两周没想起来啥 Tips，鸽了。</p>
 <h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2><p><a href="https://cyberhex.me/2020/11/24/create-ml-introduction/">CreateML - 开启革命的星星之火</a></p>
 
       
