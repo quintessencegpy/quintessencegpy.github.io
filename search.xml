@@ -258,7 +258,7 @@
 <h3 id="仍然不够成熟"><a href="#仍然不够成熟" class="headerlink" title="仍然不够成熟"></a>仍然不够成熟</h3><p>和隔壁使用 Python 生态的机器学习圈相比，苹果和 Swift 仍然有挺长的路要走。虽然 Create ML 包含了 Image，Video，Motion，Sound，Text 和 Table 的类别，但是其中暂时也是只有一些特定的 Template 可以使用，还是略显单薄。</p>
 <h3 id="无法在云端训练"><a href="#无法在云端训练" class="headerlink" title="无法在云端训练"></a>无法在云端训练</h3><p>虽然在 Mac 上就能进行 Training 听起来非常美好，但是缺乏在云端训练的功能还是一个比较值得注意的问题。如果想让更多的用户转移到 Create ML 这个平台势必要考虑这个问题。但如果 Create ML 的定位就是轻量级别的 Training 的话，这可能也算不上一个问题。</p>
 <h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>从苹果这些年的一系列动作可以看出他们对于机器学习的生态有很大的野望，和谷歌等大公司的明争暗斗也让人看得眼花缭乱。谷歌也在积极推进 Swift for TensorFlow，从侧面也能看出谷歌对他这个对手的尊重。在我们凡人围观这场“神仙打架”的过程中也能看出来 Create ML 的出现更像一场即将或正在发生的革命 - 曾经机器学习的大部分资源都掌握在少数“AI精英”的手中，Create ML 的出现有助于打破现有的 “机器学习垄断”，让更多的开发者能有一个像样的交通工具加入这个赛道，虽然比不上别人的兰博基尼，但是也算有了代步的工具。随着更多人的加入，全民机器学习的时代可能会比我们想象的更早到来，到时候作为非机器学习的开发者也将有机会把自己的想法转化成真正的产品，AI 相关的应用将犹如雨后春笋般的出现。</p>
-<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>感谢公司的这次机会以及苹果员工精彩的演讲和耐心的咨询。最后打个广告：落叶的一生就是为了归根吗？曾经的我也相信宿命论 - 程序员就是要 996 的，疫情是要被裁员的，出游是要自掏腰包的，五一是只有三天假的 … 仿佛死神与巴格达商人在萨拉马的相会，一切都是那么无力。直到我加入了猿辅导，我的世界观崩塌了：原来程序员也不一定非要 996，疫情期间会有更多的项目和机会，出游是公司掏钱，五一有九天假！从来没见过如此“不讲武德”的公司，说好的武林要以和为贵呢？你这样其他公司怎么活！那你还在等什么，加入我们，我的邮箱是 <a href="mailto:&#x67;&#x6f;&#117;&#x70;&#x79;&#x40;&#102;&#x65;&#x6e;&#98;&#105;&#x2e;&#99;&#111;&#109;">goupy@fenbi.com</a>，内推我是认真的，你值得拥有更好的。</p>
+<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>感谢公司的这次机会以及苹果员工精彩的演讲和耐心的咨询。最后打个广告：落叶的一生就是为了归根吗？曾经的我也相信宿命论 - 程序员就是要 996 的，疫情是要被裁员的，出游是要自掏腰包的，五一是只有三天假的 … 仿佛死神与巴格达商人在萨拉马的相会，一切都是那么无力。直到我加入了猿辅导，我的世界观崩塌了：原来程序员也不一定非要 996，疫情期间会有更多的项目和机会，出游是公司掏钱，五一有九天假！从来没见过如此“不讲武德”的公司，说好的武林要以和为贵呢？你这样其他公司怎么活！那你还在等什么，加入我们，我的邮箱是 <a href="mailto:&#x67;&#x6f;&#x75;&#x70;&#121;&#64;&#102;&#101;&#x6e;&#98;&#x69;&#46;&#99;&#111;&#x6d;">goupy@fenbi.com</a>，内推我是认真的，你值得拥有更好的。</p>
 <div class="note info">
             <p>相关链接：<br><a href="https://www.notion.so/Create-ML-84d28aa842064be7b74eb3bde136bd93">笔记 - 基于 Create ML 的物体识别</a><br><a href="https://machinethink.net/blog/new-in-apple-machine-learning-2020/">Apple machine learning in 2020: What’s new?</a><br><a href="https://www.raywenderlich.com/5653-create-ml-tutorial-getting-started#toc-anchor-020">Create ML Tutorial: Getting Started</a><br><a href="http://www.cocoachina.com/articles/26420">WWDC 2018：初探 Create ML</a><br><a href="https://www.zhihu.com/question/41979241">什么是迁移学习 (Transfer Learning)？这个领域历史发展前景如何？</a><br><a href="https://www.netguru.com/codestories/createml-start-your-adventure-in-machine-learning-with-swift">CreateML: Start Your Adventure in Machine Learning with Swift</a><br><a href="https://hongchaozhang.github.io/blog/2018/06/15/introducing-create-ml/">Introducing Create ML</a><br><a href="https://heartbeat.fritz.ai/sound-classification-using-core-ml-3-and-create-ml-fc73ca20aff5">Sound Classification on iOS Using Core ML 3 and Create ML</a><br><a href="https://www.computerworld.com/article/3293446/why-apple-s-create-ml-matters-to-your-enterprise.html">Why Apple’s Create ML matters to your enterprise</a></p>
           </div>
@@ -301,6 +301,72 @@
       </categories>
       <tags>
         <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Objective-C 中 Nullability 的使用</title>
+    <url>/2018/11/25/nullability-annotations-in-objective-c/</url>
+    <content><![CDATA[<p>本文主要记录在学习 Objective-C 的过程中关于 Nullability 的问题。</p>
+<span id="more"></span>
+
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>我们都知道 Swift 和 Objective-C 可以同时存在于同一个 project 中，但想让他们俩兄弟同时幸福快乐和谐的生活在同一个项目中并不是一件容易的事。 Swift 小老弟最大的优势就是 Type Safety, 而 Objective-C 老大哥最大的“问题”就是可以有满屏的 nil。 在 Swift 中如果你想在不初始化一个变量的情况使用这个变量，你必须要提前告知 Xcode 这个变量是 optional 的， 但是 Objective-C 就没有这样的要求。 那么怎么解决这个问题呢，苹果最后引入了 Nullability 来给 Objective-C 加入一些安全保障。</p>
+<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>在 Objective-C 中有以下代码：</p>
+<figure class="highlight objc"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Objective-C</span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">User</span>: <span class="title">NSObject</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">copy</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSString</span> *username;</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">copy</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSString</span> *password;</span><br><span class="line"></span><br><span class="line">- (<span class="type">BOOL</span>)loginWithUsername:(<span class="built_in">NSString</span> *)username</span><br><span class="line">                 password:(<span class="built_in">NSString</span> *)password;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+
+<p>但是如果这段代码是存在与两种语言混合的项目中，这段代码 import 进如 Swift 之后就成了一下这样：</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Swift</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">User</span>: <span class="title class_ inherited__">NSObject</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> username: <span class="type">String</span>!</span><br><span class="line">    <span class="keyword">var</span> password: <span class="type">String</span>!</span><br><span class="line"></span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">login</span>(<span class="params">withUsername</span> <span class="params">username</span>: <span class="type">String</span>!,</span><br><span class="line">                            <span class="params">password</span>: <span class="type">String</span>!) -&gt; <span class="type">Bool</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们看到了满屏的惊叹号，这对于有强迫症的同学简直是一种煎熬，为什么会这样呢？<br>因为 Swift 是 Type Safe 的语言，除非你提前申明这个变量是 optional，否则他不会让你随便给变量赋值 nil。</p>
+<p>但是，如果在 Objective-C 中引入了 Nullability， 这个问题就会大大改善，比如下边的例子：</p>
+<figure class="highlight objc"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Objective-C</span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">User</span>: <span class="title">NSObject</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonnull</span>, <span class="keyword">copy</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSString</span> *username;</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nullable</span>, <span class="keyword">copy</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSString</span> *password;</span><br><span class="line"></span><br><span class="line">- (<span class="type">BOOL</span>)loginWithUsername:(<span class="keyword">nonnull</span> <span class="built_in">NSString</span> *)username</span><br><span class="line">                 password:(<span class="keyword">nonnull</span> <span class="built_in">NSString</span> *)password;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+
+<p>在 Swift 中，接口就会变成以下的情况：</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Swift</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">User</span>: <span class="title class_ inherited__">NSObject</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> username: <span class="type">String</span></span><br><span class="line">    <span class="keyword">var</span> password: <span class="type">String？</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">login</span>(<span class="params">withUsername</span> <span class="params">username</span>: <span class="type">String</span>,</span><br><span class="line">                            <span class="params">password</span>: <span class="type">String</span>) -&gt; <span class="type">Bool</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>但是，虽然这样解决的 Swift 和 Objective-C 之间搭桥的问题，Objective-C 本身并没有发生改变，他还是该吃吃，该喝喝，runtime 的行为模式和以前没啥区别，毕竟嘛，那什么改不了那啥。但是经过这样的改变，compiler 会站出来在我们用错 API 的时候提出警告。</p>
+<h2 id="四种-Nullability-标记"><a href="#四种-Nullability-标记" class="headerlink" title="四种 Nullability 标记"></a>四种 Nullability 标记</h2><table>
+<thead>
+<tr>
+<th align="center">Pointers</th>
+<th align="center">Properties</th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">_Null_unspecified</td>
+<td align="center">null_unspecified</td>
+<td align="center">默认值，在搭桥到 Swift 后会成为 unwrapped optional</td>
+</tr>
+<tr>
+<td align="center">_Nonnull</td>
+<td align="center">nonnull</td>
+<td align="center">在搭桥到 Swift 后变成正常变量声明</td>
+</tr>
+<tr>
+<td align="center">_Nullable</td>
+<td align="center">nullable</td>
+<td align="center">在搭桥到 Swift 后变成 optional</td>
+</tr>
+<tr>
+<td align="center">N&#x2F;A</td>
+<td align="center">null_resettable</td>
+<td align="center">这种变量在读的时候不会是 nil， 但是可以重置为nil</td>
+</tr>
+</tbody></table>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>这算是我第一篇正儿八经的博客了，也算是学习笔记性质的记录博客，所以内容不一定是完全正确的，所以还希望各位大佬不吝赐教，大家一起学习。</p>
+<div class="note info">
+            <p>相关链接：</p><p><a href="https://teamtreehouse.com/library/nullability-annotations-in-objectivec">Tree House: Nullability Annotations in Objective-C</a></p>
+          </div>
+
+
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+        <tag>Objective-C</tag>
+        <tag>Nullability</tag>
       </tags>
   </entry>
   <entry>
@@ -413,7 +479,7 @@
     <content><![CDATA[<p>TDD 与 BUG 的爱恨情仇（卷五），本系列链表头部请戳 <a href="https://cyberhex.me/2020/06/14/tdd-part-one/">A song of TDD and BUG - 前奏曲</a></p>
 <span id="more"></span>
 
-<h2 id="结语与鸣谢"><a href="#结语与鸣谢" class="headerlink" title="结语与鸣谢"></a>结语与鸣谢</h2><p>感谢同事们（海春，超超等）在我迷茫的时候的帮助，感谢强哥对整个系列的 review 和宝贵意见。最后打个广告：落叶的一生就是为了归根吗？曾经的我也相信宿命论 - 程序员就是要 996 的，疫情是要被裁员的，出游是要自掏腰包的，五一是只有三天假的 … 仿佛死神与巴格达商人在萨拉马的相会，一切都是那么无力。直到我加入了猿辅导，我的世界观崩塌了：原来程序员也不一定非要 996，疫情期间会有更多的项目和机会，出游是公司掏钱，五一有九天假！从来没见过如此“不讲武德”的公司，说好的武林要以和为贵呢？你这样其他公司怎么活！那你还在等什么，加入我们，我的邮箱是 <a href="mailto:&#x67;&#x6f;&#x75;&#112;&#x79;&#64;&#102;&#101;&#x6e;&#98;&#x69;&#x2e;&#x63;&#111;&#109;">goupy@fenbi.com</a>，内推我是认真的，你值得拥有更好的。</p>
+<h2 id="结语与鸣谢"><a href="#结语与鸣谢" class="headerlink" title="结语与鸣谢"></a>结语与鸣谢</h2><p>感谢同事们（海春，超超等）在我迷茫的时候的帮助，感谢强哥对整个系列的 review 和宝贵意见。最后打个广告：落叶的一生就是为了归根吗？曾经的我也相信宿命论 - 程序员就是要 996 的，疫情是要被裁员的，出游是要自掏腰包的，五一是只有三天假的 … 仿佛死神与巴格达商人在萨拉马的相会，一切都是那么无力。直到我加入了猿辅导，我的世界观崩塌了：原来程序员也不一定非要 996，疫情期间会有更多的项目和机会，出游是公司掏钱，五一有九天假！从来没见过如此“不讲武德”的公司，说好的武林要以和为贵呢？你这样其他公司怎么活！那你还在等什么，加入我们，我的邮箱是 <a href="mailto:&#x67;&#x6f;&#117;&#x70;&#x79;&#x40;&#x66;&#101;&#x6e;&#98;&#x69;&#x2e;&#99;&#111;&#109;">goupy@fenbi.com</a>，内推我是认真的，你值得拥有更好的。</p>
 ]]></content>
       <categories>
         <category>工作总结</category>
@@ -556,72 +622,6 @@
       <tags>
         <tag>iOS</tag>
         <tag>TDD</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Objective-C 中 Nullability 的使用</title>
-    <url>/2018/11/25/nullability-annotations-in-objective-c/</url>
-    <content><![CDATA[<p>本文主要记录在学习 Objective-C 的过程中关于 Nullability 的问题。</p>
-<span id="more"></span>
-
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>我们都知道 Swift 和 Objective-C 可以同时存在于同一个 project 中，但想让他们俩兄弟同时幸福快乐和谐的生活在同一个项目中并不是一件容易的事。 Swift 小老弟最大的优势就是 Type Safety, 而 Objective-C 老大哥最大的“问题”就是可以有满屏的 nil。 在 Swift 中如果你想在不初始化一个变量的情况使用这个变量，你必须要提前告知 Xcode 这个变量是 optional 的， 但是 Objective-C 就没有这样的要求。 那么怎么解决这个问题呢，苹果最后引入了 Nullability 来给 Objective-C 加入一些安全保障。</p>
-<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>在 Objective-C 中有以下代码：</p>
-<figure class="highlight objc"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Objective-C</span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">User</span>: <span class="title">NSObject</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">copy</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSString</span> *username;</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">copy</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSString</span> *password;</span><br><span class="line"></span><br><span class="line">- (<span class="type">BOOL</span>)loginWithUsername:(<span class="built_in">NSString</span> *)username</span><br><span class="line">                 password:(<span class="built_in">NSString</span> *)password;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
-
-<p>但是如果这段代码是存在与两种语言混合的项目中，这段代码 import 进如 Swift 之后就成了一下这样：</p>
-<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Swift</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">User</span>: <span class="title class_ inherited__">NSObject</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> username: <span class="type">String</span>!</span><br><span class="line">    <span class="keyword">var</span> password: <span class="type">String</span>!</span><br><span class="line"></span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">login</span>(<span class="params">withUsername</span> <span class="params">username</span>: <span class="type">String</span>!,</span><br><span class="line">                            <span class="params">password</span>: <span class="type">String</span>!) -&gt; <span class="type">Bool</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>我们看到了满屏的惊叹号，这对于有强迫症的同学简直是一种煎熬，为什么会这样呢？<br>因为 Swift 是 Type Safe 的语言，除非你提前申明这个变量是 optional，否则他不会让你随便给变量赋值 nil。</p>
-<p>但是，如果在 Objective-C 中引入了 Nullability， 这个问题就会大大改善，比如下边的例子：</p>
-<figure class="highlight objc"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Objective-C</span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">User</span>: <span class="title">NSObject</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonnull</span>, <span class="keyword">copy</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSString</span> *username;</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nullable</span>, <span class="keyword">copy</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSString</span> *password;</span><br><span class="line"></span><br><span class="line">- (<span class="type">BOOL</span>)loginWithUsername:(<span class="keyword">nonnull</span> <span class="built_in">NSString</span> *)username</span><br><span class="line">                 password:(<span class="keyword">nonnull</span> <span class="built_in">NSString</span> *)password;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
-
-<p>在 Swift 中，接口就会变成以下的情况：</p>
-<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Swift</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">User</span>: <span class="title class_ inherited__">NSObject</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> username: <span class="type">String</span></span><br><span class="line">    <span class="keyword">var</span> password: <span class="type">String？</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">login</span>(<span class="params">withUsername</span> <span class="params">username</span>: <span class="type">String</span>,</span><br><span class="line">                            <span class="params">password</span>: <span class="type">String</span>) -&gt; <span class="type">Bool</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>但是，虽然这样解决的 Swift 和 Objective-C 之间搭桥的问题，Objective-C 本身并没有发生改变，他还是该吃吃，该喝喝，runtime 的行为模式和以前没啥区别，毕竟嘛，那什么改不了那啥。但是经过这样的改变，compiler 会站出来在我们用错 API 的时候提出警告。</p>
-<h2 id="四种-Nullability-标记"><a href="#四种-Nullability-标记" class="headerlink" title="四种 Nullability 标记"></a>四种 Nullability 标记</h2><table>
-<thead>
-<tr>
-<th align="center">Pointers</th>
-<th align="center">Properties</th>
-<th align="center"></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">_Null_unspecified</td>
-<td align="center">null_unspecified</td>
-<td align="center">默认值，在搭桥到 Swift 后会成为 unwrapped optional</td>
-</tr>
-<tr>
-<td align="center">_Nonnull</td>
-<td align="center">nonnull</td>
-<td align="center">在搭桥到 Swift 后变成正常变量声明</td>
-</tr>
-<tr>
-<td align="center">_Nullable</td>
-<td align="center">nullable</td>
-<td align="center">在搭桥到 Swift 后变成 optional</td>
-</tr>
-<tr>
-<td align="center">N&#x2F;A</td>
-<td align="center">null_resettable</td>
-<td align="center">这种变量在读的时候不会是 nil， 但是可以重置为nil</td>
-</tr>
-</tbody></table>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>这算是我第一篇正儿八经的博客了，也算是学习笔记性质的记录博客，所以内容不一定是完全正确的，所以还希望各位大佬不吝赐教，大家一起学习。</p>
-<div class="note info">
-            <p>相关链接：</p><p><a href="https://teamtreehouse.com/library/nullability-annotations-in-objectivec">Tree House: Nullability Annotations in Objective-C</a></p>
-          </div>
-
-
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>iOS</tag>
-        <tag>Objective-C</tag>
-        <tag>Nullability</tag>
       </tags>
   </entry>
   <entry>
