@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>ARTS 打卡 01</title>
-    <url>/2020/06/14/arts-01/</url>
-    <content><![CDATA[<p>本文主要是公司内部 ARTS 活动打卡记录</p>
-<span id="more"></span>
-
-<h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><p>N 皇后问题（LeetCode 51 困难）</p>
-<p>这个题目也算是 DFS 算法中经典的经典，所以这道题目的结构也是遵循递归的几大步骤（recursion terminator，current level logic，drill down，reverse state if needed），只不过这道题目需要多考虑的是怎么剪枝，也就是如果提前发现本次递归是一个无效的递归就提前终止。我的做法是用了三个 set 来记录当前的位置是否有效，我看讨论区还有一种用位运算来处理的，看起来很 fancy，但是没有仔细去研究，有时间需要好好看一下。</p>
-<p>DFS 一直感觉有一点烧脑，尤其是如果做人肉递归的情况下，以后要养成避免人肉递归的习惯。</p>
-<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><p>最近一直在看 Raywenderlich 的 RxSwift 的书，已经看到了第 24 章（总共 25 章 fighting！），感觉收获很大，好好反思了之前对于 RxSwift 的用法，觉得有很多不合理的地方，而且也有了一些在工作上该如何使用的思考，顺便思考了之前项目中的架构的不足，由于最近开始折腾单测的问题才发现之前有很多不合理的地方，在之后的重构中要更加注意。</p>
-<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>本来以为这周的 tips 可能要鸽了，但是在打卡前的最后几个小时发现了一个看起来很有意思的小技巧，让我这个强迫症眼前一亮。<br>在 MVVM 中因为每一个 ViewController 都会有一个 ViewModel，所以之前我在创建 ViewController 的时候有两种方法，一种是用 Initializer Injection，也就是把 ViewModel 作为 ViewController的 Init 方法的参数，另一种就是把 ViewModel 设为一个 Optional 的 internal 的变量，在初始化 ViewController 之后把 ViewModel 赋值进去。但感觉这两种方法都有一点不符合我的习惯，第一种需要加一个没用的 required 的 initializer，第二种需要在初始化之后赋值（有可能会忘）。今天发现一种使用工厂方法来创建 ViewController 的套路，如下：</p>
-<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ViewController</span>: <span class="title class_ inherited__">UIViewController</span> &#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">let</span> viewModel: <span class="type">ViewModel</span></span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">func</span> <span class="title function_">create</span>(<span class="params">withViewModel</span> <span class="params">viewModel</span>: <span class="type">ViewModel</span>) -&gt; <span class="type">ViewController</span> &#123;</span><br><span class="line">		<span class="keyword">let</span> vc <span class="operator">=</span> <span class="type">ViewController</span>()</span><br><span class="line">		vc.viewModel <span class="operator">=</span> viewModel</span><br><span class="line">		<span class="keyword">return</span> vc</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2><p><a href="https://cyberhex.me/2020/04/26/coodinator-pattern/">都是 Apple 惹的祸 - Coordinator Pattern 的前世今生</a></p>
-]]></content>
-      <categories>
-        <category>ARTS</category>
-      </categories>
-  </entry>
-  <entry>
     <title>ARTS 打卡 02</title>
     <url>/2020/07/05/arts-02/</url>
     <content><![CDATA[<p>本文主要是公司内部 ARTS 活动打卡记录</p>
@@ -39,6 +20,25 @@
     <content><![CDATA[<h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><p>三角形最小路径之和（LeetCode 120，中等）</p>
 <p>这道题属于动态规划的入门题了，所以感觉给中等完全是给动态规划面子。有两种方法可以做，一种是自底向上，一种是自顶向下。分别对应的是正着想和反向推。</p>
 <h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2><p><a href="https://cyberhex.me/2020/07/07/tdd-part-three/">A song of TDD and BUG - 副歌</a></p>
+]]></content>
+      <categories>
+        <category>ARTS</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>ARTS 打卡 01</title>
+    <url>/2020/06/14/arts-01/</url>
+    <content><![CDATA[<p>本文主要是公司内部 ARTS 活动打卡记录</p>
+<span id="more"></span>
+
+<h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><p>N 皇后问题（LeetCode 51 困难）</p>
+<p>这个题目也算是 DFS 算法中经典的经典，所以这道题目的结构也是遵循递归的几大步骤（recursion terminator，current level logic，drill down，reverse state if needed），只不过这道题目需要多考虑的是怎么剪枝，也就是如果提前发现本次递归是一个无效的递归就提前终止。我的做法是用了三个 set 来记录当前的位置是否有效，我看讨论区还有一种用位运算来处理的，看起来很 fancy，但是没有仔细去研究，有时间需要好好看一下。</p>
+<p>DFS 一直感觉有一点烧脑，尤其是如果做人肉递归的情况下，以后要养成避免人肉递归的习惯。</p>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><p>最近一直在看 Raywenderlich 的 RxSwift 的书，已经看到了第 24 章（总共 25 章 fighting！），感觉收获很大，好好反思了之前对于 RxSwift 的用法，觉得有很多不合理的地方，而且也有了一些在工作上该如何使用的思考，顺便思考了之前项目中的架构的不足，由于最近开始折腾单测的问题才发现之前有很多不合理的地方，在之后的重构中要更加注意。</p>
+<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>本来以为这周的 tips 可能要鸽了，但是在打卡前的最后几个小时发现了一个看起来很有意思的小技巧，让我这个强迫症眼前一亮。<br>在 MVVM 中因为每一个 ViewController 都会有一个 ViewModel，所以之前我在创建 ViewController 的时候有两种方法，一种是用 Initializer Injection，也就是把 ViewModel 作为 ViewController的 Init 方法的参数，另一种就是把 ViewModel 设为一个 Optional 的 internal 的变量，在初始化 ViewController 之后把 ViewModel 赋值进去。但感觉这两种方法都有一点不符合我的习惯，第一种需要加一个没用的 required 的 initializer，第二种需要在初始化之后赋值（有可能会忘）。今天发现一种使用工厂方法来创建 ViewController 的套路，如下：</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ViewController</span>: <span class="title class_ inherited__">UIViewController</span> &#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">let</span> viewModel: <span class="type">ViewModel</span></span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">func</span> <span class="title function_">create</span>(<span class="params">withViewModel</span> <span class="params">viewModel</span>: <span class="type">ViewModel</span>) -&gt; <span class="type">ViewController</span> &#123;</span><br><span class="line">		<span class="keyword">let</span> vc <span class="operator">=</span> <span class="type">ViewController</span>()</span><br><span class="line">		vc.viewModel <span class="operator">=</span> viewModel</span><br><span class="line">		<span class="keyword">return</span> vc</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2><p><a href="https://cyberhex.me/2020/04/26/coodinator-pattern/">都是 Apple 惹的祸 - Coordinator Pattern 的前世今生</a></p>
 ]]></content>
       <categories>
         <category>ARTS</category>
@@ -206,9 +206,8 @@
 <figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="comment">// DispathQueue 的定义</span></span><br><span class="line"><span class="keyword">let</span> queue <span class="operator">=</span> <span class="type">OperationQueue</span>()</span><br><span class="line">        queue.maxConcurrentOperationCount <span class="operator">=</span> <span class="number">2</span></span><br><span class="line">        queue.addOperation &#123;</span><br><span class="line">            queue.addOperation &#123;</span><br><span class="line">                sleep(<span class="number">2</span>)</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;1&quot;</span><span class="operator">+</span><span class="string">&quot;<span class="subst">\(Thread.current)</span>&quot;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;2&quot;</span><span class="operator">+</span><span class="string">&quot;<span class="subst">\(Thread.current)</span>&quot;</span>)</span><br><span class="line">            queue.addOperation &#123;</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;3&quot;</span><span class="operator">+</span><span class="string">&quot;<span class="subst">\(Thread.current)</span>&quot;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">&#125;</span><br><span class="line">sleep(<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
 
 <p>答案我会在下一篇博客中揭晓。</p>
-<div class="note info">
-            <p>相关链接：</p><p><a href="https://teamtreehouse.com/library/concurrency-in-ios">Tree House: Concurrency in iOS</a><br><a href="http://lkml.iu.edu/hypermail/linux/kernel/9608/0191.html">Linus Torvalds 的邮件</a><br><a href="https://www.cnblogs.com/lmule/archive/2010/08/18/1802774.html">进程和线程的区别</a><br><a href="https://juejin.im/post/5b1cf4fa6fb9a01e4b062771">我所理解的 iOS 并发编程</a><br><a href="http://khanlou.com/2016/04/the-GCD-handbook/">The GCD Handbook</a><br><a href="https://www.objc.io/issues/2-concurrency/">OBJC Concurrent Programming</a><br><a href="https://www.jianshu.com/p/2d57c72016c6">iOS 多线程：『GCD』详尽总结</a></p>
-          </div>]]></content>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p><a href="https://teamtreehouse.com/library/concurrency-in-iOS">Tree House: Concurrency in iOS</a><br><a href="http://lkml.iu.edu/hypermail/linux/kernel/9608/0191.html">Linus Torvalds 的邮件</a><br><a href="https://www.cnblogs.com/lmule/archive/2010/08/18/1802774.html">进程和线程的区别</a><br><a href="https://juejin.im/post/5b1cf4fa6fb9a01e4b062771">我所理解的 iOS 并发编程</a><br><a href="http://khanlou.com/2016/04/the-GCD-handbook/">The GCD Handbook</a><br><a href="https://www.objc.io/issues/2-concurrency/">OBJC Concurrent Programming</a><br><a href="https://www.jianshu.com/p/2d57c72016c6">iOS 多线程：『GCD』详尽总结</a></p>
+]]></content>
       <categories>
         <category>学习笔记</category>
       </categories>
@@ -245,31 +244,21 @@
 <h2 id="什么是-Create-ML"><a href="#什么是-Create-ML" class="headerlink" title="什么是 Create ML"></a>什么是 Create ML</h2><p>关于 CreateML 网上有太多的介绍和教程，我只做一下简单的介绍，因为我再怎么努力也没办法比前人讲的更好更清楚，既然这样，那就站在巨人的肩膀上，大概讲一下我的认识。</p>
 <p>苹果在 2016 年收购了 Turi Create，然后在此基础上发展出了 Create ML（虽然在 WWDC 中没有明说，但是大家都心知肚明）。在 Create ML 之前如果你想在 iOS 中使用 Core ML 的 Model（mlmodel 格式的文件）的话，只能在 TensorFlow，Pytorch 等流行的框架中先进行模型训练，然后通过 Core ML 中的 converter 把这些模型转换成 mlmodel 的格式。这其实是有一定门槛的，首先你得对 TensorFlow，Pytorch 有一定的了解，也要会使用 Python 语言（虽然不是很难），最重要的是你得对机器学习有比较多的了解，才能把自己的想法转化成模型。</p>
 <p>但 Create ML 的出现，打破了这个壁垒。Create ML 中现在有很多机器学习的类型，包括：Image，Video，Motion，Sound，Text 和 Table，囊括了很多我们平时会遇到的场景，我们通过其中预设的 Template 再加上几行代码（如果你用 GUI 工具甚至一行代码都不用写），通过对收集的数据进行训练，在你的 Mac 上就可以得到一个 well-trained 模型。这其中除了一些对数据集有一些需要注意的点 - 比如数据集要尽量均衡，要有不同的背景、不同的角度，要有噪音等等，你不需要对内部的神经网络之类的有很多的了解。剩下需要你做的基本就是一些拖拽，设置参数，泡杯卡布奇诺等待 Mac 帮你 Training 之类的操作。</p>
-<p>关于 Create ML 具体要怎么操作，你可以看 Raywenerlich 的这篇教程 <a href="https://www.raywenderlich.com/5653-create-ml-tutorial-getting-started#toc-anchor-020">Create ML Tutorial: Getting Started</a>，或者如果你更喜欢看中文版，可以看故胤道长的这篇博客 <a href="http://www.cocoachina.com/articles/26420">WWDC 2018：初探 Create ML</a>，都是非常好的参考资料，比我写的不知道高到哪里去了。</p>
+<p>关于 Create ML 具体要怎么操作，你可以看 Raywenerlich 的这篇教程 <a href="https://www.raywenderlich.com/5653/create-ml-tutorial-getting-started#toc-anchor-020">Create ML Tutorial: Getting Started</a>，或者如果你更喜欢看中文版，可以看故胤道长的这篇博客 <a href="http://www.cocoachina.com/articles/26420">WWDC 2018：初探 Create ML</a>，都是非常好的参考资料，比我写的不知道高到哪里去了。</p>
 <h2 id="Transfer-Learning"><a href="#Transfer-Learning" class="headerlink" title="Transfer Learning"></a>Transfer Learning</h2><p>Transfer Learning（迁移学习）就是把已学训练好的模型参数迁移到新的模型来帮助新模型训练。苹果在 Create ML 也用到了 Transfer Learning ，这样可以大幅缩短 Training 的时间，Model 的体积和数据量。当然你也可以选择 Full Network 的方式来进行，但是按照苹果的说法是 Full Network 和 Transfer Learning 可以达到几乎一致的结果，所以从成本的角度来考虑完全没有必要使用 Full Network 的方式（当时这是在完全相信苹果的前提下）。</p>
 <p>Full Network 和 Transfer Training 的区别就是：Full Network 是从头开始训练一个模型，而 Transfer Training 形象的来说就是苹果给你一个半成品模型（Backbone），这个模型已经被苹果用大量的数据调教过了，然后你再用这个半成品进行二次训练，从而节省更多的成本。</p>
 <h2 id="这次活动都讲了什么"><a href="#这次活动都讲了什么" class="headerlink" title="这次活动都讲了什么"></a>这次活动都讲了什么</h2><p>这次会议是关于物体识别的，这个主要是用了 Create ML 中 Image 类型下的 Object Detection Template。</p>
 <p>更详细的记录可以看我同事温和的<a href="https://www.notion.so/Create-ML-84d28aa842064be7b74eb3bde136bd93">笔记</a>。</p>
-<h2 id="Create-ML-的优势"><a href="#Create-ML-的优势" class="headerlink" title="Create ML 的优势"></a>Create ML 的优势</h2><h3 id="灵活性"><a href="#灵活性" class="headerlink" title="灵活性"></a>灵活性</h3><p>在 Swift 中，新手能很快上手用 Swift 编写 iOS App，甚至他们都不需要了解泛型，函数式等比较高阶一点的用法；但对于有多年 Swift 经验的老同志来说，如果想用到更 Fancy 的功能，Swift 也能满足你的需求。Create ML 继承了苹果一贯的思想 - 对没有任何机器学习的新手来说非常友好，但同时对那些想“搞事情”的老玩家也提供了一些底层的 API 来进行一些他们想要的操作。</p>
+<h2 id="Create-ML-的优势"><a href="#Create-ML-的优势" class="headerlink" title="Create ML 的优势"></a>Create ML 的优势</h2><h3 id="灵活性"><a href="#灵活性" class="headerlink" title="灵活性"></a>灵活性</h3><p>在 Swift 中，新手能很快上手用 Swift 编写 iOS App，甚至他们都不需要了解泛型，函数式等比较高阶一点的用法；但对于有多年 Swift 经验的老同志来说，如果想用到更 Fancy 的功能，Swift 也能满足你的需求。Create ML 继承了苹果一贯的思想 - 对没有任何机器学习的新手来说非常友好，但同时对那些想”搞事情”的老玩家也提供了一些底层的 API 来进行一些他们想要的操作。</p>
 <h3 id="高效率"><a href="#高效率" class="headerlink" title="高效率"></a>高效率</h3><p>由于 Transfer Learning 的原因，Training 所需要的时间数据集和都不多，这节省了很多等待和收集数据的时间。而且对于 iOS 开发者来说，都不需要新学一门语言就可以直接上手，这也节约了很多学习和开发成本。</p>
-<h2 id="Create-ML-能为我们带来什么"><a href="#Create-ML-能为我们带来什么" class="headerlink" title="Create ML 能为我们带来什么"></a>Create ML 能为我们带来什么</h2><p>还记得在上研究生时为了训练马里奥让他轻松过关，训练了一晚上这货还是傻乎乎的往大乌龟上撞。虽然这大概率是我模型建的太渣，但也从一个侧面体现出来了一个问题，就是传统的 Training 太耗费时间了，不懂得“点到为止”。作为一个学生，这个带来的结果最多是错过 deadline，你跟教授死缠烂打一下，他说不定就睁一只眼闭一只眼过去了（我可没有这么做过啊）。但是放在生产中，这代价就不会只有错过 deadline 这么简单了，这会影响产品的上线和迭代，从而影响市场占有率。在产品的早期，产品的完成度比完美度更有说服力，所以选择 Create ML 这样的工具，以较低的成本先占领市场，然后再慢慢完善产品的迭代也是一种不错的选择。</p>
+<h2 id="Create-ML-能为我们带来什么"><a href="#Create-ML-能为我们带来什么" class="headerlink" title="Create ML 能为我们带来什么"></a>Create ML 能为我们带来什么</h2><p>还记得在上研究生时为了训练马里奥让他轻松过关，训练了一晚上这货还是傻乎乎的往大乌龟上撞。虽然这大概率是我模型建的太渣，但也从一个侧面体现出来了一个问题，就是传统的 Training 太耗费时间了，不懂得”点到为止”。作为一个学生，这个带来的结果最多是错过 deadline，你跟教授死缠烂打一下，他说不定就睁一只眼闭一只眼过去了（我可没有这么做过啊）。但是放在生产中，这代价就不会只有错过 deadline 这么简单了，这会影响产品的上线和迭代，从而影响市场占有率。在产品的早期，产品的完成度比完美度更有说服力，所以选择 Create ML 这样的工具，以较低的成本先占领市场，然后再慢慢完善产品的迭代也是一种不错的选择。</p>
 <p>同时，对于没有专门的 AI Team 的小企业或者是个人开发者，Create ML 也为他们提供了绝佳的武器。他们可以实现一些比较轻量的与机器学习相关的功能，比如情感分析，搜索辅助，图片识别等，这将对他们应用的体验有很大提升，并且也不需要很高的成本。</p>
-<h2 id="Create-ML-仍有要“好好反思”的余地"><a href="#Create-ML-仍有要“好好反思”的余地" class="headerlink" title="Create ML 仍有要“好好反思”的余地"></a>Create ML 仍有要“好好反思”的余地</h2><p>苹果这些年在机器学习投入了很多，但毕竟作为一个“后来者”，还有一些问题需要解决。</p>
+<h2 id="Create-ML-仍有要”好好反思”的余地"><a href="#Create-ML-仍有要”好好反思”的余地" class="headerlink" title="Create ML 仍有要”好好反思”的余地"></a>Create ML 仍有要”好好反思”的余地</h2><p>苹果这些年在机器学习投入了很多，但毕竟作为一个”后来者”，还有一些问题需要解决。</p>
 <h3 id="仍然不够成熟"><a href="#仍然不够成熟" class="headerlink" title="仍然不够成熟"></a>仍然不够成熟</h3><p>和隔壁使用 Python 生态的机器学习圈相比，苹果和 Swift 仍然有挺长的路要走。虽然 Create ML 包含了 Image，Video，Motion，Sound，Text 和 Table 的类别，但是其中暂时也是只有一些特定的 Template 可以使用，还是略显单薄。</p>
 <h3 id="无法在云端训练"><a href="#无法在云端训练" class="headerlink" title="无法在云端训练"></a>无法在云端训练</h3><p>虽然在 Mac 上就能进行 Training 听起来非常美好，但是缺乏在云端训练的功能还是一个比较值得注意的问题。如果想让更多的用户转移到 Create ML 这个平台势必要考虑这个问题。但如果 Create ML 的定位就是轻量级别的 Training 的话，这可能也算不上一个问题。</p>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>从苹果这些年的一系列动作可以看出他们对于机器学习的生态有很大的野望，和谷歌等大公司的明争暗斗也让人看得眼花缭乱。谷歌也在积极推进 Swift for TensorFlow，从侧面也能看出谷歌对他这个对手的尊重。在我们凡人围观这场“神仙打架”的过程中也能看出来 Create ML 的出现更像一场即将或正在发生的革命 - 曾经机器学习的大部分资源都掌握在少数“AI精英”的手中，Create ML 的出现有助于打破现有的 “机器学习垄断”，让更多的开发者能有一个像样的交通工具加入这个赛道，虽然比不上别人的兰博基尼，但是也算有了代步的工具。随着更多人的加入，全民机器学习的时代可能会比我们想象的更早到来，到时候作为非机器学习的开发者也将有机会把自己的想法转化成真正的产品，AI 相关的应用将犹如雨后春笋般的出现。</p>
-<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>感谢公司的这次机会以及苹果员工精彩的演讲和耐心的咨询。最后打个广告：落叶的一生就是为了归根吗？曾经的我也相信宿命论 - 程序员就是要 996 的，疫情是要被裁员的，出游是要自掏腰包的，五一是只有三天假的 … 仿佛死神与巴格达商人在萨拉马的相会，一切都是那么无力。直到我加入了猿辅导，我的世界观崩塌了：原来程序员也不一定非要 996，疫情期间会有更多的项目和机会，出游是公司掏钱，五一有九天假！从来没见过如此“不讲武德”的公司，说好的武林要以和为贵呢？你这样其他公司怎么活！那你还在等什么，加入我们，我的邮箱是 <a href="mailto:&#103;&#x6f;&#x75;&#112;&#121;&#64;&#102;&#101;&#x6e;&#98;&#105;&#46;&#x63;&#111;&#x6d;">goupy@fenbi.com</a>，内推我是认真的，你值得拥有更好的。</p>
-<div class="note info">
-            <p>相关链接：<br><a href="https://www.notion.so/Create-ML-84d28aa842064be7b74eb3bde136bd93">笔记 - 基于 Create ML 的物体识别</a><br><a href="https://machinethink.net/blog/new-in-apple-machine-learning-2020/">Apple machine learning in 2020: What’s new?</a><br><a href="https://www.raywenderlich.com/5653-create-ml-tutorial-getting-started#toc-anchor-020">Create ML Tutorial: Getting Started</a><br><a href="http://www.cocoachina.com/articles/26420">WWDC 2018：初探 Create ML</a><br><a href="https://www.zhihu.com/question/41979241">什么是迁移学习 (Transfer Learning)？这个领域历史发展前景如何？</a><br><a href="https://www.netguru.com/codestories/createml-start-your-adventure-in-machine-learning-with-swift">CreateML: Start Your Adventure in Machine Learning with Swift</a><br><a href="https://hongchaozhang.github.io/blog/2018/06/15/introducing-create-ml/">Introducing Create ML</a><br><a href="https://heartbeat.fritz.ai/sound-classification-using-core-ml-3-and-create-ml-fc73ca20aff5">Sound Classification on iOS Using Core ML 3 and Create ML</a><br><a href="https://www.computerworld.com/article/3293446/why-apple-s-create-ml-matters-to-your-enterprise.html">Why Apple’s Create ML matters to your enterprise</a></p>
-          </div>
-
-
-
-
-
-
-
-
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>从苹果这些年的一系列动作可以看出他们对于机器学习的生态有很大的野望，和谷歌等大公司的明争暗斗也让人看得眼花缭乱。谷歌也在积极推进 Swift for TensorFlow，从侧面也能看出谷歌对他这个对手的尊重。在我们凡人围观这场”神仙打架”的过程中也能看出来 Create ML 的出现更像一场即将或正在发生的革命 - 曾经机器学习的大部分资源都掌握在少数”AI精英”的手中，Create ML 的出现有助于打破现有的 “机器学习垄断”，让更多的开发者能有一个像样的交通工具加入这个赛道，虽然比不上别人的兰博基尼，但是也算有了代步的工具。随着更多人的加入，全民机器学习的时代可能会比我们想象的更早到来，到时候作为非机器学习的开发者也将有机会把自己的想法转化成真正的产品，AI 相关的应用将犹如雨后春笋般的出现。</p>
+<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>感谢公司的这次机会以及苹果员工精彩的演讲和耐心的咨询。最后打个广告：落叶的一生就是为了归根吗？曾经的我也相信宿命论 - 程序员就是要 996 的，疫情是要被裁员的，出游是要自掏腰包的，五一是只有三天假的 … 仿佛死神与巴格达商人在萨拉马的相会，一切都是那么无力。直到我加入了猿辅导，我的世界观崩塌了：原来程序员也不一定非要 996，疫情期间会有更多的项目和机会，出游是公司掏钱，五一有九天假！从来没见过如此”不讲武德”的公司，说好的武林要以和为贵呢？你这样其他公司怎么活！那你还在等什么，加入我们，我的邮箱是 <a href="mailto:&#x67;&#x6f;&#117;&#x70;&#x79;&#64;&#102;&#x65;&#x6e;&#98;&#x69;&#x2e;&#99;&#x6f;&#109;">goupy@fenbi.com</a>，内推我是认真的，你值得拥有更好的。</p>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p><a href="https://www.notion.so/Create-ML-84d28aa842064be7b74eb3bde136bd93">笔记 - 基于 Create ML 的物体识别</a><br><a href="https://machinethink.net/blog/new-in-apple-machine-learning-2020/">Apple machine learning in 2020: What’s new?</a><br><a href="https://www.raywenderlich.com/5653/create-ml-tutorial-getting-started#toc-anchor-020">Create ML Tutorial: Getting Started</a><br><a href="http://www.cocoachina.com/articles/26420">WWDC 2018：初探 Create ML</a><br><a href="https://www.zhihu.com/question/41979241">什么是迁移学习 (Transfer Learning)？这个领域历史发展前景如何？</a><br><a href="https://www.netguru.com/codestories/createml-start-your-adventure-in-machine-learning-with-swift">CreateML: Start Your Adventure in Machine Learning with Swift</a><br><a href="https://hongchaozhang.github.io/blog/2018/06/15/introducing-create-ml/">Introducing Create ML</a><br><a href="https://heartbeat.fritz.ai/sound-classification-using-core-ml-3-and-create-ml-fc73ca20aff5">Sound Classification on iOS Using Core ML 3 and Create ML</a><br><a href="https://www.computerworld.com/article/3293446/why-apple-s-create-ml-matters-to-your-enterprise.html">Why Apple’s Create ML matters to your enterprise</a></p>
 ]]></content>
       <categories>
         <category>会议报告</category>
@@ -354,11 +343,8 @@
 </tr>
 </tbody></table>
 <h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>这算是我第一篇正儿八经的博客了，也算是学习笔记性质的记录博客，所以内容不一定是完全正确的，所以还希望各位大佬不吝赐教，大家一起学习。</p>
-<div class="note info">
-            <p>相关链接：</p><p><a href="https://teamtreehouse.com/library/nullability-annotations-in-objectivec">Tree House: Nullability Annotations in Objective-C</a></p>
-          </div>
-
-
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p>相关链接：</p>
+<p><a href="https://teamtreehouse.com/library/nullability-annotations-in-objectivec">Tree House: Nullability Annotations in Objective-C</a></p>
 ]]></content>
       <categories>
         <category>学习笔记</category>
@@ -371,7 +357,7 @@
   </entry>
   <entry>
     <title>优化图片</title>
-    <url>/2019/06/26/optimizing-images/</url>
+    <url>/2025/06/29/optimizing-images/</url>
     <content><![CDATA[<blockquote>
 <p>作者：Jordan Morgan，<a href="https://www.swiftjectivec.com/optimizing-images/">原文链接</a>，原文日期：2018-12-11<br>译者：CyberHex；</p>
 </blockquote>
@@ -474,22 +460,6 @@
       </tags>
   </entry>
   <entry>
-    <title>A song of TDD and BUG - 尾声</title>
-    <url>/2020/07/07/tdd-part-five/</url>
-    <content><![CDATA[<p>TDD 与 BUG 的爱恨情仇（卷五），本系列链表头部请戳 <a href="https://cyberhex.me/2020/06/14/tdd-part-one/">A song of TDD and BUG - 前奏曲</a></p>
-<span id="more"></span>
-
-<h2 id="结语与鸣谢"><a href="#结语与鸣谢" class="headerlink" title="结语与鸣谢"></a>结语与鸣谢</h2><p>感谢同事们（海春，超超等）在我迷茫的时候的帮助，感谢强哥对整个系列的 review 和宝贵意见。最后打个广告：落叶的一生就是为了归根吗？曾经的我也相信宿命论 - 程序员就是要 996 的，疫情是要被裁员的，出游是要自掏腰包的，五一是只有三天假的 … 仿佛死神与巴格达商人在萨拉马的相会，一切都是那么无力。直到我加入了猿辅导，我的世界观崩塌了：原来程序员也不一定非要 996，疫情期间会有更多的项目和机会，出游是公司掏钱，五一有九天假！从来没见过如此“不讲武德”的公司，说好的武林要以和为贵呢？你这样其他公司怎么活！那你还在等什么，加入我们，我的邮箱是 <a href="mailto:&#103;&#x6f;&#x75;&#x70;&#121;&#64;&#102;&#101;&#x6e;&#98;&#x69;&#46;&#x63;&#x6f;&#109;">goupy@fenbi.com</a>，内推我是认真的，你值得拥有更好的。</p>
-]]></content>
-      <categories>
-        <category>工作总结</category>
-      </categories>
-      <tags>
-        <tag>iOS</tag>
-        <tag>TDD</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>A song of TDD and BUG - 变奏曲</title>
     <url>/2020/07/07/tdd-part-four/</url>
     <content><![CDATA[<p>TDD 与 BUG 的爱恨情仇（卷四），本系列链表头部请戳 <a href="https://cyberhex.me/2020/06/14/tdd-part-one/">A song of TDD and BUG - 前奏曲</a></p>
@@ -501,6 +471,22 @@
 <li>利用时间局部性：就像 LRU 的思想一下，在最近一段时间修改过的逻辑很有可能在未来一段时间内也需要修改，所以选择用单侧保证这部分逻辑有助于之后的迭代和重构。</li>
 <li>“从”新开始：主意是从新，不是重新，也就是暂时考虑放弃之前的逻辑，对新业务使用 TDD 的开发模式来开发。这种比较适合没有时间对老代码进行重构和改造的情况，先对新的业务进行单测，等到业务稳定以后再考虑之前的历史包袱。</li>
 </ol>
+]]></content>
+      <categories>
+        <category>工作总结</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+        <tag>TDD</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>A song of TDD and BUG - 尾声</title>
+    <url>/2020/07/07/tdd-part-five/</url>
+    <content><![CDATA[<p>TDD 与 BUG 的爱恨情仇（卷五），本系列链表头部请戳 <a href="https://cyberhex.me/2020/06/14/tdd-part-one/">A song of TDD and BUG - 前奏曲</a></p>
+<span id="more"></span>
+
+<h2 id="结语与鸣谢"><a href="#结语与鸣谢" class="headerlink" title="结语与鸣谢"></a>结语与鸣谢</h2><p>感谢同事们（海春，超超等）在我迷茫的时候的帮助，感谢强哥对整个系列的 review 和宝贵意见。最后打个广告：落叶的一生就是为了归根吗？曾经的我也相信宿命论 - 程序员就是要 996 的，疫情是要被裁员的，出游是要自掏腰包的，五一是只有三天假的 … 仿佛死神与巴格达商人在萨拉马的相会，一切都是那么无力。直到我加入了猿辅导，我的世界观崩塌了：原来程序员也不一定非要 996，疫情期间会有更多的项目和机会，出游是公司掏钱，五一有九天假！从来没见过如此“不讲武德”的公司，说好的武林要以和为贵呢？你这样其他公司怎么活！那你还在等什么，加入我们，我的邮箱是 <a href="mailto:&#x67;&#111;&#117;&#112;&#121;&#x40;&#102;&#x65;&#110;&#x62;&#105;&#x2e;&#x63;&#x6f;&#x6d;">goupy@fenbi.com</a>，内推我是认真的，你值得拥有更好的。</p>
 ]]></content>
       <categories>
         <category>工作总结</category>
@@ -549,9 +535,9 @@
 <h2 id="赛博朋克演示法"><a href="#赛博朋克演示法" class="headerlink" title="赛博朋克演示法"></a>赛博朋克演示法</h2><p>本系列我会继续使用我最喜欢的赛博朋克演示法，那有同学就要问了，什么是赛博朋克演示法呢？其实大家都在写博客或者做分享的时候用到过，只不过这个方法被我冠名成赛博朋克演示法，我还没有看到其他人这么叫过，所以算原创吧（小得意一下）。</p>
 <p>众所周知，所谓赛博朋克就是高科技，低生活。那套用在这里就是用一个特别傻的项目去演示一个特别 fancy 的概念。所以贯穿整个系列我都会用一个天气的项目叫做 <a href="https://github.com/quintessencegpy/Rainstorm">Rainstorm</a> 来展示单测和 TDD 的概念，这个项目不是我的原创，是我在学习 MVVM 的时候跟着 <a href="https://cocoacasts.com/">cococast.com</a> 一起做的，这个不是广告，只是既然用了人家的东西，总得给人家一个名分，嗯嗯。</p>
 <p>如果你对我说的这些都感兴趣，那就跟着我的节奏一起摇摆（不好意思，走错片场了），跟着我的步伐一起深入了解 TDD，欢迎观看下一集 <a href="https://cyberhex.me/2020/07/07/tdd-part-two/">A song of TDD and BUG - 主歌</a>。</p>
-<div class="note info">
-            <p>相关链接：</p><p><a href="https://kknews.cc/zh-hk/code/qx5639g.html">為什麼任何系統都會存在Bug？什麼是抽象漏洞定律？</a><br><a href="https://blog.gurock.com/unit-testing-tdd-bdd/?utm_source=adwords&utm_medium=cpc&utm_campaign=asia_afr_ams_en_dsa&utm_content=&creative=302597526479&keyword=&matchtype=b&network=g&device=c&gclid=CjwKCAjwmMX4BRAAEiwA-zM4JryMT8iAqgeNEpB6mdo1aCOXYdR-EOIEADy8R1eG20r5vvgv7lelfhoCDDYQAvD_BwE">Unit Testing, TDD, and BDD, Oh My. Your Guide to Different Unit Testing Techniques</a><br><a href="http://www.51testing.com/html/00/n-3724000.html">论单元测试的重要性</a></p>
-          </div>]]></content>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p>相关链接：</p>
+<p><a href="https://kknews.cc/zh-hk/code/qx5639g.html">為什麼任何系統都會存在Bug？什麼是抽象漏洞定律？</a><br><a href="https://blog.gurock.com/unit-testing-tdd-bdd/?utm_source=adwords&utm_medium=cpc&utm_campaign=asia_afr_ams_en_dsa&utm_content=&creative=302597526479&keyword=&matchtype=b&network=g&device=c&gclid=CjwKCAjwmMX4BRAAEiwA-zM4JryMT8iAqgeNEpB6mdo1aCOXYdR-EOIEADy8R1eG20r5vvgv7lelfhoCDDYQAvD_BwE">Unit Testing, TDD, and BDD, Oh My. Your Guide to Different Unit Testing Techniques</a><br><a href="http://www.51testing.com/html/00/n-3724000.html">论单元测试的重要性</a></p>
+]]></content>
       <categories>
         <category>工作总结</category>
       </categories>
@@ -611,10 +597,8 @@
 <p>如果在底层测试（单元测试）完全通过的情况下，我们在更高层的测试中（比如 UI 测试或者人工测试）中发现了一个 Bug， 我们应该在更底层补充相应的测试来覆盖这种情况。因为低层级测试让你更容易缩小错误的范围并且有更高的运行效率。</p>
 <p>另外需要注意的一点就是，如果底层的测试已经完全能够覆盖之前发现的问题，可以选择在高层的测试中删除这部分测试，这样可以避免重复测试。如果问题评估比较重要，可以保留，因为这样可以增加上线的自信度。</p>
 <h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>本章粗略总结了一下 TDD 的基本步骤和单元测试之外的几个重要的测试。一个很重要的概念就是测试金字塔，这个是所有测试的基本哲学，在构架你的 FTDD 的时候一定要考虑到。</p>
-<div class="note info">
-            <p>相关链接：</p><p><a href="https://insights.thoughtworks.cn/practical-test-pyramid/">测试金字塔实战</a><br><a href="https://martinfowler.com/bliki/TestPyramid.html">TestPyramid</a><br><a href="https://www.thoughtworks.com/insights/blog/introducing-software-testing-cupcake-anti-pattern">Introducing the Software Testing Cupcake (Anti-Pattern)</a><br><a href="https://jamescrisp.org/2011/05/30/automated-testing-and-the-test-pyramid/">Automated Testing and the Test Pyramid</a><br><a href="http://fabiopereira.me/blog/2012/03/18/introducing-depth-of-test-dot/">Introducing Depth of Test (DOT)</a> </p>
-          </div>
-
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p>相关链接：</p>
+<p><a href="https://insights.thoughtworks.cn/practical-test-pyramid/">测试金字塔实战</a><br><a href="https://martinfowler.com/bliki/TestPyramid.html">TestPyramid</a><br><a href="https://www.thoughtworks.com/insights/blog/introducing-software-testing-cupcake-anti-pattern">Introducing the Software Testing Cupcake (Anti-Pattern)</a><br><a href="https://jamescrisp.org/2011/05/30/automated-testing-and-the-test-pyramid/">Automated Testing and the Test Pyramid</a><br><a href="http://fabiopereira.me/blog/2012/03/18/introducing-depth-of-test-dot/">Introducing Depth of Test (DOT)</a></p>
 ]]></content>
       <categories>
         <category>工作总结</category>
@@ -751,9 +735,9 @@
 <p>RxTest 更加全面，可以覆盖大部分测试，而且 TestScheduler 模拟的虚拟时间可以大大缩短测试时间，但是写起来比较长也比较麻烦。相比 RxBlocking 写起来非常简单也直观，但使用场景比较局限。我们何不取长补短，在可以使用 RxBlocking 的时候使用 RxBlocking，而在更复杂的使用场景，尤其是那些需要 timestamp 精准对应的场景使用 RxTest。这样我们就充分利用了两种方式的长处，何乐而不为呢。</p>
 <h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>这一篇主要讲了关于单测的东西，单测作为 TDD 的根基，是学习 TDD 路上必须要掌握的生存技能。不过对于许多人来说只掌握单测其实就足够了，因为 TDD 只是一种开发模式，而单测才是根本。你也可以在掌握了单测后根据自己或团队的 workflow 来定制属于自己的开发模式。如果你对 TDD 比较好奇的话，也可以继续往下看。</p>
 <p><a href="https://cyberhex.me/2020/07/07/tdd-part-three/">To Be Continued</a>（此处应有专属音乐）</p>
-<div class="note info">
-            <p>相关链接：</p><p><a href="https://github.com/Quick/Quick/tree/master/Documentation">Quick Documentation</a><br><a href="https://www.raywenderlich.com/135-behavior-driven-testing-tutorial-for-ios-with-quick-nimble#toc-anchor-010">Behavior-Driven Testing Tutorial for iOS with Quick &amp; Nimble</a><br><a href="https://blog.pragmatists.com/test-doubles-fakes-mocks-and-stubs-1a7491dfa3da">Test Doubles — Fakes, Mocks and Stubs.</a><br><a href="https://www.mokacoding.com/blog/waituntil-vs-toeventually/">Nimble: when to use waitUntil or toEventually</a><br><a href="http://rx-marin.com/post/rxblocking-part2/">Testing with RxBlocking, part 2</a><br><a href="https://www.raywenderlich.com/7408-testing-your-rxswift-code#toc-anchor-005">Testing Your RxSwift Code</a></p>
-          </div>]]></content>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p>相关链接：</p>
+<p><a href="https://github.com/Quick/Quick/tree/master/Documentation">Quick Documentation</a><br><a href="https://www.raywenderlich.com/135-behavior-driven-testing-tutorial-for-ios-with-quick-nimble#toc-anchor-010">Behavior-Driven Testing Tutorial for iOS with Quick &amp; Nimble</a><br><a href="https://blog.pragmatists.com/test-doubles-fakes-mocks-and-stubs-1a7491dfa3da">Test Doubles — Fakes, Mocks and Stubs.</a><br><a href="https://www.mokacoding.com/blog/waituntil-vs-toeventually/">Nimble: when to use waitUntil or toEventually</a><br><a href="http://rx-marin.com/post/rxblocking-part2/">Testing with RxBlocking, part 2</a><br><a href="https://www.raywenderlich.com/7408-testing-your-rxswift-code#toc-anchor-005">Testing Your RxSwift Code</a></p>
+]]></content>
       <categories>
         <category>工作总结</category>
       </categories>
@@ -764,7 +748,7 @@
   </entry>
   <entry>
     <title>你不知道的 View Controller Containment</title>
-    <url>/2019/06/21/viewcontroller-containment/</url>
+    <url>/2025/06/29/viewcontroller-containment/</url>
     <content><![CDATA[<p>本文主要记录在工作过程中如何利用 View Controller Containment 来重构 UI</p>
 <span id="more"></span>
 
@@ -779,9 +763,9 @@
 
 <p>这里需要注意的点是在做布局之前要使用 addChild(:) 方法，这样会触发子控制器的 willMove(toParent:) 方法，并且在布局完后要使用 didMove(toParent:) 方法。在移除 Child View Controller 的时候也需要重复相似的步骤，在移除 View 之前要使用 willMove(toParent:)， 在移除 View 之后使用 removeFromParentViewController() 方法。这样的做的好处是可以把子控制器的生命周期纳入父控制器的控制范围：在父控制器加入或者移除子控制器的时候能够触发子控制器的 viewWillAppear 和 viewWillDisappear 的方法。</p>
 <h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>View Controller Containment 是一种非常实用的重构 UI 的设计模式，我在接触了这种模式后就开始欲罢不能（谁用谁知道）。这种模式不仅能增加代码的复用性和可拓展性，还可以将逻辑进行分离从而增加代码的可读性。所以把它加入你的 skill set 中会给你以后的工作和学习带来很大的益处。</p>
-<div class="note info">
-            <p>相关链接：</p><p><a href="https://cocoacasts.com/managing-view-controllers-with-container-view-controllers">Managing View Controllers With Container View Controllers</a></p>
-          </div>]]></content>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p>相关链接：</p>
+<p><a href="https://cocoacasts.com/managing-view-controllers-with-container-view-controllers">Managing View Controllers With Container View Controllers</a></p>
+]]></content>
       <categories>
         <category>工作总结</category>
       </categories>
