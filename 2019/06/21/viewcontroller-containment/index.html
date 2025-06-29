@@ -1,187 +1,50 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next mist use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
+<link rel="stylesheet" href="/css/main.css">
 
 
-  
-  
-  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-
-
-
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-    
-      
-    
-
-    
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Poor Story:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-cyberhex.png?v=6.5.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-cyberhex.png?v=6.5.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-cyberhex.png?v=6.5.0">
-
-
-  <link rel="mask-icon" href="/images/cyberhex.svg?v=6.5.0" color="#222">
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '6.5.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
-    fancybox: true,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"cyberhex.me","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
   <meta name="description" content="本文主要记录在工作过程中如何利用 View Controller Containment 来重构 UI">
-<meta name="keywords" content="Swift,iOS,Design Pattern">
 <meta property="og:type" content="article">
 <meta property="og:title" content="你不知道的 View Controller Containment">
 <meta property="og:url" content="http://cyberhex.me/2019/06/21/viewcontroller-containment/index.html">
 <meta property="og:site_name" content="CyberHex">
 <meta property="og:description" content="本文主要记录在工作过程中如何利用 View Controller Containment 来重构 UI">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-06-14T11:01:32.489Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-06-21T13:59:24.780Z">
+<meta property="article:modified_time" content="2020-06-14T11:01:32.480Z">
+<meta property="article:author" content="Penstein">
+<meta property="article:tag" content="Swift">
+<meta property="article:tag" content="iOS">
+<meta property="article:tag" content="Design Pattern">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="你不知道的 View Controller Containment">
-<meta name="twitter:description" content="本文主要记录在工作过程中如何利用 View Controller Containment 来重构 UI">
+
+<link rel="canonical" href="http://cyberhex.me/2019/06/21/viewcontroller-containment/">
 
 
-
-  <link rel="alternate" href="/atom.xml" title="CyberHex" type="application/atom+xml">
-
-
-
-
-  <link rel="canonical" href="http://cyberhex.me/2019/06/21/viewcontroller-containment/">
-
-
-
-<script type="text/javascript" id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -193,170 +56,80 @@
 
 
 
-
-
-
-
-
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
+<link rel="alternate" href="/atom.xml" title="CyberHex" type="application/atom+xml">
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">CyberHex</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-    
-      
-        <p class="site-subtitle">Simple(r) Always Wins.</p>
-      
-    
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">CyberHex</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Simple(r) Always Wins.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
+
 
 
 
 <nav class="site-nav">
-  
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
-    <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
-    <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
-    <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
-  </li>
-
-      
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
-        </li>
-      
-    </ul>
-  
-
-  
-    
-
-  
-
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
-  
+  </ul>
 </nav>
 
-
-
-  
 
 
 
@@ -364,153 +137,70 @@
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
-          <div id="content" class="content">
+
+          <div class="content post posts-expand">
             
 
-  <div id="posts" class="posts-expand">
     
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://cyberhex.me/2019/06/21/viewcontroller-containment/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Penstein">
       <meta itemprop="description" content="Simple(r) Always Wins.">
-      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="CyberHex">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">你不知道的 View Controller Containment
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          你不知道的 View Controller Containment
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2019-06-21 21:59:24" itemprop="dateCreated datePublished" datetime="2019-06-21T21:59:24+08:00">2019-06-21</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-06-14 19:01:32" itemprop="dateModified" datetime="2020-06-14T19:01:32+08:00">2020-06-14</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/工作总结/" itemprop="url" rel="index"><span itemprop="name">工作总结</span></a></span>
-
-                
-                
-              
             </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
-                <a href="/2019/06/21/viewcontroller-containment/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/06/21/viewcontroller-containment/" itemprop="commentCount"></span>
-                </a>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-06-14 19:01:32" itemprop="dateModified" datetime="2020-06-14T19:01:32+08:00">2020-06-14</time>
               </span>
-            
-          
-
-          
-          
-             <span id="/2019/06/21/viewcontroller-containment/" class="leancloud_visitors" data-flag-title="你不知道的 View Controller Containment">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-fire"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">热度：</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-                 <span>℃</span>
-             </span>
-          
-
-          
-
-          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">工作总结</span></a>
+                </span>
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -518,10 +208,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
+        <p>本文主要记录在工作过程中如何利用 View Controller Containment 来重构 UI</p>
+<span id="more"></span>
 
-      
-        <p>本文主要记录在工作过程中如何利用 View Controller Containment 来重构 UI<br><a id="more"></a></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>不知道你有没有经历过这样的情况，一个页面中有很多的 View，但各个 View 之间有明显的层级关系，这个时候一种可行的做法是把一系列相关联的 View 归到一个父亲 View 中。 但这种做法会有有一些其他的问题， 比如会让 View Controller 或者 View Model 比较大， 甚至有时候不得不把逻辑写在 View 里边。那么有没有一个既可以解决问题， 又不会引入更多棘手的问题的方法吗？ 问得好！ 如果你心里真的这个问题，那说明你一定是在质疑我写这篇分享的初衷。 不过别担心，看到最后我保证你一定会有所收获的。</p>
 <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>铺垫了这么多，你可能会想: View Controller Containment 到底是什么个玩意，从来没听说过，确定会有人用这个吗？ 但是接下来我会打消你的疑虑，因为苹果自己就在设计 UINavigationController 和 UITabBarController 利用了这种模式。在UINavigationController 和 UITabBarController 中你都可以塞入自定义的控制器， 只不过他们控制这些控制器的形式不同（一个是堆叠，一个是平行）。</p>
 <p>那么 View Controller Containment 到底是什么呢？ 其实非常简单，就是把一个控制器当作容器，只不过这个控制器比较特别一点，它不止能控制 View， 还可以控制在它里边的控制器。 这种模式中，父控制器只需要来管理和安排子控制器 View 的布局和大小，而子控制器负责它自己内部各个 View 的布局和大小。</p>
@@ -529,453 +218,159 @@
 <h3 id="可复用性"><a href="#可复用性" class="headerlink" title="可复用性"></a>可复用性</h3><p>利用 View Controller Containment 一个很大的优点就是可复用性，比如上边提到的苹果自带 SDK 中的 UINavigationController 和 UITabBarController 都有极大的可复用性，基本上在每个项目中都会用到。在项目中我们有时候也会碰到一些情况会有需要复用 Root View Controller 的情况。比如我在最近的一个项目中，会碰到有在同一个页面有三个区块，并且在项目不同的地方会对它们做相同的布局甚至动画。所以这种情况下抽出来一个可复用的 Root View Controller 就会极大的提高工作效率。</p>
 <h3 id="逻辑分离"><a href="#逻辑分离" class="headerlink" title="逻辑分离"></a>逻辑分离</h3><p>对于一些比较复杂的页面，分出来不同的控制器，让子控制器来控制各自的逻辑，这样会让整个 UI 的结构更加清晰，每一个控制器的职责更加明确，会有更强的拓展性，以后如果想加入新的功能或者动画，我们只需要加入新的控制器，最多再加几个回调和代理，并不需要对原来的 UI 结构有很大的改动。</p>
 <h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>拿我现在做的一个直播页边来举例，里边有比较明显的三个区块，一个课件区，一个视频区，一个是讨论区。每个区块上边还有一些相关的 View。 所以我觉得可以用 View Controller Containment 来实现。 用一个 MasterViewController 来管理这三个区域。 这三个区域也是不同的子控制器。</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">VideoViewController</span>: <span class="title">UIViewController</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">KeynoteViewController</span>: <span class="title">UIViewController</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ChatViewController</span>: <span class="title">UIViewController</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">MasterViewControlller</span>: <span class="title">UIViewController</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">lazy</span> <span class="keyword">var</span> videoViewController: <span class="type">VideoViewController</span> = &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="type">VideoViewController</span>()</span><br><span class="line">    &#125;()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">lazy</span> <span class="keyword">var</span> keynoteViewController: <span class="type">KeynoteViewController</span> = &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="type">KeynoteViewController</span>()</span><br><span class="line">    &#125;()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">lazy</span> <span class="keyword">var</span> chatViewController: <span class="type">ChatViewController</span> = &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="type">ChatViewController</span>()</span><br><span class="line">    &#125;()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.viewDidLoad()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// MARK: - Add Child View Controllers</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">setupInterface</span><span class="params">()</span></span> &#123;</span><br><span class="line">        </span><br><span class="line">        addChild(videoViewController)</span><br><span class="line">        addChild(keynoteViewController)</span><br><span class="line">        addChild(chatViewController)</span><br><span class="line"></span><br><span class="line">        view.addSubViews([</span><br><span class="line">            videoViewController.view,</span><br><span class="line">            keynoteViewController,</span><br><span class="line">            chatViewController</span><br><span class="line">        ])</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 这里进行对子控制器的 View 的布局</span></span><br><span class="line"></span><br><span class="line">        videoViewController.didMove(toParent: <span class="keyword">self</span>)</span><br><span class="line">        keynoteViewController.didMove(toParent: <span class="keyword">self</span>)</span><br><span class="line">        chatViewController.didMove(toParent: <span class="keyword">self</span>)</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// MARK: - Remove Child View Controller</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">remove</span><span class="params">(asChild viewController: UIViewController)</span></span> &#123;</span><br><span class="line">        <span class="comment">// Notify Child View Controller</span></span><br><span class="line">        viewController.willMove(toParent: <span class="literal">nil</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Remove Child View From Superview</span></span><br><span class="line">        viewController.view.removeFromSuperview()</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Notify Child View Controller</span></span><br><span class="line">        viewController.removeFromParentViewController()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">VideoViewController</span>: <span class="title class_ inherited__">UIViewController</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">KeynoteViewController</span>: <span class="title class_ inherited__">UIViewController</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ChatViewController</span>: <span class="title class_ inherited__">UIViewController</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">final</span> <span class="keyword">class</span> <span class="title class_">MasterViewControlller</span>: <span class="title class_ inherited__">UIViewController</span> &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">lazy</span> <span class="keyword">var</span> videoViewController: <span class="type">VideoViewController</span> <span class="operator">=</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="type">VideoViewController</span>()</span><br><span class="line">    &#125;()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">lazy</span> <span class="keyword">var</span> keynoteViewController: <span class="type">KeynoteViewController</span> <span class="operator">=</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="type">KeynoteViewController</span>()</span><br><span class="line">    &#125;()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">lazy</span> <span class="keyword">var</span> chatViewController: <span class="type">ChatViewController</span> <span class="operator">=</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="type">ChatViewController</span>()</span><br><span class="line">    &#125;()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="keyword">func</span> <span class="title function_">viewDidLoad</span>() &#123;</span><br><span class="line">        <span class="keyword">super</span>.viewDidLoad()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// MARK: - Add Child View Controllers</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">func</span> <span class="title function_">setupInterface</span>() &#123;</span><br><span class="line">        </span><br><span class="line">        addChild(videoViewController)</span><br><span class="line">        addChild(keynoteViewController)</span><br><span class="line">        addChild(chatViewController)</span><br><span class="line"></span><br><span class="line">        view.addSubViews([</span><br><span class="line">            videoViewController.view,</span><br><span class="line">            keynoteViewController,</span><br><span class="line">            chatViewController</span><br><span class="line">        ])</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 这里进行对子控制器的 View 的布局</span></span><br><span class="line"></span><br><span class="line">        videoViewController.didMove(toParent: <span class="keyword">self</span>)</span><br><span class="line">        keynoteViewController.didMove(toParent: <span class="keyword">self</span>)</span><br><span class="line">        chatViewController.didMove(toParent: <span class="keyword">self</span>)</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// MARK: - Remove Child View Controller</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">func</span> <span class="title function_">remove</span>(<span class="params">asChild</span> <span class="params">viewController</span>: <span class="type">UIViewController</span>) &#123;</span><br><span class="line">        <span class="comment">// Notify Child View Controller</span></span><br><span class="line">        viewController.willMove(toParent: <span class="literal">nil</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Remove Child View From Superview</span></span><br><span class="line">        viewController.view.removeFromSuperview()</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Notify Child View Controller</span></span><br><span class="line">        viewController.removeFromParentViewController()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>这里需要注意的点是在做布局之前要使用 addChild(:) 方法，这样会触发子控制器的 willMove(toParent:) 方法，并且在布局完后要使用 didMove(toParent:) 方法。在移除 Child View Controller 的时候也需要重复相似的步骤，在移除 View 之前要使用 willMove(toParent:)， 在移除 View 之后使用 removeFromParentViewController() 方法。这样的做的好处是可以把子控制器的生命周期纳入父控制器的控制范围：在父控制器加入或者移除子控制器的时候能够触发子控制器的 viewWillAppear 和 viewWillDisappear 的方法。</p>
 <h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>View Controller Containment 是一种非常实用的重构 UI 的设计模式，我在接触了这种模式后就开始欲罢不能（谁用谁知道）。这种模式不仅能增加代码的复用性和可拓展性，还可以将逻辑进行分离从而增加代码的可读性。所以把它加入你的 skill set 中会给你以后的工作和学习带来很大的益处。</p>
-<div class="note info"><p>相关链接：</p><p><a href="https://cocoacasts.com/managing-view-controllers-with-container-view-controllers" target="_blank" rel="noopener">Managing View Controllers With Container View Controllers</a></p></div>
-      
+<div class="note info">
+            <p>相关链接：</p><p><a target="_blank" rel="noopener" href="https://cocoacasts.com/managing-view-controllers-with-container-view-controllers">Managing View Controllers With Container View Controllers</a></p>
+          </div>
     </div>
 
     
-
-    
     
     
 
-    <div>
-      
-        <div>
-    
-        <div style="text-align:center;color: #ccc;font-size:14px;">本文结束 <i class="fa fa-star"></i> 感谢您的阅读</div>
-    
-</div>
-      
-    </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Swift/" rel="tag"># Swift</a>
+              <a href="/tags/iOS/" rel="tag"># iOS</a>
+              <a href="/tags/Design-Pattern/" rel="tag"># Design Pattern</a>
+          </div>
 
-    <div>
-      
         
-<div class="my_post_copyright">
-  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-  
-  <!-- JS库 sweetalert 可修改路径 -->
-  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2019/06/21/viewcontroller-containment/">你不知道的 View Controller Containment</a></p>
-  <p><span>文章作者:</span><a href="/" title="访问 Penstein 的个人博客">Penstein</a></p>
-  <p><span>原始链接:</span><a href="/2019/06/21/viewcontroller-containment/" title="你不知道的 View Controller Containment">http://cyberhex.me/2019/06/21/viewcontroller-containment/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://cyberhex.me/2019/06/21/viewcontroller-containment/" aria-label="复制成功！"></i></span>
-  </p>
-  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
-</div>
-<script> 
-    var clipboard = new Clipboard('.fa-clipboard');
-    $(".fa-clipboard").click(function(){
-      clipboard.on('success', function(){
-        swal({   
-          title: "",   
-          text: '复制成功',
-          icon: "success", 
-          showConfirmButton: true
-          });
-	});
-    });  
-</script>
 
-      
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2018/11/27/concurrency-in-iOS/" rel="prev" title="iOS 中的并发性问题">
+      <i class="fa fa-chevron-left"></i> iOS 中的并发性问题
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/06/26/optimizing-images/" rel="next" title="优化图片">
+      优化图片 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
-
+      </footer>
     
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Swift/" rel="tag"><i class="fa fa-tag"></i>  Swift</a>
-          
-            <a href="/tags/iOS/" rel="tag"><i class="fa fa-tag"></i>  iOS</a>
-          
-            <a href="/tags/Design-Pattern/" rel="tag"><i class="fa fa-tag"></i>  Design Pattern</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/11/27/concurrency-in-iOS/" rel="next" title="iOS 中的并发性问题">
-                <i class="fa fa-chevron-left"></i> iOS 中的并发性问题
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/26/optimizing-images/" rel="prev" title="优化图片">
-                优化图片 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-
-  </div>
 
 
           </div>
           
 
-  
-    <div class="comments" id="comments">
-    </div>
-  
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-            
-            <a href="/">
-              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="Penstein">
-            </a>
-            
-              <p class="site-author-name" itemprop="name">Penstein</p>
-              <p class="site-description motion-element" itemprop="description">Simple(r) Always Wins.</p>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">20</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                
-              <div class="site-state-item site-state-categories">
-                <a href="/categories">
-                  <a href="/categories/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">6</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
-                </a>
-              </div>
-              
-
-              
-                
-                
-                
-                <div class="site-state-item site-state-tags">
-                  <a href="/tags">
-                    <a href="/tags/index.html">
-                      
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                      <span class="site-state-item-count">9</span>
-                      <span class="site-state-item-name">标签</span>
-                    </a>
-                  </a>
-                </div>
-                
-              
-            </nav>
-          
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
-
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  <a href="https://github.com/quintessencegpy" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://www.linkedin.com/in/pengyu-penn）-gou-3b03667a" target="_blank" title="Linkedin"><i class="fa fa-fw fa-linkedin"></i>Linkedin</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://weibo.com/penstein" target="_blank" title="Weibo"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
-                  
-                </span>
-              
-            </div>
-          
-
-          
-          
-
-          
-          
-            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
-              <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-globe"></i>
-                东方神秘链接
-              </div>
-              <ul class="links-of-blogroll-list">
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://laracasts.com/" title="Laracast" target="_blank">Laracast</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://www.letsbuildthatapp.com/" title="LBTA" target="_blank">LBTA</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://teamtreehouse.com/" title="TreeHouse" target="_blank">TreeHouse</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
-
-          
-            
-          
-          <div id="days"></div>
 <script>
-function show_date_time(){
-window.setTimeout("show_date_time()", 1000);
-BirthDay=new Date("11/04/2018 15:13:14");
-today=new Date();
-timeold=(today.getTime()-BirthDay.getTime());
-sectimeold=timeold/1000
-secondsold=Math.floor(sectimeold);
-msPerDay=24*60*60*1000
-e_daysold=timeold/msPerDay
-daysold=Math.floor(e_daysold);
-e_hrsold=(e_daysold-daysold)*24;
-hrsold=setzero(Math.floor(e_hrsold));
-e_minsold=(e_hrsold-hrsold)*60;
-minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
-seconds=setzero(Math.floor((e_minsold-minsold)*60));
-document.getElementById('days').innerHTML="已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
-}
-function setzero(i){
-if (i<10)
-{i="0" + i};
-return i;
-}
-show_date_time();
-</script>
-
-
-        </div>
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">2.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优点"><span class="nav-number">3.</span> <span class="nav-text">优点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#可复用性"><span class="nav-number">3.1.</span> <span class="nav-text">可复用性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑分离"><span class="nav-number">3.2.</span> <span class="nav-text">逻辑分离</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#举例"><span class="nav-number">4.</span> <span class="nav-text">举例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结论"><span class="nav-number">5.</span> <span class="nav-text">结论</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-      
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright"> &copy; 2018 – <span itemprop="copyrightYear">2020</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Penstein</span>
-
-  
-
-  
-</div>
-
-
- 
-
-
-
-
-
-
-
-
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv" title="总访客量">
-      <i class="fa fa-user"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-    </span>
-  
-
-  
-    <span class="site-pv" title="总访问量">
-      <i class="fa fa-eye"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-    </span>
-  
-</div>
-
-
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
-    
-
-    
-      <div id="needsharebutton-float">
-        <span class="btn">
-          <i class="fa fa-share-alt" aria-hidden="true"></i>
-        </span>
-      </div>
-    
-	
-    
-
-    
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
   }
 </script>
 
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-number">2.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E7%82%B9"><span class="nav-number">3.</span> <span class="nav-text">优点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E5%A4%8D%E7%94%A8%E6%80%A7"><span class="nav-number">3.1.</span> <span class="nav-text">可复用性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E5%88%86%E7%A6%BB"><span class="nav-number">3.2.</span> <span class="nav-text">逻辑分离</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BE%E4%BE%8B"><span class="nav-number">4.</span> <span class="nav-text">举例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">5.</span> <span class="nav-text">结论</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Penstein</p>
+  <div class="site-description" itemprop="description">Simple(r) Always Wins.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Penstein</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
 
 
 
@@ -983,6 +378,25 @@ show_date_time();
 
 
 
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -1002,458 +416,6 @@ show_date_time();
 
 
 
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-
-
-
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  
-  
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(function (item) {
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: '45fn3meaOT61ysJFuteanO38-gzGzoHsz',
-        appKey: '8DKj6dC7GuqWu4tIpNKVaiFB',
-        placeholder: '想说就说，别客气',
-        avatar:'mp',
-        meta:guest,
-        pageSize:'10' || 10,
-        visitor: true
-    });
-  </script>
-
-
-
-  
-
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-  
-  <script src="/lib/needsharebutton/needsharebutton.js"></script>
-
-  <script>
-    
-    
-      flOptions = {};
-      
-          flOptions.iconStyle = "default";
-      
-          flOptions.boxForm = "horizontal";
-      
-          flOptions.position = "middleRight";
-      
-          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Linkedin,Twitter";
-      
-      new needShareButton('#needsharebutton-float', flOptions);
-    
-  </script>
-
-  
-
-  
-
-  
-
-  
 
   
 

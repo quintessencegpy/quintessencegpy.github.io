@@ -1,187 +1,49 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next mist use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
+<link rel="stylesheet" href="/css/main.css">
 
 
-  
-  
-  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-
-
-
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-    
-      
-    
-
-    
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Poor Story:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-cyberhex.png?v=6.5.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-cyberhex.png?v=6.5.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-cyberhex.png?v=6.5.0">
-
-
-  <link rel="mask-icon" href="/images/cyberhex.svg?v=6.5.0" color="#222">
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '6.5.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
-    fancybox: true,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"cyberhex.me","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
   <meta name="description" content="本文主要是苹果线上活动 - 基于 CreateML 的物体识别的观后感和一点想法。">
-<meta name="keywords" content="iOS,Machine Learning">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CreateML - 开启革命的星星之火">
 <meta property="og:url" content="http://cyberhex.me/2020/11/24/create-ml-introduction/index.html">
 <meta property="og:site_name" content="CyberHex">
 <meta property="og:description" content="本文主要是苹果线上活动 - 基于 CreateML 的物体识别的观后感和一点想法。">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-12-01T15:03:20.128Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-24T12:56:24.000Z">
+<meta property="article:modified_time" content="2020-12-01T15:03:20.120Z">
+<meta property="article:author" content="Penstein">
+<meta property="article:tag" content="iOS">
+<meta property="article:tag" content="Machine Learning">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CreateML - 开启革命的星星之火">
-<meta name="twitter:description" content="本文主要是苹果线上活动 - 基于 CreateML 的物体识别的观后感和一点想法。">
+
+<link rel="canonical" href="http://cyberhex.me/2020/11/24/create-ml-introduction/">
 
 
-
-  <link rel="alternate" href="/atom.xml" title="CyberHex" type="application/atom+xml">
-
-
-
-
-  <link rel="canonical" href="http://cyberhex.me/2020/11/24/create-ml-introduction/">
-
-
-
-<script type="text/javascript" id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -193,170 +55,80 @@
 
 
 
-
-
-
-
-
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
+<link rel="alternate" href="/atom.xml" title="CyberHex" type="application/atom+xml">
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">CyberHex</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-    
-      
-        <p class="site-subtitle">Simple(r) Always Wins.</p>
-      
-    
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">CyberHex</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Simple(r) Always Wins.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
+
 
 
 
 <nav class="site-nav">
-  
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
-    <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
-    <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
-    <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
-  </li>
-
-      
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
-        </li>
-      
-    </ul>
-  
-
-  
-    
-
-  
-
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
-  
+  </ul>
 </nav>
 
-
-
-  
 
 
 
@@ -364,153 +136,70 @@
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
-          <div id="content" class="content">
+
+          <div class="content post posts-expand">
             
 
-  <div id="posts" class="posts-expand">
     
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://cyberhex.me/2020/11/24/create-ml-introduction/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Penstein">
       <meta itemprop="description" content="Simple(r) Always Wins.">
-      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="CyberHex">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">CreateML - 开启革命的星星之火
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          CreateML - 开启革命的星星之火
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2020-11-24 20:56:24" itemprop="dateCreated datePublished" datetime="2020-11-24T20:56:24+08:00">2020-11-24</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-12-01 23:03:20" itemprop="dateModified" datetime="2020-12-01T23:03:20+08:00">2020-12-01</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/会议报告/" itemprop="url" rel="index"><span itemprop="name">会议报告</span></a></span>
-
-                
-                
-              
             </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
-                <a href="/2020/11/24/create-ml-introduction/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2020/11/24/create-ml-introduction/" itemprop="commentCount"></span>
-                </a>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-01 23:03:20" itemprop="dateModified" datetime="2020-12-01T23:03:20+08:00">2020-12-01</time>
               </span>
-            
-          
-
-          
-          
-             <span id="/2020/11/24/create-ml-introduction/" class="leancloud_visitors" data-flag-title="CreateML - 开启革命的星星之火">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-fire"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">热度：</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-                 <span>℃</span>
-             </span>
-          
-
-          
-
-          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BC%9A%E8%AE%AE%E6%8A%A5%E5%91%8A/" itemprop="url" rel="index"><span itemprop="name">会议报告</span></a>
+                </span>
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -518,19 +207,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
+        <p>本文主要是苹果线上活动 - 基于 CreateML 的物体识别的观后感和一点想法。</p>
+<span id="more"></span>
 
-      
-        <p>本文主要是苹果线上活动 - 基于 CreateML 的物体识别的观后感和一点想法。<br><a id="more"></a></p>
 <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>Core ML 在 2017 年的横空出世开启了苹果机器学习的元年。但苹果貌似并没有准备在这条路上停下脚步，隔了仅仅一年，苹果就推出了 Create ML，之后苹果还在不断地给 Core ML 和 Create ML 添加新的功能，甚至在 XCode 11 之后将 Create ML 独立成为一个单独的 App。由此可见，苹果并不是拍拍脑袋或者搞搞 KPI（他们应该没有，只是为了押韵），他们是认真在考虑把 Machine Learning 移植到移动端，并且不断地在尝试去降低 Machine Learning 的门槛，让越来越多的开发正更方便的使用 Machine Learning 给自己的应用增砖添瓦。</p>
 <h2 id="什么是-Create-ML"><a href="#什么是-Create-ML" class="headerlink" title="什么是 Create ML"></a>什么是 Create ML</h2><p>关于 CreateML 网上有太多的介绍和教程，我只做一下简单的介绍，因为我再怎么努力也没办法比前人讲的更好更清楚，既然这样，那就站在巨人的肩膀上，大概讲一下我的认识。</p>
 <p>苹果在 2016 年收购了 Turi Create，然后在此基础上发展出了 Create ML（虽然在 WWDC 中没有明说，但是大家都心知肚明）。在 Create ML 之前如果你想在 iOS 中使用 Core ML 的 Model（mlmodel 格式的文件）的话，只能在 TensorFlow，Pytorch 等流行的框架中先进行模型训练，然后通过 Core ML 中的 converter 把这些模型转换成 mlmodel 的格式。这其实是有一定门槛的，首先你得对 TensorFlow，Pytorch 有一定的了解，也要会使用 Python 语言（虽然不是很难），最重要的是你得对机器学习有比较多的了解，才能把自己的想法转化成模型。</p>
 <p>但 Create ML 的出现，打破了这个壁垒。Create ML 中现在有很多机器学习的类型，包括：Image，Video，Motion，Sound，Text 和 Table，囊括了很多我们平时会遇到的场景，我们通过其中预设的 Template 再加上几行代码（如果你用 GUI 工具甚至一行代码都不用写），通过对收集的数据进行训练，在你的 Mac 上就可以得到一个 well-trained 模型。这其中除了一些对数据集有一些需要注意的点 - 比如数据集要尽量均衡，要有不同的背景、不同的角度，要有噪音等等，你不需要对内部的神经网络之类的有很多的了解。剩下需要你做的基本就是一些拖拽，设置参数，泡杯卡布奇诺等待 Mac 帮你 Training 之类的操作。</p>
-<p>关于 Create ML 具体要怎么操作，你可以看 Raywenerlich 的这篇教程 <a href="https://www.raywenderlich.com/5653-create-ml-tutorial-getting-started#toc-anchor-020" target="_blank" rel="noopener">Create ML Tutorial: Getting Started</a>，或者如果你更喜欢看中文版，可以看故胤道长的这篇博客 <a href="http://www.cocoachina.com/articles/26420" target="_blank" rel="noopener">WWDC 2018：初探 Create ML</a>，都是非常好的参考资料，比我写的不知道高到哪里去了。</p>
+<p>关于 Create ML 具体要怎么操作，你可以看 Raywenerlich 的这篇教程 <a target="_blank" rel="noopener" href="https://www.raywenderlich.com/5653-create-ml-tutorial-getting-started#toc-anchor-020">Create ML Tutorial: Getting Started</a>，或者如果你更喜欢看中文版，可以看故胤道长的这篇博客 <a target="_blank" rel="noopener" href="http://www.cocoachina.com/articles/26420">WWDC 2018：初探 Create ML</a>，都是非常好的参考资料，比我写的不知道高到哪里去了。</p>
 <h2 id="Transfer-Learning"><a href="#Transfer-Learning" class="headerlink" title="Transfer Learning"></a>Transfer Learning</h2><p>Transfer Learning（迁移学习）就是把已学训练好的模型参数迁移到新的模型来帮助新模型训练。苹果在 Create ML 也用到了 Transfer Learning ，这样可以大幅缩短 Training 的时间，Model 的体积和数据量。当然你也可以选择 Full Network 的方式来进行，但是按照苹果的说法是 Full Network 和 Transfer Learning 可以达到几乎一致的结果，所以从成本的角度来考虑完全没有必要使用 Full Network 的方式（当时这是在完全相信苹果的前提下）。</p>
 <p>Full Network 和 Transfer Training 的区别就是：Full Network 是从头开始训练一个模型，而 Transfer Training 形象的来说就是苹果给你一个半成品模型（Backbone），这个模型已经被苹果用大量的数据调教过了，然后你再用这个半成品进行二次训练，从而节省更多的成本。</p>
 <h2 id="这次活动都讲了什么"><a href="#这次活动都讲了什么" class="headerlink" title="这次活动都讲了什么"></a>这次活动都讲了什么</h2><p>这次会议是关于物体识别的，这个主要是用了 Create ML 中 Image 类型下的 Object Detection Template。</p>
-<p>更详细的记录可以看我同事温和的<a href="https://www.notion.so/Create-ML-84d28aa842064be7b74eb3bde136bd93" target="_blank" rel="noopener">笔记</a>。</p>
+<p>更详细的记录可以看我同事温和的<a target="_blank" rel="noopener" href="https://www.notion.so/Create-ML-84d28aa842064be7b74eb3bde136bd93">笔记</a>。</p>
 <h2 id="Create-ML-的优势"><a href="#Create-ML-的优势" class="headerlink" title="Create ML 的优势"></a>Create ML 的优势</h2><h3 id="灵活性"><a href="#灵活性" class="headerlink" title="灵活性"></a>灵活性</h3><p>在 Swift 中，新手能很快上手用 Swift 编写 iOS App，甚至他们都不需要了解泛型，函数式等比较高阶一点的用法；但对于有多年 Swift 经验的老同志来说，如果想用到更 Fancy 的功能，Swift 也能满足你的需求。Create ML 继承了苹果一贯的思想 - 对没有任何机器学习的新手来说非常友好，但同时对那些想“搞事情”的老玩家也提供了一些底层的 API 来进行一些他们想要的操作。</p>
 <h3 id="高效率"><a href="#高效率" class="headerlink" title="高效率"></a>高效率</h3><p>由于 Transfer Learning 的原因，Training 所需要的时间数据集和都不多，这节省了很多等待和收集数据的时间。而且对于 iOS 开发者来说，都不需要新学一门语言就可以直接上手，这也节约了很多学习和开发成本。</p>
 <h2 id="Create-ML-能为我们带来什么"><a href="#Create-ML-能为我们带来什么" class="headerlink" title="Create ML 能为我们带来什么"></a>Create ML 能为我们带来什么</h2><p>还记得在上研究生时为了训练马里奥让他轻松过关，训练了一晚上这货还是傻乎乎的往大乌龟上撞。虽然这大概率是我模型建的太渣，但也从一个侧面体现出来了一个问题，就是传统的 Training 太耗费时间了，不懂得“点到为止”。作为一个学生，这个带来的结果最多是错过 deadline，你跟教授死缠烂打一下，他说不定就睁一只眼闭一只眼过去了（我可没有这么做过啊）。但是放在生产中，这代价就不会只有错过 deadline 这么简单了，这会影响产品的上线和迭代，从而影响市场占有率。在产品的早期，产品的完成度比完美度更有说服力，所以选择 Create ML 这样的工具，以较低的成本先占领市场，然后再慢慢完善产品的迭代也是一种不错的选择。</p>
@@ -539,450 +227,164 @@
 <h3 id="仍然不够成熟"><a href="#仍然不够成熟" class="headerlink" title="仍然不够成熟"></a>仍然不够成熟</h3><p>和隔壁使用 Python 生态的机器学习圈相比，苹果和 Swift 仍然有挺长的路要走。虽然 Create ML 包含了 Image，Video，Motion，Sound，Text 和 Table 的类别，但是其中暂时也是只有一些特定的 Template 可以使用，还是略显单薄。</p>
 <h3 id="无法在云端训练"><a href="#无法在云端训练" class="headerlink" title="无法在云端训练"></a>无法在云端训练</h3><p>虽然在 Mac 上就能进行 Training 听起来非常美好，但是缺乏在云端训练的功能还是一个比较值得注意的问题。如果想让更多的用户转移到 Create ML 这个平台势必要考虑这个问题。但如果 Create ML 的定位就是轻量级别的 Training 的话，这可能也算不上一个问题。</p>
 <h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>从苹果这些年的一系列动作可以看出他们对于机器学习的生态有很大的野望，和谷歌等大公司的明争暗斗也让人看得眼花缭乱。谷歌也在积极推进 Swift for TensorFlow，从侧面也能看出谷歌对他这个对手的尊重。在我们凡人围观这场“神仙打架”的过程中也能看出来 Create ML 的出现更像一场即将或正在发生的革命 - 曾经机器学习的大部分资源都掌握在少数“AI精英”的手中，Create ML 的出现有助于打破现有的 “机器学习垄断”，让更多的开发者能有一个像样的交通工具加入这个赛道，虽然比不上别人的兰博基尼，但是也算有了代步的工具。随着更多人的加入，全民机器学习的时代可能会比我们想象的更早到来，到时候作为非机器学习的开发者也将有机会把自己的想法转化成真正的产品，AI 相关的应用将犹如雨后春笋般的出现。</p>
-<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>感谢公司的这次机会以及苹果员工精彩的演讲和耐心的咨询。最后打个广告：落叶的一生就是为了归根吗？曾经的我也相信宿命论 - 程序员就是要 996 的，疫情是要被裁员的，出游是要自掏腰包的，五一是只有三天假的 … 仿佛死神与巴格达商人在萨拉马的相会，一切都是那么无力。直到我加入了猿辅导，我的世界观崩塌了：原来程序员也不一定非要 996，疫情期间会有更多的项目和机会，出游是公司掏钱，五一有九天假！从来没见过如此“不讲武德”的公司，说好的武林要以和为贵呢？你这样其他公司怎么活！那你还在等什么，加入我们，我的邮箱是 <a href="mailto:goupy@fenbi.com" target="_blank" rel="noopener">goupy@fenbi.com</a>，内推我是认真的，你值得拥有更好的。</p>
-<div class="note info"><p>相关链接：<br><a href="https://www.notion.so/Create-ML-84d28aa842064be7b74eb3bde136bd93" target="_blank" rel="noopener">笔记 - 基于 Create ML 的物体识别</a><br><a href="https://machinethink.net/blog/new-in-apple-machine-learning-2020/" target="_blank" rel="noopener">Apple machine learning in 2020: What’s new?</a><br><a href="https://www.raywenderlich.com/5653-create-ml-tutorial-getting-started#toc-anchor-020" target="_blank" rel="noopener">Create ML Tutorial: Getting Started</a><br><a href="http://www.cocoachina.com/articles/26420" target="_blank" rel="noopener">WWDC 2018：初探 Create ML</a><br><a href="https://www.zhihu.com/question/41979241" target="_blank" rel="noopener">什么是迁移学习 (Transfer Learning)？这个领域历史发展前景如何？</a><br><a href="https://www.netguru.com/codestories/createml-start-your-adventure-in-machine-learning-with-swift" target="_blank" rel="noopener">CreateML: Start Your Adventure in Machine Learning with Swift</a><br><a href="https://hongchaozhang.github.io/blog/2018/06/15/introducing-create-ml/" target="_blank" rel="noopener">Introducing Create ML</a><br><a href="https://heartbeat.fritz.ai/sound-classification-using-core-ml-3-and-create-ml-fc73ca20aff5" target="_blank" rel="noopener">Sound Classification on iOS Using Core ML 3 and Create ML</a><br><a href="https://www.computerworld.com/article/3293446/why-apple-s-create-ml-matters-to-your-enterprise.html" target="_blank" rel="noopener">Why Apple’s Create ML matters to your enterprise</a></p></div>
+<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>感谢公司的这次机会以及苹果员工精彩的演讲和耐心的咨询。最后打个广告：落叶的一生就是为了归根吗？曾经的我也相信宿命论 - 程序员就是要 996 的，疫情是要被裁员的，出游是要自掏腰包的，五一是只有三天假的 … 仿佛死神与巴格达商人在萨拉马的相会，一切都是那么无力。直到我加入了猿辅导，我的世界观崩塌了：原来程序员也不一定非要 996，疫情期间会有更多的项目和机会，出游是公司掏钱，五一有九天假！从来没见过如此“不讲武德”的公司，说好的武林要以和为贵呢？你这样其他公司怎么活！那你还在等什么，加入我们，我的邮箱是 <a href="mailto:&#103;&#111;&#x75;&#112;&#121;&#64;&#x66;&#101;&#110;&#98;&#105;&#46;&#x63;&#111;&#109;">goupy@fenbi.com</a>，内推我是认真的，你值得拥有更好的。</p>
+<div class="note info">
+            <p>相关链接：<br><a target="_blank" rel="noopener" href="https://www.notion.so/Create-ML-84d28aa842064be7b74eb3bde136bd93">笔记 - 基于 Create ML 的物体识别</a><br><a target="_blank" rel="noopener" href="https://machinethink.net/blog/new-in-apple-machine-learning-2020/">Apple machine learning in 2020: What’s new?</a><br><a target="_blank" rel="noopener" href="https://www.raywenderlich.com/5653-create-ml-tutorial-getting-started#toc-anchor-020">Create ML Tutorial: Getting Started</a><br><a target="_blank" rel="noopener" href="http://www.cocoachina.com/articles/26420">WWDC 2018：初探 Create ML</a><br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/41979241">什么是迁移学习 (Transfer Learning)？这个领域历史发展前景如何？</a><br><a target="_blank" rel="noopener" href="https://www.netguru.com/codestories/createml-start-your-adventure-in-machine-learning-with-swift">CreateML: Start Your Adventure in Machine Learning with Swift</a><br><a target="_blank" rel="noopener" href="https://hongchaozhang.github.io/blog/2018/06/15/introducing-create-ml/">Introducing Create ML</a><br><a target="_blank" rel="noopener" href="https://heartbeat.fritz.ai/sound-classification-using-core-ml-3-and-create-ml-fc73ca20aff5">Sound Classification on iOS Using Core ML 3 and Create ML</a><br><a target="_blank" rel="noopener" href="https://www.computerworld.com/article/3293446/why-apple-s-create-ml-matters-to-your-enterprise.html">Why Apple’s Create ML matters to your enterprise</a></p>
+          </div>
 
-      
+
+
+
+
+
+
+
+
     </div>
 
     
-
-    
     
     
 
-    <div>
-      
-        <div>
-    
-        <div style="text-align:center;color: #ccc;font-size:14px;">本文结束 <i class="fa fa-star"></i> 感谢您的阅读</div>
-    
-</div>
-      
-    </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/iOS/" rel="tag"># iOS</a>
+              <a href="/tags/Machine-Learning/" rel="tag"># Machine Learning</a>
+          </div>
 
-    <div>
-      
         
-<div class="my_post_copyright">
-  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-  
-  <!-- JS库 sweetalert 可修改路径 -->
-  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2020/11/24/create-ml-introduction/">CreateML - 开启革命的星星之火</a></p>
-  <p><span>文章作者:</span><a href="/" title="访问 Penstein 的个人博客">Penstein</a></p>
-  <p><span>原始链接:</span><a href="/2020/11/24/create-ml-introduction/" title="CreateML - 开启革命的星星之火">http://cyberhex.me/2020/11/24/create-ml-introduction/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://cyberhex.me/2020/11/24/create-ml-introduction/" aria-label="复制成功！"></i></span>
-  </p>
-  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
-</div>
-<script> 
-    var clipboard = new Clipboard('.fa-clipboard');
-    $(".fa-clipboard").click(function(){
-      clipboard.on('success', function(){
-        swal({   
-          title: "",   
-          text: '复制成功',
-          icon: "success", 
-          showConfirmButton: true
-          });
-	});
-    });  
-</script>
 
-      
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/08/02/arts-08/" rel="prev" title="ARTS 打卡 08">
+      <i class="fa fa-chevron-left"></i> ARTS 打卡 08
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/12/01/arts-09/" rel="next" title="ARTS 打卡 09">
+      ARTS 打卡 09 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
-
+      </footer>
     
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/iOS/" rel="tag"><i class="fa fa-tag"></i>  iOS</a>
-          
-            <a href="/tags/Machine-Learning/" rel="tag"><i class="fa fa-tag"></i>  Machine Learning</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2020/08/02/arts-08/" rel="next" title="ARTS 打卡 08">
-                <i class="fa fa-chevron-left"></i> ARTS 打卡 08
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/12/01/arts-09/" rel="prev" title="ARTS 打卡 09">
-                ARTS 打卡 09 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-
-  </div>
 
 
           </div>
           
 
-  
-    <div class="comments" id="comments">
-    </div>
-  
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-            
-            <a href="/">
-              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="Penstein">
-            </a>
-            
-              <p class="site-author-name" itemprop="name">Penstein</p>
-              <p class="site-description motion-element" itemprop="description">Simple(r) Always Wins.</p>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">20</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                
-              <div class="site-state-item site-state-categories">
-                <a href="/categories">
-                  <a href="/categories/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">6</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
-                </a>
-              </div>
-              
-
-              
-                
-                
-                
-                <div class="site-state-item site-state-tags">
-                  <a href="/tags">
-                    <a href="/tags/index.html">
-                      
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                      <span class="site-state-item-count">9</span>
-                      <span class="site-state-item-name">标签</span>
-                    </a>
-                  </a>
-                </div>
-                
-              
-            </nav>
-          
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
-
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  <a href="https://github.com/quintessencegpy" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://www.linkedin.com/in/pengyu-penn）-gou-3b03667a" target="_blank" title="Linkedin"><i class="fa fa-fw fa-linkedin"></i>Linkedin</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://weibo.com/penstein" target="_blank" title="Weibo"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
-                  
-                </span>
-              
-            </div>
-          
-
-          
-          
-
-          
-          
-            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
-              <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-globe"></i>
-                东方神秘链接
-              </div>
-              <ul class="links-of-blogroll-list">
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://laracasts.com/" title="Laracast" target="_blank">Laracast</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://www.letsbuildthatapp.com/" title="LBTA" target="_blank">LBTA</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://teamtreehouse.com/" title="TreeHouse" target="_blank">TreeHouse</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
-
-          
-            
-          
-          <div id="days"></div>
 <script>
-function show_date_time(){
-window.setTimeout("show_date_time()", 1000);
-BirthDay=new Date("11/04/2018 15:13:14");
-today=new Date();
-timeold=(today.getTime()-BirthDay.getTime());
-sectimeold=timeold/1000
-secondsold=Math.floor(sectimeold);
-msPerDay=24*60*60*1000
-e_daysold=timeold/msPerDay
-daysold=Math.floor(e_daysold);
-e_hrsold=(e_daysold-daysold)*24;
-hrsold=setzero(Math.floor(e_hrsold));
-e_minsold=(e_hrsold-hrsold)*60;
-minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
-seconds=setzero(Math.floor((e_minsold-minsold)*60));
-document.getElementById('days').innerHTML="已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
-}
-function setzero(i){
-if (i<10)
-{i="0" + i};
-return i;
-}
-show_date_time();
-</script>
-
-
-        </div>
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是-Create-ML"><span class="nav-number">2.</span> <span class="nav-text">什么是 Create ML</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Transfer-Learning"><span class="nav-number">3.</span> <span class="nav-text">Transfer Learning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#这次活动都讲了什么"><span class="nav-number">4.</span> <span class="nav-text">这次活动都讲了什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Create-ML-的优势"><span class="nav-number">5.</span> <span class="nav-text">Create ML 的优势</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#灵活性"><span class="nav-number">5.1.</span> <span class="nav-text">灵活性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高效率"><span class="nav-number">5.2.</span> <span class="nav-text">高效率</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Create-ML-能为我们带来什么"><span class="nav-number">6.</span> <span class="nav-text">Create ML 能为我们带来什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Create-ML-仍有要“好好反思”的余地"><span class="nav-number">7.</span> <span class="nav-text">Create ML 仍有要“好好反思”的余地</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#仍然不够成熟"><span class="nav-number">7.1.</span> <span class="nav-text">仍然不够成熟</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无法在云端训练"><span class="nav-number">7.2.</span> <span class="nav-text">无法在云端训练</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结语"><span class="nav-number">8.</span> <span class="nav-text">结语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鸣谢"><span class="nav-number">9.</span> <span class="nav-text">鸣谢</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-      
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright"> &copy; 2018 – <span itemprop="copyrightYear">2020</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Penstein</span>
-
-  
-
-  
-</div>
-
-
- 
-
-
-
-
-
-
-
-
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv" title="总访客量">
-      <i class="fa fa-user"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-    </span>
-  
-
-  
-    <span class="site-pv" title="总访问量">
-      <i class="fa fa-eye"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-    </span>
-  
-</div>
-
-
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
-    
-
-    
-      <div id="needsharebutton-float">
-        <span class="btn">
-          <i class="fa fa-share-alt" aria-hidden="true"></i>
-        </span>
-      </div>
-    
-	
-    
-
-    
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
   }
 </script>
 
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-Create-ML"><span class="nav-number">2.</span> <span class="nav-text">什么是 Create ML</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Transfer-Learning"><span class="nav-number">3.</span> <span class="nav-text">Transfer Learning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%99%E6%AC%A1%E6%B4%BB%E5%8A%A8%E9%83%BD%E8%AE%B2%E4%BA%86%E4%BB%80%E4%B9%88"><span class="nav-number">4.</span> <span class="nav-text">这次活动都讲了什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Create-ML-%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="nav-number">5.</span> <span class="nav-text">Create ML 的优势</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%81%B5%E6%B4%BB%E6%80%A7"><span class="nav-number">5.1.</span> <span class="nav-text">灵活性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AB%98%E6%95%88%E7%8E%87"><span class="nav-number">5.2.</span> <span class="nav-text">高效率</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Create-ML-%E8%83%BD%E4%B8%BA%E6%88%91%E4%BB%AC%E5%B8%A6%E6%9D%A5%E4%BB%80%E4%B9%88"><span class="nav-number">6.</span> <span class="nav-text">Create ML 能为我们带来什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Create-ML-%E4%BB%8D%E6%9C%89%E8%A6%81%E2%80%9C%E5%A5%BD%E5%A5%BD%E5%8F%8D%E6%80%9D%E2%80%9D%E7%9A%84%E4%BD%99%E5%9C%B0"><span class="nav-number">7.</span> <span class="nav-text">Create ML 仍有要“好好反思”的余地</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8D%E7%84%B6%E4%B8%8D%E5%A4%9F%E6%88%90%E7%86%9F"><span class="nav-number">7.1.</span> <span class="nav-text">仍然不够成熟</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E6%B3%95%E5%9C%A8%E4%BA%91%E7%AB%AF%E8%AE%AD%E7%BB%83"><span class="nav-number">7.2.</span> <span class="nav-text">无法在云端训练</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">8.</span> <span class="nav-text">结语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%B8%A3%E8%B0%A2"><span class="nav-number">9.</span> <span class="nav-text">鸣谢</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Penstein</p>
+  <div class="site-description" itemprop="description">Simple(r) Always Wins.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Penstein</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
 
 
 
@@ -990,6 +392,25 @@ show_date_time();
 
 
 
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -1009,458 +430,6 @@ show_date_time();
 
 
 
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-
-
-
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  
-  
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(function (item) {
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: '45fn3meaOT61ysJFuteanO38-gzGzoHsz',
-        appKey: '8DKj6dC7GuqWu4tIpNKVaiFB',
-        placeholder: '想说就说，别客气',
-        avatar:'mp',
-        meta:guest,
-        pageSize:'10' || 10,
-        visitor: true
-    });
-  </script>
-
-
-
-  
-
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-  
-  <script src="/lib/needsharebutton/needsharebutton.js"></script>
-
-  <script>
-    
-    
-      flOptions = {};
-      
-          flOptions.iconStyle = "default";
-      
-          flOptions.boxForm = "horizontal";
-      
-          flOptions.position = "middleRight";
-      
-          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Linkedin,Twitter";
-      
-      new needShareButton('#needsharebutton-float', flOptions);
-    
-  </script>
-
-  
-
-  
-
-  
-
-  
 
   
 
