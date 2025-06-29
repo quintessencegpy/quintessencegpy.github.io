@@ -45,6 +45,24 @@
       </categories>
   </entry>
   <entry>
+    <title>ARTS 打卡 04</title>
+    <url>/2020/07/05/arts-04/</url>
+    <content><![CDATA[<p>本文主要是公司内部 ARTS 活动打卡记录</p>
+<span id="more"></span>
+
+<h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><p>前缀树问题（LeetCode 208 中等）</p>
+<p>这个问题也相当于一个比较基础的问题了，它是一些其他题目（比如 Word ladder II 之类的）题目的前置题目，这个题目如果你是想刷算法的话属于必背题目，核心点是在每次插入一个单词的时候更新树的结构，这样的话在下次查找的时候就可以判断是否有这个单词或者是否有以某个单词开头的单词。</p>
+<p>一个比较重要的点就是前缀树和哈希表之间的对比，他们俩在很多时候可以互相替代，前缀树花费的空间更少一些但是单次查询花费的时间更多一点。</p>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>前一阵做单元测试的时候发现一个问题，就是如果想把 UIImage 作为 ViewModel 的输出的时候会有一个问题就是不知道怎么样单测这个 UIImage 的输出，最后无奈只能让 ViewModel 输出 UIImage 的名字，然后在 ViewController 中来进行 UIImage 的初始化。但是昨天看关于单测的东西的时候发现一个很好用的技巧，下次在做单测的时候可以尝试使用了：</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line">	</span><br><span class="line"><span class="keyword">func</span> <span class="title function_">testImage</span>() &#123;</span><br><span class="line">	<span class="keyword">let</span> viewModelImage <span class="operator">=</span> viewModel.image</span><br><span class="line">	<span class="keyword">let</span> viewModelImageDataReference <span class="operator">=</span> viewModelImage.pngData()<span class="operator">!</span></span><br><span class="line">	<span class="keyword">let</span> stubImageDataReference <span class="operator">=</span> <span class="type">UIImage</span>(named: <span class="string">&quot;test&quot;</span>).pngData()<span class="operator">!</span></span><br><span class="line">	<span class="type">XCAssertEqual</span>(viewModelImageDataReference, stubImageDataReference)</span><br><span class="line">	<span class="type">XCAssertEqual</span>(viewModelImage.size.width, desiredWidth)</span><br><span class="line">	<span class="type">XCAssertEqual</span>(viewModelImage.size.height, desiredHeight)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2><p><a href="https://cyberhex.me/2020/07/05/unit-test-short-story-01/">尤尼泰斯特 2020 - 回忆篇</a></p>
+]]></content>
+      <categories>
+        <category>ARTS</category>
+      </categories>
+  </entry>
+  <entry>
     <title>ARTS 打卡 06</title>
     <url>/2020/07/20/arts-06/</url>
     <content><![CDATA[<p>本文主要是公司内部 ARTS 活动打卡记录</p>
@@ -74,24 +92,6 @@
       </categories>
   </entry>
   <entry>
-    <title>ARTS 打卡 04</title>
-    <url>/2020/07/05/arts-04/</url>
-    <content><![CDATA[<p>本文主要是公司内部 ARTS 活动打卡记录</p>
-<span id="more"></span>
-
-<h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><p>前缀树问题（LeetCode 208 中等）</p>
-<p>这个问题也相当于一个比较基础的问题了，它是一些其他题目（比如 Word ladder II 之类的）题目的前置题目，这个题目如果你是想刷算法的话属于必背题目，核心点是在每次插入一个单词的时候更新树的结构，这样的话在下次查找的时候就可以判断是否有这个单词或者是否有以某个单词开头的单词。</p>
-<p>一个比较重要的点就是前缀树和哈希表之间的对比，他们俩在很多时候可以互相替代，前缀树花费的空间更少一些但是单次查询花费的时间更多一点。</p>
-<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>前一阵做单元测试的时候发现一个问题，就是如果想把 UIImage 作为 ViewModel 的输出的时候会有一个问题就是不知道怎么样单测这个 UIImage 的输出，最后无奈只能让 ViewModel 输出 UIImage 的名字，然后在 ViewController 中来进行 UIImage 的初始化。但是昨天看关于单测的东西的时候发现一个很好用的技巧，下次在做单测的时候可以尝试使用了：</p>
-<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line">	</span><br><span class="line"><span class="keyword">func</span> <span class="title function_">testImage</span>() &#123;</span><br><span class="line">	<span class="keyword">let</span> viewModelImage <span class="operator">=</span> viewModel.image</span><br><span class="line">	<span class="keyword">let</span> viewModelImageDataReference <span class="operator">=</span> viewModelImage.pngData()<span class="operator">!</span></span><br><span class="line">	<span class="keyword">let</span> stubImageDataReference <span class="operator">=</span> <span class="type">UIImage</span>(named: <span class="string">&quot;test&quot;</span>).pngData()<span class="operator">!</span></span><br><span class="line">	<span class="type">XCAssertEqual</span>(viewModelImageDataReference, stubImageDataReference)</span><br><span class="line">	<span class="type">XCAssertEqual</span>(viewModelImage.size.width, desiredWidth)</span><br><span class="line">	<span class="type">XCAssertEqual</span>(viewModelImage.size.height, desiredHeight)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2><p><a href="https://cyberhex.me/2020/07/05/unit-test-short-story-01/">尤尼泰斯特 2020 - 回忆篇</a></p>
-]]></content>
-      <categories>
-        <category>ARTS</category>
-      </categories>
-  </entry>
-  <entry>
     <title>ARTS 打卡 07</title>
     <url>/2020/07/26/arts-07/</url>
     <content><![CDATA[<p>本文主要是公司内部 ARTS 活动打卡记录</p>
@@ -114,6 +114,19 @@
       </categories>
   </entry>
   <entry>
+    <title>ARTS 打卡 08</title>
+    <url>/2020/08/02/arts-08/</url>
+    <content><![CDATA[<h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><p>朋友圈（LeetCode 547，中等）</p>
+<p>这道题是并查集考察的最经典的一道题了（当然也可以用 BFS，但总感觉比较山寨），因为并查集有几个比较基本的特性（查找两个节点是不是有同一个父亲，集合里边总共有多少个区块）正好有适用于这道题的特性。需要注意的就是要自己的得把并查集实现出来。</p>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><p><a href="http://rx-marin.com/post/rxswift-rxcocoa-sample-split-laps-timer/">Split laps timer with RxSwift and RxCocoa</a></p>
+<p>Marin 老哥的博客关注很久了，每次都是碰到问题会去看，这次准备从头开始系统的看一下他的博客，第一篇比较简单，就从第二篇开始写感想。</p>
+<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2><p><a href="https://cyberhex.me/2020/05/16/flutter-setup/">跨端开发的终极解决方案？- Flutter 学习历程之环境配置采坑记录</a></p>
+]]></content>
+      <categories>
+        <category>ARTS</category>
+      </categories>
+  </entry>
+  <entry>
     <title>ARTS 打卡 09</title>
     <url>/2020/12/01/arts-09/</url>
     <content><![CDATA[<h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><p>排序链表圈（Leetcode 148，中等）</p>
@@ -123,19 +136,6 @@
 <p>通过 WWDC 这个讲座了解到了 MLModel 可以通过 AppleCloud 的方式进行更新和维护，还可以有不同的 ModelCollection 针对不同种类的用户，如果使用这种方式的话并不会增加包体积，而且还有了官方支持的方法可以进行 A&#x2F;B Test。之后在一些需要实时机器学习的场景（比如视频，音频等）就可以引入 MLModel 而不是用云端处理的方式，这样会有更好的用户体验。</p>
 <h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>这两周没想起来啥 Tips，鸽了。</p>
 <h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2><p><a href="https://cyberhex.me/2020/11/24/create-ml-introduction/">CreateML - 开启革命的星星之火</a></p>
-]]></content>
-      <categories>
-        <category>ARTS</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>ARTS 打卡 08</title>
-    <url>/2020/08/02/arts-08/</url>
-    <content><![CDATA[<h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><p>朋友圈（LeetCode 547，中等）</p>
-<p>这道题是并查集考察的最经典的一道题了（当然也可以用 BFS，但总感觉比较山寨），因为并查集有几个比较基本的特性（查找两个节点是不是有同一个父亲，集合里边总共有多少个区块）正好有适用于这道题的特性。需要注意的就是要自己的得把并查集实现出来。</p>
-<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><p><a href="http://rx-marin.com/post/rxswift-rxcocoa-sample-split-laps-timer/">Split laps timer with RxSwift and RxCocoa</a></p>
-<p>Marin 老哥的博客关注很久了，每次都是碰到问题会去看，这次准备从头开始系统的看一下他的博客，第一篇比较简单，就从第二篇开始写感想。</p>
-<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2><p><a href="https://cyberhex.me/2020/05/16/flutter-setup/">跨端开发的终极解决方案？- Flutter 学习历程之环境配置采坑记录</a></p>
 ]]></content>
       <categories>
         <category>ARTS</category>
@@ -258,7 +258,7 @@
 <h3 id="仍然不够成熟"><a href="#仍然不够成熟" class="headerlink" title="仍然不够成熟"></a>仍然不够成熟</h3><p>和隔壁使用 Python 生态的机器学习圈相比，苹果和 Swift 仍然有挺长的路要走。虽然 Create ML 包含了 Image，Video，Motion，Sound，Text 和 Table 的类别，但是其中暂时也是只有一些特定的 Template 可以使用，还是略显单薄。</p>
 <h3 id="无法在云端训练"><a href="#无法在云端训练" class="headerlink" title="无法在云端训练"></a>无法在云端训练</h3><p>虽然在 Mac 上就能进行 Training 听起来非常美好，但是缺乏在云端训练的功能还是一个比较值得注意的问题。如果想让更多的用户转移到 Create ML 这个平台势必要考虑这个问题。但如果 Create ML 的定位就是轻量级别的 Training 的话，这可能也算不上一个问题。</p>
 <h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>从苹果这些年的一系列动作可以看出他们对于机器学习的生态有很大的野望，和谷歌等大公司的明争暗斗也让人看得眼花缭乱。谷歌也在积极推进 Swift for TensorFlow，从侧面也能看出谷歌对他这个对手的尊重。在我们凡人围观这场“神仙打架”的过程中也能看出来 Create ML 的出现更像一场即将或正在发生的革命 - 曾经机器学习的大部分资源都掌握在少数“AI精英”的手中，Create ML 的出现有助于打破现有的 “机器学习垄断”，让更多的开发者能有一个像样的交通工具加入这个赛道，虽然比不上别人的兰博基尼，但是也算有了代步的工具。随着更多人的加入，全民机器学习的时代可能会比我们想象的更早到来，到时候作为非机器学习的开发者也将有机会把自己的想法转化成真正的产品，AI 相关的应用将犹如雨后春笋般的出现。</p>
-<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>感谢公司的这次机会以及苹果员工精彩的演讲和耐心的咨询。最后打个广告：落叶的一生就是为了归根吗？曾经的我也相信宿命论 - 程序员就是要 996 的，疫情是要被裁员的，出游是要自掏腰包的，五一是只有三天假的 … 仿佛死神与巴格达商人在萨拉马的相会，一切都是那么无力。直到我加入了猿辅导，我的世界观崩塌了：原来程序员也不一定非要 996，疫情期间会有更多的项目和机会，出游是公司掏钱，五一有九天假！从来没见过如此“不讲武德”的公司，说好的武林要以和为贵呢？你这样其他公司怎么活！那你还在等什么，加入我们，我的邮箱是 <a href="mailto:&#x67;&#x6f;&#117;&#x70;&#121;&#64;&#102;&#x65;&#x6e;&#x62;&#105;&#46;&#x63;&#x6f;&#x6d;">goupy@fenbi.com</a>，内推我是认真的，你值得拥有更好的。</p>
+<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>感谢公司的这次机会以及苹果员工精彩的演讲和耐心的咨询。最后打个广告：落叶的一生就是为了归根吗？曾经的我也相信宿命论 - 程序员就是要 996 的，疫情是要被裁员的，出游是要自掏腰包的，五一是只有三天假的 … 仿佛死神与巴格达商人在萨拉马的相会，一切都是那么无力。直到我加入了猿辅导，我的世界观崩塌了：原来程序员也不一定非要 996，疫情期间会有更多的项目和机会，出游是公司掏钱，五一有九天假！从来没见过如此“不讲武德”的公司，说好的武林要以和为贵呢？你这样其他公司怎么活！那你还在等什么，加入我们，我的邮箱是 <a href="mailto:&#x67;&#x6f;&#117;&#x70;&#x79;&#x40;&#102;&#x65;&#x6e;&#98;&#105;&#x2e;&#99;&#111;&#109;">goupy@fenbi.com</a>，内推我是认真的，你值得拥有更好的。</p>
 <div class="note info">
             <p>相关链接：<br><a href="https://www.notion.so/Create-ML-84d28aa842064be7b74eb3bde136bd93">笔记 - 基于 Create ML 的物体识别</a><br><a href="https://machinethink.net/blog/new-in-apple-machine-learning-2020/">Apple machine learning in 2020: What’s new?</a><br><a href="https://www.raywenderlich.com/5653-create-ml-tutorial-getting-started#toc-anchor-020">Create ML Tutorial: Getting Started</a><br><a href="http://www.cocoachina.com/articles/26420">WWDC 2018：初探 Create ML</a><br><a href="https://www.zhihu.com/question/41979241">什么是迁移学习 (Transfer Learning)？这个领域历史发展前景如何？</a><br><a href="https://www.netguru.com/codestories/createml-start-your-adventure-in-machine-learning-with-swift">CreateML: Start Your Adventure in Machine Learning with Swift</a><br><a href="https://hongchaozhang.github.io/blog/2018/06/15/introducing-create-ml/">Introducing Create ML</a><br><a href="https://heartbeat.fritz.ai/sound-classification-using-core-ml-3-and-create-ml-fc73ca20aff5">Sound Classification on iOS Using Core ML 3 and Create ML</a><br><a href="https://www.computerworld.com/article/3293446/why-apple-s-create-ml-matters-to-your-enterprise.html">Why Apple’s Create ML matters to your enterprise</a></p>
           </div>
@@ -277,72 +277,6 @@
       <tags>
         <tag>iOS</tag>
         <tag>Machine Learning</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Objective-C 中 Nullability 的使用</title>
-    <url>/2018/11/25/nullability-annotations-in-objective-c/</url>
-    <content><![CDATA[<p>本文主要记录在学习 Objective-C 的过程中关于 Nullability 的问题。</p>
-<span id="more"></span>
-
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>我们都知道 Swift 和 Objective-C 可以同时存在于同一个 project 中，但想让他们俩兄弟同时幸福快乐和谐的生活在同一个项目中并不是一件容易的事。 Swift 小老弟最大的优势就是 Type Safety, 而 Objective-C 老大哥最大的“问题”就是可以有满屏的 nil。 在 Swift 中如果你想在不初始化一个变量的情况使用这个变量，你必须要提前告知 Xcode 这个变量是 optional 的， 但是 Objective-C 就没有这样的要求。 那么怎么解决这个问题呢，苹果最后引入了 Nullability 来给 Objective-C 加入一些安全保障。</p>
-<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>在 Objective-C 中有以下代码：</p>
-<figure class="highlight objc"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Objective-C</span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">User</span>: <span class="title">NSObject</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">copy</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSString</span> *username;</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">copy</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSString</span> *password;</span><br><span class="line"></span><br><span class="line">- (<span class="type">BOOL</span>)loginWithUsername:(<span class="built_in">NSString</span> *)username</span><br><span class="line">                 password:(<span class="built_in">NSString</span> *)password;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
-
-<p>但是如果这段代码是存在与两种语言混合的项目中，这段代码 import 进如 Swift 之后就成了一下这样：</p>
-<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Swift</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">User</span>: <span class="title class_ inherited__">NSObject</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> username: <span class="type">String</span>!</span><br><span class="line">    <span class="keyword">var</span> password: <span class="type">String</span>!</span><br><span class="line"></span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">login</span>(<span class="params">withUsername</span> <span class="params">username</span>: <span class="type">String</span>!,</span><br><span class="line">                            <span class="params">password</span>: <span class="type">String</span>!) -&gt; <span class="type">Bool</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>我们看到了满屏的惊叹号，这对于有强迫症的同学简直是一种煎熬，为什么会这样呢？<br>因为 Swift 是 Type Safe 的语言，除非你提前申明这个变量是 optional，否则他不会让你随便给变量赋值 nil。</p>
-<p>但是，如果在 Objective-C 中引入了 Nullability， 这个问题就会大大改善，比如下边的例子：</p>
-<figure class="highlight objc"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Objective-C</span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">User</span>: <span class="title">NSObject</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonnull</span>, <span class="keyword">copy</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSString</span> *username;</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nullable</span>, <span class="keyword">copy</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSString</span> *password;</span><br><span class="line"></span><br><span class="line">- (<span class="type">BOOL</span>)loginWithUsername:(<span class="keyword">nonnull</span> <span class="built_in">NSString</span> *)username</span><br><span class="line">                 password:(<span class="keyword">nonnull</span> <span class="built_in">NSString</span> *)password;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
-
-<p>在 Swift 中，接口就会变成以下的情况：</p>
-<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Swift</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">User</span>: <span class="title class_ inherited__">NSObject</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> username: <span class="type">String</span></span><br><span class="line">    <span class="keyword">var</span> password: <span class="type">String？</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">login</span>(<span class="params">withUsername</span> <span class="params">username</span>: <span class="type">String</span>,</span><br><span class="line">                            <span class="params">password</span>: <span class="type">String</span>) -&gt; <span class="type">Bool</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>但是，虽然这样解决的 Swift 和 Objective-C 之间搭桥的问题，Objective-C 本身并没有发生改变，他还是该吃吃，该喝喝，runtime 的行为模式和以前没啥区别，毕竟嘛，那什么改不了那啥。但是经过这样的改变，compiler 会站出来在我们用错 API 的时候提出警告。</p>
-<h2 id="四种-Nullability-标记"><a href="#四种-Nullability-标记" class="headerlink" title="四种 Nullability 标记"></a>四种 Nullability 标记</h2><table>
-<thead>
-<tr>
-<th align="center">Pointers</th>
-<th align="center">Properties</th>
-<th align="center"></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">_Null_unspecified</td>
-<td align="center">null_unspecified</td>
-<td align="center">默认值，在搭桥到 Swift 后会成为 unwrapped optional</td>
-</tr>
-<tr>
-<td align="center">_Nonnull</td>
-<td align="center">nonnull</td>
-<td align="center">在搭桥到 Swift 后变成正常变量声明</td>
-</tr>
-<tr>
-<td align="center">_Nullable</td>
-<td align="center">nullable</td>
-<td align="center">在搭桥到 Swift 后变成 optional</td>
-</tr>
-<tr>
-<td align="center">N&#x2F;A</td>
-<td align="center">null_resettable</td>
-<td align="center">这种变量在读的时候不会是 nil， 但是可以重置为nil</td>
-</tr>
-</tbody></table>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>这算是我第一篇正儿八经的博客了，也算是学习笔记性质的记录博客，所以内容不一定是完全正确的，所以还希望各位大佬不吝赐教，大家一起学习。</p>
-<div class="note info">
-            <p>相关链接：</p><p><a href="https://teamtreehouse.com/library/nullability-annotations-in-objectivec">Tree House: Nullability Annotations in Objective-C</a></p>
-          </div>
-
-
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>iOS</tag>
-        <tag>Objective-C</tag>
-        <tag>Nullability</tag>
       </tags>
   </entry>
   <entry>
@@ -367,22 +301,6 @@
       </categories>
       <tags>
         <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>A song of TDD and BUG - 尾声</title>
-    <url>/2020/07/07/tdd-part-five/</url>
-    <content><![CDATA[<p>TDD 与 BUG 的爱恨情仇（卷五），本系列链表头部请戳 <a href="https://cyberhex.me/2020/06/14/tdd-part-one/">A song of TDD and BUG - 前奏曲</a></p>
-<span id="more"></span>
-
-<h2 id="结语与鸣谢"><a href="#结语与鸣谢" class="headerlink" title="结语与鸣谢"></a>结语与鸣谢</h2><p>感谢同事们（海春，超超等）在我迷茫的时候的帮助，感谢强哥对整个系列的 review 和宝贵意见。最后打个广告：落叶的一生就是为了归根吗？曾经的我也相信宿命论 - 程序员就是要 996 的，疫情是要被裁员的，出游是要自掏腰包的，五一是只有三天假的 … 仿佛死神与巴格达商人在萨拉马的相会，一切都是那么无力。直到我加入了猿辅导，我的世界观崩塌了：原来程序员也不一定非要 996，疫情期间会有更多的项目和机会，出游是公司掏钱，五一有九天假！从来没见过如此“不讲武德”的公司，说好的武林要以和为贵呢？你这样其他公司怎么活！那你还在等什么，加入我们，我的邮箱是 <a href="mailto:&#x67;&#111;&#x75;&#x70;&#121;&#64;&#102;&#x65;&#110;&#98;&#105;&#x2e;&#x63;&#111;&#109;">goupy@fenbi.com</a>，内推我是认真的，你值得拥有更好的。</p>
-]]></content>
-      <categories>
-        <category>工作总结</category>
-      </categories>
-      <tags>
-        <tag>iOS</tag>
-        <tag>TDD</tag>
       </tags>
   </entry>
   <entry>
@@ -487,6 +405,22 @@
         <tag>Swift</tag>
         <tag>iOS</tag>
         <tag>Design Pattern</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>A song of TDD and BUG - 尾声</title>
+    <url>/2020/07/07/tdd-part-five/</url>
+    <content><![CDATA[<p>TDD 与 BUG 的爱恨情仇（卷五），本系列链表头部请戳 <a href="https://cyberhex.me/2020/06/14/tdd-part-one/">A song of TDD and BUG - 前奏曲</a></p>
+<span id="more"></span>
+
+<h2 id="结语与鸣谢"><a href="#结语与鸣谢" class="headerlink" title="结语与鸣谢"></a>结语与鸣谢</h2><p>感谢同事们（海春，超超等）在我迷茫的时候的帮助，感谢强哥对整个系列的 review 和宝贵意见。最后打个广告：落叶的一生就是为了归根吗？曾经的我也相信宿命论 - 程序员就是要 996 的，疫情是要被裁员的，出游是要自掏腰包的，五一是只有三天假的 … 仿佛死神与巴格达商人在萨拉马的相会，一切都是那么无力。直到我加入了猿辅导，我的世界观崩塌了：原来程序员也不一定非要 996，疫情期间会有更多的项目和机会，出游是公司掏钱，五一有九天假！从来没见过如此“不讲武德”的公司，说好的武林要以和为贵呢？你这样其他公司怎么活！那你还在等什么，加入我们，我的邮箱是 <a href="mailto:&#x67;&#x6f;&#x75;&#112;&#x79;&#64;&#102;&#101;&#x6e;&#98;&#x69;&#x2e;&#x63;&#111;&#109;">goupy@fenbi.com</a>，内推我是认真的，你值得拥有更好的。</p>
+]]></content>
+      <categories>
+        <category>工作总结</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+        <tag>TDD</tag>
       </tags>
   </entry>
   <entry>
@@ -625,32 +559,69 @@
       </tags>
   </entry>
   <entry>
-    <title>你不知道的 View Controller Containment</title>
-    <url>/2019/06/21/viewcontroller-containment/</url>
-    <content><![CDATA[<p>本文主要记录在工作过程中如何利用 View Controller Containment 来重构 UI</p>
+    <title>Objective-C 中 Nullability 的使用</title>
+    <url>/2018/11/25/nullability-annotations-in-objective-c/</url>
+    <content><![CDATA[<p>本文主要记录在学习 Objective-C 的过程中关于 Nullability 的问题。</p>
 <span id="more"></span>
 
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>不知道你有没有经历过这样的情况，一个页面中有很多的 View，但各个 View 之间有明显的层级关系，这个时候一种可行的做法是把一系列相关联的 View 归到一个父亲 View 中。 但这种做法会有有一些其他的问题， 比如会让 View Controller 或者 View Model 比较大， 甚至有时候不得不把逻辑写在 View 里边。那么有没有一个既可以解决问题， 又不会引入更多棘手的问题的方法吗？ 问得好！ 如果你心里真的这个问题，那说明你一定是在质疑我写这篇分享的初衷。 不过别担心，看到最后我保证你一定会有所收获的。</p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>铺垫了这么多，你可能会想: View Controller Containment 到底是什么个玩意，从来没听说过，确定会有人用这个吗？ 但是接下来我会打消你的疑虑，因为苹果自己就在设计 UINavigationController 和 UITabBarController 利用了这种模式。在UINavigationController 和 UITabBarController 中你都可以塞入自定义的控制器， 只不过他们控制这些控制器的形式不同（一个是堆叠，一个是平行）。</p>
-<p>那么 View Controller Containment 到底是什么呢？ 其实非常简单，就是把一个控制器当作容器，只不过这个控制器比较特别一点，它不止能控制 View， 还可以控制在它里边的控制器。 这种模式中，父控制器只需要来管理和安排子控制器 View 的布局和大小，而子控制器负责它自己内部各个 View 的布局和大小。</p>
-<h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><p>听起来如此简单的改变，能给我们带来什么呢？这就需要讨论一下 View Controller Containment 的优点。</p>
-<h3 id="可复用性"><a href="#可复用性" class="headerlink" title="可复用性"></a>可复用性</h3><p>利用 View Controller Containment 一个很大的优点就是可复用性，比如上边提到的苹果自带 SDK 中的 UINavigationController 和 UITabBarController 都有极大的可复用性，基本上在每个项目中都会用到。在项目中我们有时候也会碰到一些情况会有需要复用 Root View Controller 的情况。比如我在最近的一个项目中，会碰到有在同一个页面有三个区块，并且在项目不同的地方会对它们做相同的布局甚至动画。所以这种情况下抽出来一个可复用的 Root View Controller 就会极大的提高工作效率。</p>
-<h3 id="逻辑分离"><a href="#逻辑分离" class="headerlink" title="逻辑分离"></a>逻辑分离</h3><p>对于一些比较复杂的页面，分出来不同的控制器，让子控制器来控制各自的逻辑，这样会让整个 UI 的结构更加清晰，每一个控制器的职责更加明确，会有更强的拓展性，以后如果想加入新的功能或者动画，我们只需要加入新的控制器，最多再加几个回调和代理，并不需要对原来的 UI 结构有很大的改动。</p>
-<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>拿我现在做的一个直播页边来举例，里边有比较明显的三个区块，一个课件区，一个视频区，一个是讨论区。每个区块上边还有一些相关的 View。 所以我觉得可以用 View Controller Containment 来实现。 用一个 MasterViewController 来管理这三个区域。 这三个区域也是不同的子控制器。</p>
-<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">VideoViewController</span>: <span class="title class_ inherited__">UIViewController</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">KeynoteViewController</span>: <span class="title class_ inherited__">UIViewController</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ChatViewController</span>: <span class="title class_ inherited__">UIViewController</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">final</span> <span class="keyword">class</span> <span class="title class_">MasterViewControlller</span>: <span class="title class_ inherited__">UIViewController</span> &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">lazy</span> <span class="keyword">var</span> videoViewController: <span class="type">VideoViewController</span> <span class="operator">=</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="type">VideoViewController</span>()</span><br><span class="line">    &#125;()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">lazy</span> <span class="keyword">var</span> keynoteViewController: <span class="type">KeynoteViewController</span> <span class="operator">=</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="type">KeynoteViewController</span>()</span><br><span class="line">    &#125;()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">lazy</span> <span class="keyword">var</span> chatViewController: <span class="type">ChatViewController</span> <span class="operator">=</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="type">ChatViewController</span>()</span><br><span class="line">    &#125;()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="keyword">func</span> <span class="title function_">viewDidLoad</span>() &#123;</span><br><span class="line">        <span class="keyword">super</span>.viewDidLoad()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// MARK: - Add Child View Controllers</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">func</span> <span class="title function_">setupInterface</span>() &#123;</span><br><span class="line">        </span><br><span class="line">        addChild(videoViewController)</span><br><span class="line">        addChild(keynoteViewController)</span><br><span class="line">        addChild(chatViewController)</span><br><span class="line"></span><br><span class="line">        view.addSubViews([</span><br><span class="line">            videoViewController.view,</span><br><span class="line">            keynoteViewController,</span><br><span class="line">            chatViewController</span><br><span class="line">        ])</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 这里进行对子控制器的 View 的布局</span></span><br><span class="line"></span><br><span class="line">        videoViewController.didMove(toParent: <span class="keyword">self</span>)</span><br><span class="line">        keynoteViewController.didMove(toParent: <span class="keyword">self</span>)</span><br><span class="line">        chatViewController.didMove(toParent: <span class="keyword">self</span>)</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// MARK: - Remove Child View Controller</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">func</span> <span class="title function_">remove</span>(<span class="params">asChild</span> <span class="params">viewController</span>: <span class="type">UIViewController</span>) &#123;</span><br><span class="line">        <span class="comment">// Notify Child View Controller</span></span><br><span class="line">        viewController.willMove(toParent: <span class="literal">nil</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Remove Child View From Superview</span></span><br><span class="line">        viewController.view.removeFromSuperview()</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Notify Child View Controller</span></span><br><span class="line">        viewController.removeFromParentViewController()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>我们都知道 Swift 和 Objective-C 可以同时存在于同一个 project 中，但想让他们俩兄弟同时幸福快乐和谐的生活在同一个项目中并不是一件容易的事。 Swift 小老弟最大的优势就是 Type Safety, 而 Objective-C 老大哥最大的“问题”就是可以有满屏的 nil。 在 Swift 中如果你想在不初始化一个变量的情况使用这个变量，你必须要提前告知 Xcode 这个变量是 optional 的， 但是 Objective-C 就没有这样的要求。 那么怎么解决这个问题呢，苹果最后引入了 Nullability 来给 Objective-C 加入一些安全保障。</p>
+<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>在 Objective-C 中有以下代码：</p>
+<figure class="highlight objc"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Objective-C</span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">User</span>: <span class="title">NSObject</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">copy</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSString</span> *username;</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">copy</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSString</span> *password;</span><br><span class="line"></span><br><span class="line">- (<span class="type">BOOL</span>)loginWithUsername:(<span class="built_in">NSString</span> *)username</span><br><span class="line">                 password:(<span class="built_in">NSString</span> *)password;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
 
-<p>这里需要注意的点是在做布局之前要使用 addChild(:) 方法，这样会触发子控制器的 willMove(toParent:) 方法，并且在布局完后要使用 didMove(toParent:) 方法。在移除 Child View Controller 的时候也需要重复相似的步骤，在移除 View 之前要使用 willMove(toParent:)， 在移除 View 之后使用 removeFromParentViewController() 方法。这样的做的好处是可以把子控制器的生命周期纳入父控制器的控制范围：在父控制器加入或者移除子控制器的时候能够触发子控制器的 viewWillAppear 和 viewWillDisappear 的方法。</p>
-<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>View Controller Containment 是一种非常实用的重构 UI 的设计模式，我在接触了这种模式后就开始欲罢不能（谁用谁知道）。这种模式不仅能增加代码的复用性和可拓展性，还可以将逻辑进行分离从而增加代码的可读性。所以把它加入你的 skill set 中会给你以后的工作和学习带来很大的益处。</p>
+<p>但是如果这段代码是存在与两种语言混合的项目中，这段代码 import 进如 Swift 之后就成了一下这样：</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Swift</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">User</span>: <span class="title class_ inherited__">NSObject</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> username: <span class="type">String</span>!</span><br><span class="line">    <span class="keyword">var</span> password: <span class="type">String</span>!</span><br><span class="line"></span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">login</span>(<span class="params">withUsername</span> <span class="params">username</span>: <span class="type">String</span>!,</span><br><span class="line">                            <span class="params">password</span>: <span class="type">String</span>!) -&gt; <span class="type">Bool</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们看到了满屏的惊叹号，这对于有强迫症的同学简直是一种煎熬，为什么会这样呢？<br>因为 Swift 是 Type Safe 的语言，除非你提前申明这个变量是 optional，否则他不会让你随便给变量赋值 nil。</p>
+<p>但是，如果在 Objective-C 中引入了 Nullability， 这个问题就会大大改善，比如下边的例子：</p>
+<figure class="highlight objc"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Objective-C</span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">User</span>: <span class="title">NSObject</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonnull</span>, <span class="keyword">copy</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSString</span> *username;</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nullable</span>, <span class="keyword">copy</span>, <span class="keyword">nonatomic</span>) <span class="built_in">NSString</span> *password;</span><br><span class="line"></span><br><span class="line">- (<span class="type">BOOL</span>)loginWithUsername:(<span class="keyword">nonnull</span> <span class="built_in">NSString</span> *)username</span><br><span class="line">                 password:(<span class="keyword">nonnull</span> <span class="built_in">NSString</span> *)password;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+
+<p>在 Swift 中，接口就会变成以下的情况：</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Swift</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">User</span>: <span class="title class_ inherited__">NSObject</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> username: <span class="type">String</span></span><br><span class="line">    <span class="keyword">var</span> password: <span class="type">String？</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">login</span>(<span class="params">withUsername</span> <span class="params">username</span>: <span class="type">String</span>,</span><br><span class="line">                            <span class="params">password</span>: <span class="type">String</span>) -&gt; <span class="type">Bool</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>但是，虽然这样解决的 Swift 和 Objective-C 之间搭桥的问题，Objective-C 本身并没有发生改变，他还是该吃吃，该喝喝，runtime 的行为模式和以前没啥区别，毕竟嘛，那什么改不了那啥。但是经过这样的改变，compiler 会站出来在我们用错 API 的时候提出警告。</p>
+<h2 id="四种-Nullability-标记"><a href="#四种-Nullability-标记" class="headerlink" title="四种 Nullability 标记"></a>四种 Nullability 标记</h2><table>
+<thead>
+<tr>
+<th align="center">Pointers</th>
+<th align="center">Properties</th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">_Null_unspecified</td>
+<td align="center">null_unspecified</td>
+<td align="center">默认值，在搭桥到 Swift 后会成为 unwrapped optional</td>
+</tr>
+<tr>
+<td align="center">_Nonnull</td>
+<td align="center">nonnull</td>
+<td align="center">在搭桥到 Swift 后变成正常变量声明</td>
+</tr>
+<tr>
+<td align="center">_Nullable</td>
+<td align="center">nullable</td>
+<td align="center">在搭桥到 Swift 后变成 optional</td>
+</tr>
+<tr>
+<td align="center">N&#x2F;A</td>
+<td align="center">null_resettable</td>
+<td align="center">这种变量在读的时候不会是 nil， 但是可以重置为nil</td>
+</tr>
+</tbody></table>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>这算是我第一篇正儿八经的博客了，也算是学习笔记性质的记录博客，所以内容不一定是完全正确的，所以还希望各位大佬不吝赐教，大家一起学习。</p>
 <div class="note info">
-            <p>相关链接：</p><p><a href="https://cocoacasts.com/managing-view-controllers-with-container-view-controllers">Managing View Controllers With Container View Controllers</a></p>
-          </div>]]></content>
+            <p>相关链接：</p><p><a href="https://teamtreehouse.com/library/nullability-annotations-in-objectivec">Tree House: Nullability Annotations in Objective-C</a></p>
+          </div>
+
+
+]]></content>
       <categories>
-        <category>工作总结</category>
+        <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>Swift</tag>
         <tag>iOS</tag>
-        <tag>Design Pattern</tag>
+        <tag>Objective-C</tag>
+        <tag>Nullability</tag>
       </tags>
   </entry>
   <entry>
@@ -789,6 +760,35 @@
       <tags>
         <tag>iOS</tag>
         <tag>TDD</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>你不知道的 View Controller Containment</title>
+    <url>/2019/06/21/viewcontroller-containment/</url>
+    <content><![CDATA[<p>本文主要记录在工作过程中如何利用 View Controller Containment 来重构 UI</p>
+<span id="more"></span>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>不知道你有没有经历过这样的情况，一个页面中有很多的 View，但各个 View 之间有明显的层级关系，这个时候一种可行的做法是把一系列相关联的 View 归到一个父亲 View 中。 但这种做法会有有一些其他的问题， 比如会让 View Controller 或者 View Model 比较大， 甚至有时候不得不把逻辑写在 View 里边。那么有没有一个既可以解决问题， 又不会引入更多棘手的问题的方法吗？ 问得好！ 如果你心里真的这个问题，那说明你一定是在质疑我写这篇分享的初衷。 不过别担心，看到最后我保证你一定会有所收获的。</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>铺垫了这么多，你可能会想: View Controller Containment 到底是什么个玩意，从来没听说过，确定会有人用这个吗？ 但是接下来我会打消你的疑虑，因为苹果自己就在设计 UINavigationController 和 UITabBarController 利用了这种模式。在UINavigationController 和 UITabBarController 中你都可以塞入自定义的控制器， 只不过他们控制这些控制器的形式不同（一个是堆叠，一个是平行）。</p>
+<p>那么 View Controller Containment 到底是什么呢？ 其实非常简单，就是把一个控制器当作容器，只不过这个控制器比较特别一点，它不止能控制 View， 还可以控制在它里边的控制器。 这种模式中，父控制器只需要来管理和安排子控制器 View 的布局和大小，而子控制器负责它自己内部各个 View 的布局和大小。</p>
+<h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><p>听起来如此简单的改变，能给我们带来什么呢？这就需要讨论一下 View Controller Containment 的优点。</p>
+<h3 id="可复用性"><a href="#可复用性" class="headerlink" title="可复用性"></a>可复用性</h3><p>利用 View Controller Containment 一个很大的优点就是可复用性，比如上边提到的苹果自带 SDK 中的 UINavigationController 和 UITabBarController 都有极大的可复用性，基本上在每个项目中都会用到。在项目中我们有时候也会碰到一些情况会有需要复用 Root View Controller 的情况。比如我在最近的一个项目中，会碰到有在同一个页面有三个区块，并且在项目不同的地方会对它们做相同的布局甚至动画。所以这种情况下抽出来一个可复用的 Root View Controller 就会极大的提高工作效率。</p>
+<h3 id="逻辑分离"><a href="#逻辑分离" class="headerlink" title="逻辑分离"></a>逻辑分离</h3><p>对于一些比较复杂的页面，分出来不同的控制器，让子控制器来控制各自的逻辑，这样会让整个 UI 的结构更加清晰，每一个控制器的职责更加明确，会有更强的拓展性，以后如果想加入新的功能或者动画，我们只需要加入新的控制器，最多再加几个回调和代理，并不需要对原来的 UI 结构有很大的改动。</p>
+<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p>拿我现在做的一个直播页边来举例，里边有比较明显的三个区块，一个课件区，一个视频区，一个是讨论区。每个区块上边还有一些相关的 View。 所以我觉得可以用 View Controller Containment 来实现。 用一个 MasterViewController 来管理这三个区域。 这三个区域也是不同的子控制器。</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">VideoViewController</span>: <span class="title class_ inherited__">UIViewController</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">KeynoteViewController</span>: <span class="title class_ inherited__">UIViewController</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ChatViewController</span>: <span class="title class_ inherited__">UIViewController</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">final</span> <span class="keyword">class</span> <span class="title class_">MasterViewControlller</span>: <span class="title class_ inherited__">UIViewController</span> &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">lazy</span> <span class="keyword">var</span> videoViewController: <span class="type">VideoViewController</span> <span class="operator">=</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="type">VideoViewController</span>()</span><br><span class="line">    &#125;()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">lazy</span> <span class="keyword">var</span> keynoteViewController: <span class="type">KeynoteViewController</span> <span class="operator">=</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="type">KeynoteViewController</span>()</span><br><span class="line">    &#125;()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">lazy</span> <span class="keyword">var</span> chatViewController: <span class="type">ChatViewController</span> <span class="operator">=</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="type">ChatViewController</span>()</span><br><span class="line">    &#125;()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="keyword">func</span> <span class="title function_">viewDidLoad</span>() &#123;</span><br><span class="line">        <span class="keyword">super</span>.viewDidLoad()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// MARK: - Add Child View Controllers</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">func</span> <span class="title function_">setupInterface</span>() &#123;</span><br><span class="line">        </span><br><span class="line">        addChild(videoViewController)</span><br><span class="line">        addChild(keynoteViewController)</span><br><span class="line">        addChild(chatViewController)</span><br><span class="line"></span><br><span class="line">        view.addSubViews([</span><br><span class="line">            videoViewController.view,</span><br><span class="line">            keynoteViewController,</span><br><span class="line">            chatViewController</span><br><span class="line">        ])</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 这里进行对子控制器的 View 的布局</span></span><br><span class="line"></span><br><span class="line">        videoViewController.didMove(toParent: <span class="keyword">self</span>)</span><br><span class="line">        keynoteViewController.didMove(toParent: <span class="keyword">self</span>)</span><br><span class="line">        chatViewController.didMove(toParent: <span class="keyword">self</span>)</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// MARK: - Remove Child View Controller</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">func</span> <span class="title function_">remove</span>(<span class="params">asChild</span> <span class="params">viewController</span>: <span class="type">UIViewController</span>) &#123;</span><br><span class="line">        <span class="comment">// Notify Child View Controller</span></span><br><span class="line">        viewController.willMove(toParent: <span class="literal">nil</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Remove Child View From Superview</span></span><br><span class="line">        viewController.view.removeFromSuperview()</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Notify Child View Controller</span></span><br><span class="line">        viewController.removeFromParentViewController()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里需要注意的点是在做布局之前要使用 addChild(:) 方法，这样会触发子控制器的 willMove(toParent:) 方法，并且在布局完后要使用 didMove(toParent:) 方法。在移除 Child View Controller 的时候也需要重复相似的步骤，在移除 View 之前要使用 willMove(toParent:)， 在移除 View 之后使用 removeFromParentViewController() 方法。这样的做的好处是可以把子控制器的生命周期纳入父控制器的控制范围：在父控制器加入或者移除子控制器的时候能够触发子控制器的 viewWillAppear 和 viewWillDisappear 的方法。</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>View Controller Containment 是一种非常实用的重构 UI 的设计模式，我在接触了这种模式后就开始欲罢不能（谁用谁知道）。这种模式不仅能增加代码的复用性和可拓展性，还可以将逻辑进行分离从而增加代码的可读性。所以把它加入你的 skill set 中会给你以后的工作和学习带来很大的益处。</p>
+<div class="note info">
+            <p>相关链接：</p><p><a href="https://cocoacasts.com/managing-view-controllers-with-container-view-controllers">Managing View Controllers With Container View Controllers</a></p>
+          </div>]]></content>
+      <categories>
+        <category>工作总结</category>
+      </categories>
+      <tags>
+        <tag>Swift</tag>
+        <tag>iOS</tag>
+        <tag>Design Pattern</tag>
       </tags>
   </entry>
 </search>
